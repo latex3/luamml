@@ -59,10 +59,10 @@ local function annotate()
         props = {}
         properties[marked] = props
       end
-      if annotation.core then
+      if annotation.core ~= nil then
         props.mathml_core = annotation.core
       end
-      if annotation.struct then
+      if annotation.struct ~= nil then
         local saved = props.mathml_filter
         local struct = annotation.struct
         function props.mathml_filter(mml, core)
