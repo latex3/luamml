@@ -6,6 +6,15 @@ local mark_environment = {
   data = {
   },
 }
+do
+  local _ENV = mark_environment
+  function consume_label(label, fn)
+    local mathml = data.mathml[label]
+    data.mathml[label] = nil
+    if fn then fn(mathml) end
+    return mathml
+  end
+end
 
 local function annotate()
   local annotation, err = load( 'return {'
