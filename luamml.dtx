@@ -170,16 +170,20 @@
 % The most important interface is for setting the flag which controls how the
 % formulas should be converted.
 %
-% \begin{macro}{\luamml_flag_process:}
+% \begin{macro}{\luamml_process:}
 %   Consider the current formula to be a complete, free-standing mathematical
 %   expression which should be converted to MathML. Additionally, the formula
 %   is also saved in the \texttt{start\_math} node as with
-%   \cs{luamml_flag_save:}.
+%   \cs{luamml_save:}.
 %    \begin{macrocode}
-\cs_new_protected:Npn \luamml_flag_process: {
+\cs_new_protected:Npn \luamml_process: {
   \tl_set:Nn \l__luamml_label_tl {}
   \int_set:Nn \l__luamml_flag_int { 3 }
 }
+%    \end{macrocode}
+% Temporarly for compatibility
+%    \begin{macrocode}
+\cs_set_eq:NN \luamml_flag_process: \luamml_process:
 %    \end{macrocode}
 % \end{macro}
 %
@@ -194,6 +198,7 @@
     } {2}
   ) +
 }
+%    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\__luamml_style_to_num:N}
@@ -215,61 +220,76 @@
 % \end{macro}
 %
 %
-% \begin{macro}{\luamml_flag_save:n,
-%               \luamml_flag_save:nN,
-%               \luamml_flag_save:nn,
-%               \luamml_flag_save:nNn}
+% \begin{macro}{\luamml_save:n,
+%               \luamml_save:nN,
+%               \luamml_save:nn,
+%               \luamml_save:nNn}
 %   Convert the current formula but only save it's representation in the math
 %   node without emitting it as a complete formula. This is useful when the
-%   expression forms part of a bigger formula and will be intergrated into it's
+%   expression forms part of a bigger formula and will be integrated into it's
 %   MathML tables later by special code.
-%   It optinally accepts three parameters: A label, one math style command
+%   It optionally accepts three parameters: A label, one math style command
 %   (\cs{displaystyle}, \cs{textstyle}, etc.) which is the implicit math style
 %   (so the style which the surrounding code expects this style to have) and a
 %   name for the root element (defaults to \texttt{mrow}).
 %   If the root element name is \texttt{mrow}, it will get suppressed in some
 %   cases.
 %    \begin{macrocode}
-\cs_new_protected:Npn \luamml_flag_save:n #1 {
+\cs_new_protected:Npn \luamml_save:n #1 {
   \tl_set:Nn \l__luamml_label_tl {#1}
   \int_set:Nn \l__luamml_flag_int { \__luamml_maybe_structelem: 1 }
 }
-\cs_new_protected:Npn \luamml_flag_save:nN #1#2 {
+\cs_new_protected:Npn \luamml_save:nN #1#2 {
   \tl_set:Nn \l__luamml_label_tl {#1}
   \int_set:Nn \l__luamml_flag_int { \__luamml_maybe_structelem: 17 + \__luamml_style_to_num:N #2 }
 }
-\cs_new_protected:Npn \luamml_flag_save:nn #1 {
+\cs_new_protected:Npn \luamml_save:nn #1 {
   \tl_set:Nn \l__luamml_label_tl {#1}
   \int_set:Nn \l__luamml_flag_int { \__luamml_maybe_structelem: 5 }
   \tl_set:Nn \l__luamml_root_tl
 }
-\cs_new_protected:Npn \luamml_flag_save:nNn #1#2 {
+\cs_new_protected:Npn \luamml_save:nNn #1#2 {
   \tl_set:Nn \l__luamml_label_tl {#1}
   \int_set:Nn \l__luamml_flag_int { \__luamml_maybe_structelem: 21 + \__luamml_style_to_num:N #2 }
   \tl_set:Nn \l__luamml_root_tl
 }
 %    \end{macrocode}
-% \end{macro}
-%
-% \begin{macro}{\luamml_flag_ignore:}
-%   Completely ignore the math mode material.
+% Temporarly for compatibility
 %    \begin{macrocode}
-\cs_new_protected:Npn \luamml_flag_ignore: {
-  \int_set:Nn \l__luamml_flag_int { 0 }
-}
+\cs_set_eq:NN \luamml_flag_save:n \luamml_save:n
+\cs_set_eq:NN \luamml_flag_save:nN \luamml_save:nN
+\cs_set_eq:NN \luamml_flag_save:nn \luamml_save:nn
+\cs_set_eq:NN \luamml_flag_save:nNn \luamml_save:nNn
 %    \end{macrocode}
 % \end{macro}
 %
-% \begin{macro}{\luamml_flag_structelem:}
-%   Like \cs{luamml_flag_process:}, but additionally add PDF structure
+% \begin{macro}{\luamml_ignore:}
+%   Completely ignore the math mode material.
+%    \begin{macrocode}
+\cs_new_protected:Npn \luamml_ignore: {
+  \int_set:Nn \l__luamml_flag_int { 0 }
+}
+%    \end{macrocode}
+% Temporarly for compatibility
+%    \begin{macrocode}
+\cs_set_eq:NN \luamml_flag_ignore: \luamml_ignore:
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\luamml_structelem:}
+%   Like \cs{luamml_process:}, but additionally adds PDF structure
 %   elements. This only works in Lua\TeX\ and requires that the \pkg{tagpdf} package
 %   has been loaded \emph{before} \texttt{luamml}.
 %    \begin{macrocode}
 %<*luatex>
-\cs_new_protected:Npn \luamml_flag_structelem: {
+\cs_new_protected:Npn \luamml_structelem: {
   \tl_set:Nn \l__luamml_label_tl {}
   \int_set:Nn \l__luamml_flag_int { 11 }
 }
+%    \end{macrocode}
+% Temporarly for compatibility
+%    \begin{macrocode}
+\cs_set_eq:NN \luamml_flag_structelem: \luamml_structelem:
 %</luatex>
 %    \end{macrocode}
 % \end{macro}
@@ -282,7 +302,7 @@
 %   The value is fully expanded when the file is written.
 %   
 %   Only complete formulas get written into files (so formulas where
-%   \cs{luamml_flag_process:} or \cs{luamml_flag_structelem:} are in effect).
+%   \cs{luamml_process:} or \cs{luamml_structelem:} are in effect).
 %
 %   Only implemented in Lua\TeX, in pdf\TeX\ the arguments for \texttt{pdfmml}
 %   determine the output location.
@@ -304,7 +324,7 @@
 %
 % By default, the flag is set to assume complete formulas.
 %    \begin{macrocode}
-\luamml_flag_process:
+\luamml_process:
 %    \end{macrocode}
 %
 % \subsection{Annotations}
@@ -321,7 +341,7 @@
 % let Lua\TeX determine the number itself.
 %
 % Passing the first parameter explicitly is useful for any annotations which
-% should be compatible with fututre pdf\TeX versions of this functionality.
+% should be compatible with future pdf\TeX versions of this functionality.
 %    \begin{macrocode}
 \cs_new_protected:Npn \luamml_annotate:nen #1#2#3 {
   \__luamml_annotate_begin:

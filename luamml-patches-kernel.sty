@@ -7,7 +7,7 @@
     \m@th #1 {
       #2
     }
-    \luamml_flag_save:nNn {mathsmash} #1 {mpadded}
+    \luamml_save:nNn {mathsmash} #1 {mpadded}
     \luamml_pdf_write:
     $
   }
@@ -28,7 +28,7 @@
     \m@th
     #1
     {#2}
-    \luamml_flag_save:nNn {mathphant} #1 {mphantom}
+    \luamml_save:nNn {mathphant} #1 {mphantom}
     $
   }
   \luamml_annotate:nen {1} {
