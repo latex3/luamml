@@ -19,7 +19,7 @@ runs:
     - name: Send to CTAN
       uses: zauguin/ctan-upload@v0.1
       with:
-        package-name: luaotfload
+        package-name: luamml
         version: ${{ inputs.version }}
         author: 'Marcel Krüger, LaTeX Project Team'
         uploader: ${{ inputs.uploader }}
