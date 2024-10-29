@@ -1,0 +1,78 @@
+name: Release
+
+on:
+  # Only triggers for new tags
+  push:
+    tags: "*"
+
+jobs:
+  # Mostly the same as the main.yaml workflow, but we only use a single job
+  l3build:
+    runs-on: ubuntu-latest
+    steps:
+      # Boilerplate
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - run: sudo apt-get install tidy
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v3
+        with:
+          # Here we use the same list of packages as in the testing workflow.
+          package_file: .github/tl_packages
+      - name: Run l3build
+        run: l3build ctan -H --show-log-on-error
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Package
+          path: |
+            build/distrib/ctan/*.zip
+            ctan.ann
+      - name: Validate CTAN package
+        uses: ./.github/actions/ctan-upload
+        with:
+          uploader: Dummy Name
+          email: dryrun@example.com
+          filename: "build/distrib/ctan/luaotfload-ctan.zip"
+          dry-run: true
+
+  github:
+    runs-on: ubuntu-latex
+    needs:
+      - l3build
+    steps:
+      - name: Download package artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Package
+      - name: Create GitHub release
+        uses: ncipollo/release-action@2c591bcc8ecdcd2db72b97d6147f871fcd833ba5
+        id: release
+        with:
+          artifacts: "build/distrib/ctan/*.zip"
+          prerelease: ${{ endsWith(github.ref, '-dev') }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          bodyFile: ctan.ann
+
+  ctan-upload:
+    if: "${{ !endsWith(github.ref, '-dev') }}"
+    runs-on: ubuntu-latest
+    environment: CTAN
+    needs:
+      - l3build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+      - name: Download package artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Package
+      - name: Upload CTAN package
+        uses: ./.github/actions/ctan-upload
+        with:
+          uploader: ${{ secrets.CTAN_NAME }}
+          email: ${{ secrets.CTAN_EMAIL }}
+          filename: "build/distrib/ctan/luaotfload-ctan.zip"
+          dry-run: false
