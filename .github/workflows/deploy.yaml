@@ -33,11 +33,11 @@ jobs:
         with:
           uploader: Dummy Name
           email: dryrun@example.com
-          filename: "build/distrib/ctan/luaotfload-ctan.zip"
+          filename: "build/distrib/ctan/luamml-ctan.zip"
           dry-run: true
 
   github:
-    runs-on: ubuntu-latex
+    runs-on: ubuntu-latest
     needs:
       - l3build
     steps:
@@ -52,7 +52,7 @@ jobs:
           artifacts: "build/distrib/ctan/*.zip"
           prerelease: ${{ endsWith(github.ref, '-dev') }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          bodyFile: ctan.ann
+          # bodyFile: ctan.ann
 
   ctan-upload:
     if: "${{ !endsWith(github.ref, '-dev') }}"
@@ -74,5 +74,5 @@ jobs:
         with:
           uploader: ${{ secrets.CTAN_NAME }}
           email: ${{ secrets.CTAN_EMAIL }}
-          filename: "build/distrib/ctan/luaotfload-ctan.zip"
+          filename: "build/distrib/ctan/luamml-ctan.zip"
           dry-run: false
