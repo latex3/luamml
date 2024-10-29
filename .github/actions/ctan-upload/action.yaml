@@ -34,5 +34,5 @@ runs:
           LuaMML is an experimental package to automatically generate a MathML representation of mathematical expessions written in LuaLaTeX documents. These MathML representations can be used for improving accessibility or to ease conversion into new output formats like HTML.
         filename: ${{ inputs.filename }}
         dry-run: ${{ inputs.dry-run }}
-        announcement-filename: ctan.ann
+        # announcement-filename: ctan.ann
         note: Uploaded automatically by GitHub Actions.
