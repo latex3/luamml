@@ -145,8 +145,8 @@
 </math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
   <mtable columnalign="right left right left" columnspacing="0 .8em 0" displaystyle="true">
-    <mlabeledtr>
-      <mtd>
+    <mtr>
+      <mtd intent=":equationlabel">
         <mtext>(1)</mtext>
       </mtd>
       <mtd>
@@ -176,9 +176,9 @@
         <mo lspace="0.278em" rspace="0">−</mo>
         <mn>1</mn>
       </mtd>
-    </mlabeledtr>
-    <mlabeledtr>
-      <mtd>
+    </mtr>
+    <mtr>
+      <mtd intent=":equationlabel">
         <mtext>(2)</mtext>
       </mtd>
       <mtd>
@@ -199,9 +199,9 @@
       <mtd>
         <mi />
       </mtd>
-    </mlabeledtr>
-    <mlabeledtr>
-      <mtd>
+    </mtr>
+    <mtr>
+      <mtd intent=":equationlabel">
         <mtext>(3)</mtext>
       </mtd>
       <mtd>
@@ -216,7 +216,7 @@
       <mtd>
         <mi />
       </mtd>
-    </mlabeledtr>
+    </mtr>
   </mtable>
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
