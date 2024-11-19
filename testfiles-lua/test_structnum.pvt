@@ -10,7 +10,6 @@
  pdfstandard=a-4f,
  uncompress
 }
-
 \documentclass{article}
 
 \usepackage{unicode-math}
@@ -23,13 +22,14 @@
 \tagpdfsetup{math/mathml/AF=false}
 \begin{document}
 \ExplSyntaxOn
-\luamml_structelem:
-$a = b \quad
- \tagstructbegin{tag=mtext,stash}\tagmcbegin{}
- \luamml_annotate:en{nucleus=true,structnum=\tag_get:n{struct_num}}
-  {\mbox{some~text~with~\emph{structure}}}
- \tagmcend\tagstructend 
-$
+test
+%\luamml_structelem:
+%$a = b \quad
+% \tagstructbegin{tag=mtext,stash}\tagmcbegin{}
+% \luamml_annotate:en{nucleus=true,structnum=\tag_get:n{struct_num}}
+%  {\mbox{some~text~with~\emph{structure}}}
+% \tagmcend\tagstructend 
+%$
 \ExplSyntaxOff
 \end{document}
 
