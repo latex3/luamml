@@ -1,7 +1,6 @@
 \ExplSyntaxOn
 \sys_gset_rand_seed:n{42}
 \ExplSyntaxOff
-\input{regression-test}
 \DocumentMetadata{
  lang=en,
  testphase={phase-III,math},
@@ -10,6 +9,7 @@
  pdfstandard=a-4f,
  uncompress
 }
+\input{regression-test}
 \documentclass{article}
 
 \usepackage{unicode-math}
