@@ -12,9 +12,15 @@
 }
 
 \documentclass{article}
-\usepackage{luamml}
+
 \usepackage{unicode-math}
 
+% suppress writing of luamml-mathml
+\tagpdfsetup{math/mathml/luamml/write=false} %
+
+% suppress mathml-AF reading
+\tagpdfsetup{math/mathml/sources=} %
+\tagpdfsetup{math/mathml/AF=false}
 \begin{document}
 \ExplSyntaxOn
 \luamml_structelem:
