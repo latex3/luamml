@@ -4,14 +4,14 @@
 \DocumentMetadata{
   uncompress,
   pdfversion = 2.0,
-  testphase = phase-I,
+  testphase = {phase-III,math},
 }
 \input{regression-test}
 \documentclass{article}
-\usepackage[structelem]{luamml-demo}
+
 
 \usepackage{unicode-math}
-
+\newcommand\LuaMMLTagAF[2]{#2}
 \begin{document}
 \tagstructbegin{tag=Document}
 
