@@ -1,0 +1,2059 @@
+%PDF-2.0
+%���������
+49 0 obj
+<< /O/NSO/NS 13 0 R/displaystyle(true)/scriptlevel(0) >>
+endobj
+52 0 obj
+<< /O/NSO/NS 13 0 R/lspace(0.278em)/rspace(0.278em) >>
+endobj
+80 0 obj
+<< /O/NSO/NS 13 0 R/display(block) >>
+endobj
+83 0 obj
+<< /O/NSO/NS 13 0 R/fence(true)/lspace(0)/rspace(0)/symmetric(true) >>
+endobj
+85 0 obj
+<< /O/NSO/NS 13 0 R/width(-4.981pt) >>
+endobj
+87 0 obj
+<< /O/NSO/NS 13 0 R/lspace(+4.981pt)/width(+9.963pt) >>
+endobj
+102 0 obj
+<< /O/NSO/NS 13 0 R/width(1.196pt) >>
+endobj
+103 0 obj
+<</Subtype/application#2Fmathml+xml
+ /Length 1105 >>       
+stream
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo fence="true" lspace="0" rspace="0" symmetric="true">(</mo><mspace width="-4.981pt"/><mpadded lspace="+4.981pt" width="+9.963pt"><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mpadded><mspace width="-4.981pt"/><mo fence="true" lspace="0" rspace="0" symmetric="true">)</mo></mrow><mo lspace="0.278em" rspace="0.278em">=</mo><mrow><mo fence="true" lspace="0" rspace="0" symmetric="true">{</mo><mpadded lspace="+4.981pt" width="+9.963pt"><mtable><mtr><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mtext>if <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝑎</mi><mo lspace="0.278em" rspace="0.278em">=</mo><mi>𝑏</mi></math></mtext><mi/></mtd></mtr><mtr><mtd columnalign="left"><mn>2</mn></mtd><mtd columnalign="left"><mtext>else</mtext><mi/></mtd></mtr></mtable></mpadded><mspace width="1.196pt"/></mrow></math>
+endstream
+endobj
+24 0 obj
+<< /Type /Filespec /AFRelationship /Supplement /F (test.xml) /UF <FEFF0074006500730074002E0078006D006C> /EF<</F 103 0 R/UF 103 0 R>> >>
+endobj
+112 0 obj
+<< /O/NSO/NS 13 0 R/lspace(0)/rspace(0.222em) >>
+endobj
+115 0 obj
+<< /O/NSO/NS 13 0 R/lspace(0.222em)/rspace(0.222em) >>
+endobj
+129 0 obj
+<< /O/NSO/NS 13 0 R/lspace(0)/rspace(0) >>
+endobj
+130 0 obj
+<</Subtype/application#2Fmathml+xml
+ /Length 469 >>        
+stream
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝑥</mi><mo lspace="0.278em" rspace="0.278em">=</mo><mfrac><mrow><mo lspace="0" rspace="0.222em">−</mo><mi>𝑏</mi><mo lspace="0.222em" rspace="0.222em">±</mo><msqrt><mrow><msup><mi>𝑏</mi><mn>2</mn></msup><mo lspace="0.222em" rspace="0.222em">−</mo><mn>4</mn><mi>𝑎</mi><mi>𝑐</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>𝑎</mi></mrow></mfrac><mo lspace="0" rspace="0">.</mo></math>
+endstream
+endobj
+104 0 obj
+<< /Type /Filespec /AFRelationship /Supplement /F (test.xml) /UF <FEFF0074006500730074002E0078006D006C> /EF<</F 130 0 R/UF 130 0 R>> >>
+endobj
+136 0 obj
+<< /O/NSO/NS 13 0 R/lspace(0)/movablelimits(true)/rspace(0.167em) >>
+endobj
+144 0 obj
+<< /O/NSO/NS 13 0 R/stretchy(true) >>
+endobj
+148 0 obj
+<< /O/NSO/NS 13 0 R/mathvariant(normal) >>
+endobj
+149 0 obj
+<</Subtype/application#2Fmathml+xml
+ /Length 316 >>        
+stream
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo lspace="0" movablelimits="true" rspace="0.167em">∑</mo><mi>𝑎</mi></munder><munder><mi>𝑐</mi><mo>_</mo></munder><mover><mi>𝑏</mi><mo stretchy="true">.</mo></mover><msup><mi>𝑐</mi><mi mathvariant="normal">′</mi></msup></math>
+endstream
+endobj
+131 0 obj
+<< /Type /Filespec /AFRelationship /Supplement /F (test.xml) /UF <FEFF0074006500730074002E0078006D006C> /EF<</F 149 0 R/UF 149 0 R>> >>
+endobj
+171 0 obj
+<< /O/NSO/NS 13 0 R/lspace(0.278em)/rspace(0) >>
+endobj
+176 0 obj
+<< /O/NSO/NS 13 0 R/fence(true)/lspace(0)/maxsize(17.861pt)/minsize(17.861pt)/rspace(0)/symmetric(true) >>
+endobj
+199 0 obj
+<< /O/NSO/NS 13 0 R/columnalign(right left right left)/columnspacing(0 .8em 0)/displaystyle(true) >>
+endobj
+202 0 obj
+<< /O/NSO/NS 13 0 R/intent(:equationlabel) >>
+endobj
+210 0 obj
+<</Subtype/application#2Fmathml+xml
+ /Length 1155 >>       
+stream
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="right left right left" columnspacing="0 .8em 0" displaystyle="true"><mtr><mtd intent=":equationlabel"><mtext>(1)</mtext></mtd><mtd><mi>𝑎</mi><mi>𝑏</mi><mi>𝑐</mi></mtd><mtd><mi/><mo lspace="0.278em" rspace="0.278em">=</mo><mi>𝑑</mi><mi>𝑒</mi><mi>𝑓</mi></mtd><mtd><msup><mi>𝑒</mi><mrow><mi mathvariant="normal">i</mi><mi>𝜋</mi></mrow></msup></mtd><mtd><mi/><mo lspace="0.278em" rspace="0">=</mo><mo lspace="0.278em" rspace="0">−</mo><mn>1</mn></mtd></mtr><mtr><mtd intent=":equationlabel"><mtext>(2)</mtext></mtd><mtd><mo fence="true" lspace="0" maxsize="17.861pt" minsize="17.861pt" rspace="0" symmetric="true">(</mo><mn>1</mn><mo lspace="0.222em" rspace="0.222em">+</mo><mn>2</mn></mtd><mtd><mi/><mo lspace="0.278em" rspace="0.278em">=</mo><mn>3</mn><mo fence="true" lspace="0" maxsize="17.861pt" minsize="17.861pt" rspace="0" symmetric="true">)</mo></mtd><mtd><mi/></mtd><mtd><mi/></mtd></mtr><mtr><mtd intent=":equationlabel"><mtext>(3)</mtext></mtd><mtd><mn>5</mn></mtd><mtd><mi/></mtd><mtd><mi/></mtd><mtd><mi/></mtd></mtr></mtable></math>
+endstream
+endobj
+150 0 obj
+<< /Type /Filespec /AFRelationship /Supplement /F (test.xml) /UF <FEFF0074006500730074002E0078006D006C> /EF<</F 210 0 R/UF 210 0 R>> >>
+endobj
+216 0 obj
+<< /O/NSO/NS 13 0 R/lspace(0)/rspace(0)/stretchy(false) >>
+endobj
+229 0 obj
+<</Subtype/application#2Fmathml+xml
+ /Length 511 >>        
+stream
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">sin</mi><mo lspace="0" rspace="0" stretchy="false">(</mo><mi>𝑥</mi><mo lspace="0" rspace="0" stretchy="false">)</mo><mo lspace="0.222em" rspace="0.222em">−</mo><mi mathvariant="normal">sin</mi><mo lspace="0" rspace="0" stretchy="false">(</mo><mi>𝑥</mi><mo lspace="0.222em" rspace="0.222em">+</mo><mn>2</mn><mi>𝜋</mi><mo lspace="0" rspace="0" stretchy="false">)</mo><mo lspace="0.278em" rspace="0.278em">=</mo><mn>0</mn></math>
+endstream
+endobj
+211 0 obj
+<< /Type /Filespec /AFRelationship /Supplement /F (test.xml) /UF <FEFF0074006500730074002E0078006D006C> /EF<</F 229 0 R/UF 229 0 R>> >>
+endobj
+230 0 obj
+<< /Type /Metadata /Subtype /XML /Length 11693 >>      
+stream
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/">
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about=""
+    xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+    xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"
+    xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+    xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+    xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
+    xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/"
+    xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/"
+    xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/"
+    xmlns:pdfxid="http://www.npes.org/pdfx/ns/id/"
+    xmlns:prism="http://prismstandard.org/namespaces/basic/3.0/"
+    xmlns:stFnt="http://ns.adobe.com/xap/1.0/sType/Font#"
+    xmlns:Iptc4xmpCore="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/"
+    xmlns:pdfaExtension="http://www.aiim.org/pdfa/ns/extension/"
+    xmlns:pdfaSchema="http://www.aiim.org/pdfa/ns/schema#"
+    xmlns:pdfaProperty="http://www.aiim.org/pdfa/ns/property#"
+    xmlns:pdfaType="http://www.aiim.org/pdfa/ns/type#"
+    xmlns:pdfaField="http://www.aiim.org/pdfa/ns/field#">
+   <pdfaExtension:schemas>
+    <rdf:Bag>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>XMP Media Management Schema</pdfaSchema:schema>
+      <pdfaSchema:prefix>xmpMM</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://ns.adobe.com/xap/1.0/mm/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>OriginalDocumentID</pdfaProperty:name>
+         <pdfaProperty:valueType>URI</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>The common identifier for all versions and renditions of a document.</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>PDF/A Identification Schema</pdfaSchema:schema>
+      <pdfaSchema:prefix>pdfaid</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://www.aiim.org/pdfa/ns/id/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>year</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Year of standard</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>rev</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Revision year of standard</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>PDF/UA Universal Accessibility Schema</pdfaSchema:schema>
+      <pdfaSchema:prefix>pdfuaid</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://www.aiim.org/pdfua/ns/id/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>part</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Part of ISO 14289 standard</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>rev</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Revision of ISO 14289 standard</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>PDF/X ID Schema</pdfaSchema:schema>
+      <pdfaSchema:prefix>pdfxid</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://www.npes.org/pdfx/ns/id/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>GTS_PDFXVersion</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>ID of PDF/X standard</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>PRISM Basic Metadata</pdfaSchema:schema>
+      <pdfaSchema:prefix>prism</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://prismstandard.org/namespaces/basic/3.0/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>complianceProfile</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>PRISM specification compliance profile to which this document adheres</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>publicationName</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>Publication name</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>aggregationType</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>Publication type</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>bookEdition</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>Edition of the book in which the document was published</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>volume</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>Publication volume number</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>number</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>Publication issue number within a volume</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>pageRange</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>Page range for the document within the print version of its publication</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>issn</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>ISSN for the printed publication in which the document was published</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>eIssn</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>ISSN for the electronic publication in which the document was published</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>isbn</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>ISBN for the publication in which the document was published</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>doi</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>Digital Object Identifier for the document</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>url</pdfaProperty:name>
+         <pdfaProperty:valueType>URL</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>URL at which the document can be found</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>byteCount</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Approximate file size in octets</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>pageCount</pdfaProperty:name>
+         <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>Number of pages in the print version of the document</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>subtitle</pdfaProperty:name>
+         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+         <pdfaProperty:category>external</pdfaProperty:category>
+         <pdfaProperty:description>Document's subtitle</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+    </rdf:Bag>
+   </pdfaExtension:schemas>
+   <pdf:Producer>luahbtex-NN.NN.NN</pdf:Producer>
+   <pdf:PDFVersion>2.0</pdf:PDFVersion>
+   <dc:type>
+    <rdf:Bag>
+     <rdf:li>Text</rdf:li>
+    </rdf:Bag>
+   </dc:type>
+   <dc:language>
+    <rdf:Bag>
+     <rdf:li>en</rdf:li>
+    </rdf:Bag>
+   </dc:language>
+   <dc:date>
+    <rdf:Seq>
+     <rdf:li>2016-05-20T09:00:00Z</rdf:li>
+    </rdf:Seq>
+   </dc:date>
+   <dc:format>application/pdf</dc:format>
+   <dc:source>test_struct.tex</dc:source>
+   <xmp:CreatorTool>LaTeX</xmp:CreatorTool>
+   <xmp:CreateDate>2016-05-20T09:00:00Z</xmp:CreateDate>
+   <xmp:ModifyDate>2016-05-20T09:00:00Z</xmp:ModifyDate>
+   <xmp:MetadataDate>2016-05-20T09:00:00Z</xmp:MetadataDate>
+   <xmpMM:DocumentID>uuid:0629f6ef-2113-4b62-83f8-5725311a8337</xmpMM:DocumentID>
+   <xmpMM:InstanceID>uuid:0a57c455-157a-4141-8c19-6237d832fc80</xmpMM:InstanceID>
+   <prism:complianceProfile>three</prism:complianceProfile>
+   <prism:pageCount>1</prism:pageCount>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?>
+endstream
+endobj
+233 0 obj
+<< /Length 7848 >>       
+stream
+/opacity1 gs
+/Artifact BMC
+EMC
+/P<</MCID 0>> BDC
+BT
+/F15 9.96264 Tf
+1 0 0 1 148.712 657.235 Tm [<003F0032004800480051>]TJ
+ET
+EMC
+/mo<</MCID 1>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 244.283 627.612 Tm [<09C9>]TJ
+1 0 0 1 244.283 623.87 Tm [<09C8>]TJ
+1 0 0 1 244.283 610.196 Tm [<09C7>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 2>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 253.001 635.915 Tm [<0012>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 3>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 267.945 635.915 Tm [<0011>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 4>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 282.889 635.915 Tm [<0011>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 5>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 253.001 623.96 Tm [<0011>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 6>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 267.945 623.96 Tm [<0012>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 7>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 282.889 623.96 Tm [<0011>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 8>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 253.001 612.005 Tm [<0011>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 9>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 267.945 612.005 Tm [<0011>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 10>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 282.889 612.005 Tm [<0012>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mo<</MCID 11>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 287.87 627.612 Tm [<09CC>]TJ
+1 0 0 1 287.87 623.87 Tm [<09CB>]TJ
+1 0 0 1 287.87 610.196 Tm [<09CA>]TJ
+ET
+EMC
+/mo<</MCID 12>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 299.355 623.861 Tm [<001E>]TJ
+ET
+EMC
+/mo<</MCID 13>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 309.873 623.861 Tm [<09D3>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 14>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 318.859 630.655 Tm [<0012>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mtext<</MCID 15>> BDC
+BT
+/F15 9.96264 Tf
+1 0 0 1 333.803 630.655 Tm [<004200370067>]TJ
+ET
+EMC
+/mi<</MCID 16>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 342.939 630.655 Tm [<0510>]TJ
+ET
+EMC
+/mo<</MCID 17>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 350.977 630.655 Tm [<001E>]TJ
+ET
+EMC
+/mi<</MCID 18>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 361.495 630.655 Tm [<0511>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mn<</MCID 19>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 318.859 616.309 Tm [<0013>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mtext<</MCID 20>> BDC
+BT
+/F15 9.96264 Tf
+1 0 0 1 333.803 616.309 Tm [<0032004800620032>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mi<</MCID 21>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 259.389 584.175 Tm [<0527>]TJ
+ET
+EMC
+/mo<</MCID 22>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 267.855 584.175 Tm [<001E>]TJ
+ET
+EMC
+/mo<</MCID 23>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 279.569 590.92 Tm [<0A37>]TJ
+ET
+EMC
+/mi<</MCID 24>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 287.319 590.92 Tm [<0511>]TJ
+ET
+EMC
+/mo<</MCID 25>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 293.947 590.92 Tm [<0A3B>]TJ
+ET
+EMC
+/Artifact BMC
+BT
+/F20 9.96264 Tf
+1 0 0 1 303.912 599.651 Tm [<0C05>]TJ
+ET
+q
+1 0 0 1 312.21 599.851 cm
+[] 0 d 0 J 0.398 w 0 0 m 35.684 0 l S
+Q
+EMC
+/mi<</MCID 26>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 312.21 590.92 Tm [<0511>]TJ
+ET
+EMC
+/mn<</MCID 27>> BDC
+BT
+/F21 6.97385 Tf
+1 0 0 1 316.624 593.799 Tm [<03F5>]TJ
+ET
+EMC
+/mo<</MCID 28>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 323.364 590.92 Tm [<0A37>]TJ
+ET
+EMC
+/mn<</MCID 29>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 333.329 590.92 Tm [<0015>]TJ
+ET
+EMC
+/mi<</MCID 30>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 338.31 590.92 Tm [<0510>]TJ
+ET
+EMC
+/mi<</MCID 31>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 343.58 590.92 Tm [<0512>]TJ
+ET
+EMC
+/Artifact BMC
+q
+1 0 0 1 279.569 586.666 cm
+[] 0 d 0 J 0.398 w 0 0 m 68.325 0 l S
+Q
+EMC
+/mn<</MCID 32>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 308.605 577.341 Tm [<0013>]TJ
+ET
+EMC
+/mi<</MCID 33>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 313.587 577.341 Tm [<0510>]TJ
+ET
+EMC
+/mo<</MCID 34>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 349.089 584.175 Tm [<000F>]TJ
+ET
+EMC
+/mo<</MCID 35>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 289.257 554.287 Tm [<0C02>]TJ
+ET
+EMC
+/mi<</MCID 36>> BDC
+BT
+/F21 6.97385 Tf
+1 0 0 1 294.289 543.827 Tm [<057C>]TJ
+ET
+EMC
+/mi<</MCID 37>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 305.304 554.287 Tm [<0512>]TJ
+ET
+EMC
+/Artifact BMC
+q
+1 0 0 1 305.304 552.783 cm
+[] 0 d 0 J 0.398 w 0 0 m 4.314 0 l S
+Q
+EMC
+/mo<</MCID 38>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 313.902 556.718 Tm [<06FE>]TJ
+ET
+EMC
+/mi<</MCID 39>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 309.618 554.287 Tm [<0511>]TJ
+ET
+EMC
+/mi<</MCID 40>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 314.031 554.287 Tm [<0512>]TJ
+ET
+EMC
+/mi<</MCID 41>> BDC
+BT
+/F21 6.97385 Tf
+1 0 0 1 318.594 557.904 Tm [<0BA5>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mi<</MCID 42>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 231.386 514.437 Tm [<0510>]TJ
+ET
+EMC
+/mi<</MCID 43>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 236.656 514.437 Tm [<0511>]TJ
+ET
+EMC
+/mi<</MCID 44>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 241.07 514.437 Tm [<0512>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mo<</MCID 45>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 248.151 514.437 Tm [<001E>]TJ
+ET
+EMC
+/mi<</MCID 46>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 258.669 514.437 Tm [<0513>]TJ
+ET
+EMC
+/mi<</MCID 47>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 264.089 514.437 Tm [<0514>]TJ
+ET
+EMC
+/mi<</MCID 48>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 268.731 514.437 Tm [<0515>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mi<</MCID 49>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 356.481 514.437 Tm [<0514>]TJ
+ET
+EMC
+/mi<</MCID 50>> BDC
+BT
+/F32 6.97385 Tf
+1 0 0 1 361.124 518.053 Tm [<0042>]TJ
+ET
+EMC
+/mi<</MCID 51>> BDC
+BT
+/F21 6.97385 Tf
+1 0 0 1 363.377 518.053 Tm [<11CE>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mo<</MCID 52>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 371.36 514.437 Tm [<001E>]TJ
+ET
+EMC
+/mo<</MCID 53>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 381.879 514.437 Tm [<0A37>]TJ
+ET
+EMC
+/mn<</MCID 54>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 389.63 514.437 Tm [<0012>]TJ
+ET
+EMC
+/Artifact BMC
+BT
+/F15 9.96264 Tf
+1 0 0 1 464.747 514.437 Tm [<005500520056>]TJ
+ET
+EMC
+/mo<</MCID 55>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 216.637 493.954 Tm [<0997>]TJ
+ET
+EMC
+/mn<</MCID 56>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 223.242 493.954 Tm [<0012>]TJ
+ET
+EMC
+/mo<</MCID 57>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 230.437 493.954 Tm [<000C>]TJ
+ET
+EMC
+/mn<</MCID 58>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 240.402 493.954 Tm [<0013>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+/mo<</MCID 59>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 248.151 493.954 Tm [<001E>]TJ
+ET
+EMC
+/mn<</MCID 60>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 258.669 493.954 Tm [<0014>]TJ
+ET
+EMC
+/mo<</MCID 61>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 263.65 493.954 Tm [<0998>]TJ
+ET
+EMC
+/Artifact BMC
+BT
+/F15 9.96264 Tf
+1 0 0 1 464.747 493.954 Tm [<0055006B0056>]TJ
+ET
+EMC
+/mn<</MCID 62>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 240.402 473.67 Tm [<0016>]TJ
+ET
+EMC
+/Artifact BMC
+BT
+/F15 9.96264 Tf
+1 0 0 1 464.747 473.67 Tm [<0055006A0056>]TJ
+1 0 0 1 148.712 451.752 Tm [<003100620067003B0042004800690067>]TJ
+ET
+EMC
+/mi<</MCID 63>> BDC
+BT
+/F15 9.96264 Tf
+1 0 0 1 180.453 451.752 Tm [<00620042004D>]TJ
+ET
+EMC
+/mo<</MCID 64>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 192.687 451.752 Tm [<0009>]TJ
+ET
+EMC
+/mi<</MCID 65>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 196.563 451.752 Tm [<0527>]TJ
+ET
+EMC
+/mo<</MCID 66>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 202.262 451.752 Tm [<000A>]TJ
+ET
+EMC
+/mo<</MCID 67>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 208.351 451.752 Tm [<0A37>]TJ
+ET
+EMC
+/mi<</MCID 68>> BDC
+BT
+/F15 9.96264 Tf
+1 0 0 1 218.316 451.752 Tm [<00620042004D>]TJ
+ET
+EMC
+/mo<</MCID 69>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 230.55 451.752 Tm [<0009>]TJ
+ET
+EMC
+/mi<</MCID 70>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 234.425 451.752 Tm [<0527>]TJ
+ET
+EMC
+/mo<</MCID 71>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 242.338 451.752 Tm [<000C>]TJ
+ET
+EMC
+/mn<</MCID 72>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 252.303 451.752 Tm [<0013>]TJ
+ET
+EMC
+/mi<</MCID 73>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 257.284 451.752 Tm [<117A>]TJ
+ET
+EMC
+/mo<</MCID 74>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 263.212 451.752 Tm [<000A>]TJ
+ET
+EMC
+/mo<</MCID 75>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 269.854 451.752 Tm [<001E>]TJ
+ET
+EMC
+/mn<</MCID 76>> BDC
+BT
+/F20 9.96264 Tf
+1 0 0 1 280.373 451.752 Tm [<0011>]TJ
+ET
+EMC
+/Artifact BMC
+BT
+/F15 9.96264 Tf
+1 0 0 1 285.354 451.752 Tm [<0058>]TJ
+ET
+EMC
+/Artifact BMC
+BT
+/F15 9.96264 Tf
+1 0 0 1 303.133 89.365 Tm [<0052>]TJ
+ET
+EMC
+/Artifact BMC
+EMC
+endstream
+endobj
+232 0 obj
+<< /Type /Page /Contents 233 0 R /Resources 231 0 R /MediaBox [ 0 0 612 792 ] /StructParents 0/Tabs /S /Parent 238 0 R >>
+endobj
+231 0 obj
+<< /ExtGState 1 0 R /Font << /F15 234 0 R /F20 235 0 R /F21 236 0 R /F32 237 0 R >> >>
+endobj
+1 0 obj
+<< /opacity1 <</ca 1/CA 1>>  >>
+endobj
+239 0 obj
+<< /Marked true  >>
+endobj
+6 0 obj
+<< /Nums [0 [ 23 0 R 82 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 93 0 R 94 0 R 96 0 R 45 0 R 54 0 R 56 0 R 57 0 R 58 0 R 72 0 R 74 0 R 107 0 R 108 0 R 111 0 R 113 0 R 114 0 R 119 0 R 120 0 R 121 0 R 122 0 R 123 0 R 124 0 R 126 0 R 127 0 R 128 0 R 135 0 R 137 0 R 139 0 R 143 0 R 142 0 R 146 0 R 147 0 R 153 0 R 154 0 R 155 0 R 158 0 R 159 0 R 160 0 R 161 0 R 164 0 R 166 0 R 167 0 R 170 0 R 172 0 R 173 0 R 175 0 R 177 0 R 178 0 R 179 0 R 182 0 R 183 0 R 184 0 R 190 0 R 214 0 R 215 0 R 217 0 R 218 0 R 219 0 R 220 0 R 221 0 R 222 0 R 223 0 R 224 0 R 225 0 R 226 0 R 227 0 R 228 0 R] 
+] >>
+endobj
+240 0 obj
+<< /Limits [(ID.0002) (ID.0051)]/Names [(ID.0002) 21 0 R (ID.0003) 22 0 R (ID.0004) 23 0 R (ID.0005) 25 0 R (ID.0006) 26 0 R (ID.0007) 27 0 R (ID.0008) 28 0 R (ID.0009) 29 0 R (ID.0010) 30 0 R (ID.0011) 31 0 R (ID.0012) 32 0 R (ID.0013) 33 0 R (ID.0014) 34 0 R (ID.0015) 35 0 R (ID.0016) 36 0 R (ID.0017) 37 0 R (ID.0018) 38 0 R (ID.0019) 39 0 R (ID.0020) 40 0 R (ID.0021) 41 0 R (ID.0022) 42 0 R (ID.0023) 43 0 R (ID.0024) 44 0 R (ID.0025) 45 0 R (ID.0026) 46 0 R (ID.0027) 47 0 R (ID.0028) 48 0 R (ID.0029) 50 0 R (ID.0030) 51 0 R (ID.0031) 53 0 R (ID.0032) 54 0 R (ID.0033) 55 0 R (ID.0034) 56 0 R (ID.0035) 57 0 R (ID.0036) 58 0 R (ID.0037) 59 0 R (ID.0038) 60 0 R (ID.0039) 61 0 R (ID.0040) 62 0 R (ID.0041) 63 0 R (ID.0042) 64 0 R (ID.0043) 65 0 R (ID.0044) 66 0 R (ID.0045) 67 0 R (ID.0046) 68 0 R (ID.0047) 69 0 R (ID.0048) 70 0 R (ID.0049) 71 0 R (ID.0050) 72 0 R (ID.0051) 73 0 R ] >>
+endobj
+241 0 obj
+<< /Limits [(ID.0052) (ID.0101)]/Names [(ID.0052) 74 0 R (ID.0053) 75 0 R (ID.0054) 76 0 R (ID.0055) 77 0 R (ID.0056) 78 0 R (ID.0057) 79 0 R (ID.0058) 81 0 R (ID.0059) 82 0 R (ID.0060) 84 0 R (ID.0061) 86 0 R (ID.0062) 88 0 R (ID.0063) 89 0 R (ID.0064) 90 0 R (ID.0065) 91 0 R (ID.0066) 92 0 R (ID.0067) 93 0 R (ID.0068) 94 0 R (ID.0069) 95 0 R (ID.0070) 96 0 R (ID.0071) 97 0 R (ID.0072) 98 0 R (ID.0073) 99 0 R (ID.0074) 100 0 R (ID.0075) 101 0 R (ID.0076) 105 0 R (ID.0077) 106 0 R (ID.0078) 107 0 R (ID.0079) 108 0 R (ID.0080) 109 0 R (ID.0081) 110 0 R (ID.0082) 111 0 R (ID.0083) 113 0 R (ID.0084) 114 0 R (ID.0085) 116 0 R (ID.0086) 117 0 R (ID.0087) 118 0 R (ID.0088) 119 0 R (ID.0089) 120 0 R (ID.0090) 121 0 R (ID.0091) 122 0 R (ID.0092) 123 0 R (ID.0093) 124 0 R (ID.0094) 125 0 R (ID.0095) 126 0 R (ID.0096) 127 0 R (ID.0097) 128 0 R (ID.0098) 132 0 R (ID.0099) 133 0 R (ID.0100) 134 0 R (ID.0101) 135 0 R ] >>
+endobj
+242 0 obj
+<< /Limits [(ID.0102) (ID.0151)]/Names [(ID.0102) 137 0 R (ID.0103) 138 0 R (ID.0104) 139 0 R (ID.0105) 140 0 R (ID.0106) 141 0 R (ID.0107) 142 0 R (ID.0108) 143 0 R (ID.0109) 145 0 R (ID.0110) 146 0 R (ID.0111) 147 0 R (ID.0112) 151 0 R (ID.0113) 152 0 R (ID.0114) 153 0 R (ID.0115) 154 0 R (ID.0116) 155 0 R (ID.0117) 156 0 R (ID.0118) 157 0 R (ID.0119) 158 0 R (ID.0120) 159 0 R (ID.0121) 160 0 R (ID.0122) 161 0 R (ID.0123) 162 0 R (ID.0124) 163 0 R (ID.0125) 164 0 R (ID.0126) 165 0 R (ID.0127) 166 0 R (ID.0128) 167 0 R (ID.0129) 168 0 R (ID.0130) 169 0 R (ID.0131) 170 0 R (ID.0132) 172 0 R (ID.0133) 173 0 R (ID.0134) 174 0 R (ID.0135) 175 0 R (ID.0136) 177 0 R (ID.0137) 178 0 R (ID.0138) 179 0 R (ID.0139) 180 0 R (ID.0140) 181 0 R (ID.0141) 182 0 R (ID.0142) 183 0 R (ID.0143) 184 0 R (ID.0144) 185 0 R (ID.0145) 186 0 R (ID.0146) 187 0 R (ID.0147) 188 0 R (ID.0148) 189 0 R (ID.0149) 190 0 R (ID.0150) 191 0 R (ID.0151) 192 0 R ] >>
+endobj
+243 0 obj
+<< /Limits [(ID.0152) (ID.0182)]/Names [(ID.0152) 193 0 R (ID.0153) 194 0 R (ID.0154) 195 0 R (ID.0155) 196 0 R (ID.0156) 197 0 R (ID.0157) 198 0 R (ID.0158) 200 0 R (ID.0159) 201 0 R (ID.0160) 203 0 R (ID.0161) 204 0 R (ID.0162) 205 0 R (ID.0163) 206 0 R (ID.0164) 207 0 R (ID.0165) 208 0 R (ID.0166) 209 0 R (ID.0167) 212 0 R (ID.0168) 213 0 R (ID.0169) 214 0 R (ID.0170) 215 0 R (ID.0171) 217 0 R (ID.0172) 218 0 R (ID.0173) 219 0 R (ID.0174) 220 0 R (ID.0175) 221 0 R (ID.0176) 222 0 R (ID.0177) 223 0 R (ID.0178) 224 0 R (ID.0179) 225 0 R (ID.0180) 226 0 R (ID.0181) 227 0 R (ID.0182) 228 0 R ] >>
+endobj
+244 0 obj
+<< /Kids [240 0 R 241 0 R 242 0 R 243 0 R] >>
+endobj
+7 0 obj
+<< /Artifact /NonStruct /DocumentFragment /Art /Aside /Note /H7 /H6 /H8 /H6 /H9 /H6 /H10 /H6 /Title /P /FENote /Note /Sub /Span /Em /Span /Strong /Span /title /P /part /P /section /H1 /subsection /H2 /subsubsection /H3 /paragraph /H4 /subparagraph /H5 /list /L /itemize /L /enumerate /L /description /L /quote /BlockQuote /quotation /BlockQuote /verbatim /P /item /LI /itemlabel /Lbl /itembody /LBody /footnote /Note /footnotemark /Lbl /footnotelabel /Lbl /text-unit /Part /text /P /theorem-like /Sect /codeline /Span /float /Note /figures /Sect /tables /Sect  >>
+endobj
+9 0 obj
+<< /Type /Namespace /NS (http://iso.org/pdf/ssn)  >>
+endobj
+11 0 obj
+<< /Type /Namespace /NS (http://iso.org/pdf2/ssn)  >>
+endobj
+13 0 obj
+<< /Type /Namespace /NS (http://www.w3.org/1998/Math/MathML)  >>
+endobj
+16 0 obj
+<< /title [/Title 11 0 R] /part [/Title 11 0 R] /section [/H1 11 0 R] /subsection [/H2 11 0 R] /subsubsection [/H3 11 0 R] /paragraph [/H4 11 0 R] /subparagraph [/H5 11 0 R] /list [/L 11 0 R] /itemize [/L 11 0 R] /enumerate [/L 11 0 R] /description [/L 11 0 R] /quote [/BlockQuote 9 0 R] /quotation [/BlockQuote 9 0 R] /verbatim [/P 11 0 R] /item [/LI 11 0 R] /itemlabel [/Lbl 11 0 R] /itembody [/LBody 11 0 R] /footnote [/FENote 11 0 R] /footnotemark [/Lbl 11 0 R] /footnotelabel [/Lbl 11 0 R] /text-unit [/Part 11 0 R] /text [/P 11 0 R] /theorem-like [/Sect 11 0 R] /codeline [/Sub 11 0 R] /float [/Aside 11 0 R] /figures [/Sect 11 0 R] /tables [/Sect 11 0 R]  >>
+endobj
+15 0 obj
+<< /Type /Namespace /NS (https://www.latex-project.org/ns/dflt/2022) /RoleMapNS 16 0 R  >>
+endobj
+18 0 obj
+<< /chapter [/H1 11 0 R] /section [/H2 11 0 R] /subsection [/H3 11 0 R] /subsubsection [/H4 11 0 R] /paragraph [/H5 11 0 R] /subparagraph [/H6 11 0 R]  >>
+endobj
+17 0 obj
+<< /Type /Namespace /NS (https://www.latex-project.org/ns/book/2022) /RoleMapNS 18 0 R  >>
+endobj
+19 0 obj
+<< /Type /Namespace /NS (data:,C9B55C18-275C-494E-C10F-E4B83CD03F23)  >>
+endobj
+8 0 obj
+[ 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R  ]
+endobj
+21 0 obj
+<<  /Type /StructElem /S /Document /NS 11 0 R  /P 5 0 R /K 22 0 R /ID (ID.0002) >>
+endobj
+22 0 obj
+<<  /Type /StructElem /S /Document /NS 11 0 R  /P 21 0 R /K [23 0 R 25 0 R 105 0 R 132 0 R 151 0 R 212 0 R] /ID (ID.0003) >>
+endobj
+23 0 obj
+<<  /Type /StructElem /S /P /NS 11 0 R  /P 22 0 R /K <</Type /MCR /Pg 232 0 R /MCID 0>>  /ID (ID.0004) >>
+endobj
+25 0 obj
+<<  /Type /StructElem /AF [24 0 R] /S /Formula /NS 11 0 R  /P 22 0 R /K 79 0 R /ID (ID.0005) >>
+endobj
+26 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 89 0 R /K 27 0 R /ID (ID.0006) >>
+endobj
+27 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 26 0 R /K <</Type /MCR /Pg 232 0 R /MCID 2>>  /ID (ID.0007) >>
+endobj
+28 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 89 0 R /K 29 0 R /ID (ID.0008) >>
+endobj
+29 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 28 0 R /K <</Type /MCR /Pg 232 0 R /MCID 3>>  /ID (ID.0009) >>
+endobj
+30 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 89 0 R /K 31 0 R /ID (ID.0010) >>
+endobj
+31 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 30 0 R /K <</Type /MCR /Pg 232 0 R /MCID 4>>  /ID (ID.0011) >>
+endobj
+32 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 90 0 R /K 33 0 R /ID (ID.0012) >>
+endobj
+33 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 32 0 R /K <</Type /MCR /Pg 232 0 R /MCID 5>>  /ID (ID.0013) >>
+endobj
+34 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 90 0 R /K 35 0 R /ID (ID.0014) >>
+endobj
+35 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 34 0 R /K <</Type /MCR /Pg 232 0 R /MCID 6>>  /ID (ID.0015) >>
+endobj
+36 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 90 0 R /K 37 0 R /ID (ID.0016) >>
+endobj
+37 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 36 0 R /K <</Type /MCR /Pg 232 0 R /MCID 7>>  /ID (ID.0017) >>
+endobj
+38 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 91 0 R /K 39 0 R /ID (ID.0018) >>
+endobj
+39 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 38 0 R /K <</Type /MCR /Pg 232 0 R /MCID 8>>  /ID (ID.0019) >>
+endobj
+40 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 91 0 R /K 41 0 R /ID (ID.0020) >>
+endobj
+41 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 40 0 R /K <</Type /MCR /Pg 232 0 R /MCID 9>>  /ID (ID.0021) >>
+endobj
+42 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 91 0 R /K 43 0 R /ID (ID.0022) >>
+endobj
+43 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 42 0 R /K <</Type /MCR /Pg 232 0 R /MCID 10>>  /ID (ID.0023) >>
+endobj
+44 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 99 0 R /K 45 0 R /ID (ID.0024) >>
+endobj
+45 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 44 0 R /K <</Type /MCR /Pg 232 0 R /MCID 14>>  /ID (ID.0025) >>
+endobj
+46 0 obj
+<<  /Type /StructElem /S /Artifact /NS 13 0 R  /P 5 0 R /K [ 47 0 R] /ID (ID.0026) >>
+endobj
+47 0 obj
+<<  /Type /StructElem /S /math /NS 13 0 R  /P 46 0 R /K 48 0 R /ID (ID.0027) >>
+endobj
+48 0 obj
+<<  /Type /StructElem /A  49 0 R /S /mstyle /NS 13 0 R  /P 47 0 R /K [50 0 R 51 0 R 53 0 R] /ID (ID.0028) >>
+endobj
+50 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 48 0 R /ID (ID.0029) >>
+endobj
+51 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 48 0 R /ID (ID.0030) >>
+endobj
+53 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 48 0 R /ID (ID.0031) >>
+endobj
+54 0 obj
+<<  /Type /StructElem /S /mtext /NS 13 0 R  /P 69 0 R /K [<</Type /MCR /Pg 232 0 R /MCID 15>>  55 0 R] /ID (ID.0032) >>
+endobj
+55 0 obj
+<<  /Type /StructElem /S /math /NS 13 0 R  /P 54 0 R /K [56 0 R 57 0 R 58 0 R] /ID (ID.0033) >>
+endobj
+56 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 55 0 R /K <</Type /MCR /Pg 232 0 R /MCID 16>>  /ID (ID.0034) >>
+endobj
+57 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 55 0 R /K <</Type /MCR /Pg 232 0 R /MCID 17>>  /ID (ID.0035) >>
+endobj
+58 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 55 0 R /K <</Type /MCR /Pg 232 0 R /MCID 18>>  /ID (ID.0036) >>
+endobj
+59 0 obj
+<<  /Type /StructElem /S /Artifact /NS 13 0 R  /P 5 0 R /K [ 60 0 R] /ID (ID.0037) >>
+endobj
+60 0 obj
+<<  /Type /StructElem /S /math /NS 13 0 R  /P 59 0 R /K [61 0 R 62 0 R 63 0 R] /ID (ID.0038) >>
+endobj
+61 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 60 0 R /ID (ID.0039) >>
+endobj
+62 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 60 0 R /ID (ID.0040) >>
+endobj
+63 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 60 0 R /ID (ID.0041) >>
+endobj
+64 0 obj
+<<  /Type /StructElem /S /Artifact /NS 13 0 R  /P 5 0 R /K [ 65 0 R] /ID (ID.0042) >>
+endobj
+65 0 obj
+<<  /Type /StructElem /S /math /NS 13 0 R  /P 64 0 R /K [66 0 R 67 0 R 68 0 R] /ID (ID.0043) >>
+endobj
+66 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 65 0 R /ID (ID.0044) >>
+endobj
+67 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 65 0 R /ID (ID.0045) >>
+endobj
+68 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 65 0 R /ID (ID.0046) >>
+endobj
+69 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 99 0 R /K [54 0 R 70 0 R] /ID (ID.0047) >>
+endobj
+70 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 69 0 R /ID (ID.0048) >>
+endobj
+71 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 100 0 R /K 72 0 R /ID (ID.0049) >>
+endobj
+72 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 71 0 R /K <</Type /MCR /Pg 232 0 R /MCID 19>>  /ID (ID.0050) >>
+endobj
+73 0 obj
+<<  /Type /StructElem /S /Artifact /NS 13 0 R  /P 5 0 R /ID (ID.0051) >>
+endobj
+74 0 obj
+<<  /Type /StructElem /S /mtext /NS 13 0 R  /P 77 0 R /K <</Type /MCR /Pg 232 0 R /MCID 20>>  /ID (ID.0052) >>
+endobj
+75 0 obj
+<<  /Type /StructElem /S /Artifact /NS 13 0 R  /P 5 0 R /ID (ID.0053) >>
+endobj
+76 0 obj
+<<  /Type /StructElem /S /Artifact /NS 13 0 R  /P 5 0 R /ID (ID.0054) >>
+endobj
+77 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 100 0 R /K [74 0 R 78 0 R] /ID (ID.0055) >>
+endobj
+78 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 77 0 R /ID (ID.0056) >>
+endobj
+79 0 obj
+<<  /Type /StructElem /A  80 0 R /S /math /NS 13 0 R  /P 25 0 R /K [81 0 R 94 0 R 95 0 R] /ID (ID.0057) >>
+endobj
+81 0 obj
+<<  /Type /StructElem /S /mrow /NS 13 0 R  /P 79 0 R /K [82 0 R 84 0 R 86 0 R 92 0 R 93 0 R] /ID (ID.0058) >>
+endobj
+82 0 obj
+<<  /Type /StructElem /A  83 0 R /ActualText <FEFF0028> /S /mo /NS 13 0 R  /P 81 0 R /K <</Type /MCR /Pg 232 0 R /MCID 1>>  /ID (ID.0059) >>
+endobj
+84 0 obj
+<<  /Type /StructElem /A  85 0 R /S /mspace /NS 13 0 R  /P 81 0 R /ID (ID.0060) >>
+endobj
+86 0 obj
+<<  /Type /StructElem /A  87 0 R /S /mpadded /NS 13 0 R  /P 81 0 R /K 88 0 R /ID (ID.0061) >>
+endobj
+88 0 obj
+<<  /Type /StructElem /S /mtable /NS 13 0 R  /P 86 0 R /K [89 0 R 90 0 R 91 0 R] /ID (ID.0062) >>
+endobj
+89 0 obj
+<<  /Type /StructElem /S /mtr /NS 13 0 R  /P 88 0 R /K [26 0 R 28 0 R 30 0 R] /ID (ID.0063) >>
+endobj
+90 0 obj
+<<  /Type /StructElem /S /mtr /NS 13 0 R  /P 88 0 R /K [32 0 R 34 0 R 36 0 R] /ID (ID.0064) >>
+endobj
+91 0 obj
+<<  /Type /StructElem /S /mtr /NS 13 0 R  /P 88 0 R /K [38 0 R 40 0 R 42 0 R] /ID (ID.0065) >>
+endobj
+92 0 obj
+<<  /Type /StructElem /A  85 0 R /S /mspace /NS 13 0 R  /P 81 0 R /ID (ID.0066) >>
+endobj
+93 0 obj
+<<  /Type /StructElem /A  83 0 R /ActualText <FEFF0029> /S /mo /NS 13 0 R  /P 81 0 R /K <</Type /MCR /Pg 232 0 R /MCID 11>>  /ID (ID.0067) >>
+endobj
+94 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 79 0 R /K <</Type /MCR /Pg 232 0 R /MCID 12>>  /ID (ID.0068) >>
+endobj
+95 0 obj
+<<  /Type /StructElem /S /mrow /NS 13 0 R  /P 79 0 R /K [96 0 R 97 0 R 101 0 R] /ID (ID.0069) >>
+endobj
+96 0 obj
+<<  /Type /StructElem /A  83 0 R /ActualText <FEFF007B> /S /mo /NS 13 0 R  /P 95 0 R /K <</Type /MCR /Pg 232 0 R /MCID 13>>  /ID (ID.0070) >>
+endobj
+97 0 obj
+<<  /Type /StructElem /A  87 0 R /S /mpadded /NS 13 0 R  /P 95 0 R /K 98 0 R /ID (ID.0071) >>
+endobj
+98 0 obj
+<<  /Type /StructElem /S /mtable /NS 13 0 R  /P 97 0 R /K [99 0 R 100 0 R] /ID (ID.0072) >>
+endobj
+99 0 obj
+<<  /Type /StructElem /S /mtr /NS 13 0 R  /P 98 0 R /K [44 0 R 69 0 R] /ID (ID.0073) >>
+endobj
+100 0 obj
+<<  /Type /StructElem /S /mtr /NS 13 0 R  /P 98 0 R /K [71 0 R 77 0 R] /ID (ID.0074) >>
+endobj
+101 0 obj
+<<  /Type /StructElem /A  102 0 R /S /mspace /NS 13 0 R  /P 95 0 R /ID (ID.0075) >>
+endobj
+105 0 obj
+<<  /Type /StructElem /AF [104 0 R] /S /Formula /NS 11 0 R  /P 22 0 R /K 106 0 R /ID (ID.0076) >>
+endobj
+106 0 obj
+<<  /Type /StructElem /A  80 0 R /S /math /NS 13 0 R  /P 105 0 R /K [107 0 R 108 0 R 109 0 R 128 0 R] /ID (ID.0077) >>
+endobj
+107 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 106 0 R /K <</Type /MCR /Pg 232 0 R /MCID 21>>  /ID (ID.0078) >>
+endobj
+108 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 106 0 R /K <</Type /MCR /Pg 232 0 R /MCID 22>>  /ID (ID.0079) >>
+endobj
+109 0 obj
+<<  /Type /StructElem /S /mfrac /NS 13 0 R  /P 106 0 R /K [110 0 R 125 0 R] /ID (ID.0080) >>
+endobj
+110 0 obj
+<<  /Type /StructElem /S /mrow /NS 13 0 R  /P 109 0 R /K [111 0 R 113 0 R 114 0 R 116 0 R] /ID (ID.0081) >>
+endobj
+111 0 obj
+<<  /Type /StructElem /A  112 0 R /S /mo /NS 13 0 R  /P 110 0 R /K <</Type /MCR /Pg 232 0 R /MCID 23>>  /ID (ID.0082) >>
+endobj
+113 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 110 0 R /K <</Type /MCR /Pg 232 0 R /MCID 24>>  /ID (ID.0083) >>
+endobj
+114 0 obj
+<<  /Type /StructElem /A  115 0 R /S /mo /NS 13 0 R  /P 110 0 R /K <</Type /MCR /Pg 232 0 R /MCID 25>>  /ID (ID.0084) >>
+endobj
+116 0 obj
+<<  /Type /StructElem /S /msqrt /NS 13 0 R  /P 110 0 R /K 117 0 R /ID (ID.0085) >>
+endobj
+117 0 obj
+<<  /Type /StructElem /S /mrow /NS 13 0 R  /P 116 0 R /K [118 0 R 121 0 R 122 0 R 123 0 R 124 0 R] /ID (ID.0086) >>
+endobj
+118 0 obj
+<<  /Type /StructElem /S /msup /NS 13 0 R  /P 117 0 R /K [119 0 R 120 0 R] /ID (ID.0087) >>
+endobj
+119 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 118 0 R /K <</Type /MCR /Pg 232 0 R /MCID 26>>  /ID (ID.0088) >>
+endobj
+120 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 118 0 R /K <</Type /MCR /Pg 232 0 R /MCID 27>>  /ID (ID.0089) >>
+endobj
+121 0 obj
+<<  /Type /StructElem /A  115 0 R /S /mo /NS 13 0 R  /P 117 0 R /K <</Type /MCR /Pg 232 0 R /MCID 28>>  /ID (ID.0090) >>
+endobj
+122 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 117 0 R /K <</Type /MCR /Pg 232 0 R /MCID 29>>  /ID (ID.0091) >>
+endobj
+123 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 117 0 R /K <</Type /MCR /Pg 232 0 R /MCID 30>>  /ID (ID.0092) >>
+endobj
+124 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 117 0 R /K <</Type /MCR /Pg 232 0 R /MCID 31>>  /ID (ID.0093) >>
+endobj
+125 0 obj
+<<  /Type /StructElem /S /mrow /NS 13 0 R  /P 109 0 R /K [126 0 R 127 0 R] /ID (ID.0094) >>
+endobj
+126 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 125 0 R /K <</Type /MCR /Pg 232 0 R /MCID 32>>  /ID (ID.0095) >>
+endobj
+127 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 125 0 R /K <</Type /MCR /Pg 232 0 R /MCID 33>>  /ID (ID.0096) >>
+endobj
+128 0 obj
+<<  /Type /StructElem /A  129 0 R /S /mo /NS 13 0 R  /P 106 0 R /K <</Type /MCR /Pg 232 0 R /MCID 34>>  /ID (ID.0097) >>
+endobj
+132 0 obj
+<<  /Type /StructElem /AF [131 0 R] /S /Formula /NS 11 0 R  /P 22 0 R /K 133 0 R /ID (ID.0098) >>
+endobj
+133 0 obj
+<<  /Type /StructElem /A  80 0 R /S /math /NS 13 0 R  /P 132 0 R /K [134 0 R 138 0 R 141 0 R 145 0 R] /ID (ID.0099) >>
+endobj
+134 0 obj
+<<  /Type /StructElem /S /munder /NS 13 0 R  /P 133 0 R /K [135 0 R 137 0 R] /ID (ID.0100) >>
+endobj
+135 0 obj
+<<  /Type /StructElem /A  136 0 R /S /mo /NS 13 0 R  /P 134 0 R /K <</Type /MCR /Pg 232 0 R /MCID 35>>  /ID (ID.0101) >>
+endobj
+137 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 134 0 R /K <</Type /MCR /Pg 232 0 R /MCID 36>>  /ID (ID.0102) >>
+endobj
+138 0 obj
+<<  /Type /StructElem /S /munder /NS 13 0 R  /P 133 0 R /K [139 0 R 140 0 R] /ID (ID.0103) >>
+endobj
+139 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 138 0 R /K <</Type /MCR /Pg 232 0 R /MCID 37>>  /ID (ID.0104) >>
+endobj
+140 0 obj
+<<  /Type /StructElem /S /mo /NS 13 0 R  /P 138 0 R /ID (ID.0105) >>
+endobj
+141 0 obj
+<<  /Type /StructElem /S /mover /NS 13 0 R  /P 133 0 R /K [142 0 R 143 0 R] /ID (ID.0106) >>
+endobj
+142 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 141 0 R /K <</Type /MCR /Pg 232 0 R /MCID 39>>  /ID (ID.0107) >>
+endobj
+143 0 obj
+<<  /Type /StructElem /A  144 0 R /ActualText <FEFF002E> /S /mo /NS 13 0 R  /P 141 0 R /K <</Type /MCR /Pg 232 0 R /MCID 38>>  /ID (ID.0108) >>
+endobj
+145 0 obj
+<<  /Type /StructElem /S /msup /NS 13 0 R  /P 133 0 R /K [146 0 R 147 0 R] /ID (ID.0109) >>
+endobj
+146 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 145 0 R /K <</Type /MCR /Pg 232 0 R /MCID 40>>  /ID (ID.0110) >>
+endobj
+147 0 obj
+<<  /Type /StructElem /A  148 0 R /S /mi /NS 13 0 R  /P 145 0 R /K <</Type /MCR /Pg 232 0 R /MCID 41>>  /ID (ID.0111) >>
+endobj
+151 0 obj
+<<  /Type /StructElem /AF [150 0 R] /S /Formula /NS 11 0 R  /P 22 0 R /K 197 0 R /ID (ID.0112) >>
+endobj
+152 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 200 0 R /K [153 0 R 154 0 R 155 0 R] /ID (ID.0113) >>
+endobj
+153 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 152 0 R /K <</Type /MCR /Pg 232 0 R /MCID 42>>  /ID (ID.0114) >>
+endobj
+154 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 152 0 R /K <</Type /MCR /Pg 232 0 R /MCID 43>>  /ID (ID.0115) >>
+endobj
+155 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 152 0 R /K <</Type /MCR /Pg 232 0 R /MCID 44>>  /ID (ID.0116) >>
+endobj
+156 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 200 0 R /K [157 0 R 158 0 R 159 0 R 160 0 R 161 0 R] /ID (ID.0117) >>
+endobj
+157 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 156 0 R /ID (ID.0118) >>
+endobj
+158 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 156 0 R /K <</Type /MCR /Pg 232 0 R /MCID 45>>  /ID (ID.0119) >>
+endobj
+159 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 156 0 R /K <</Type /MCR /Pg 232 0 R /MCID 46>>  /ID (ID.0120) >>
+endobj
+160 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 156 0 R /K <</Type /MCR /Pg 232 0 R /MCID 47>>  /ID (ID.0121) >>
+endobj
+161 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 156 0 R /K <</Type /MCR /Pg 232 0 R /MCID 48>>  /ID (ID.0122) >>
+endobj
+162 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 200 0 R /K 163 0 R /ID (ID.0123) >>
+endobj
+163 0 obj
+<<  /Type /StructElem /S /msup /NS 13 0 R  /P 162 0 R /K [164 0 R 165 0 R] /ID (ID.0124) >>
+endobj
+164 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 163 0 R /K <</Type /MCR /Pg 232 0 R /MCID 49>>  /ID (ID.0125) >>
+endobj
+165 0 obj
+<<  /Type /StructElem /S /mrow /NS 13 0 R  /P 163 0 R /K [166 0 R 167 0 R] /ID (ID.0126) >>
+endobj
+166 0 obj
+<<  /Type /StructElem /A  148 0 R /S /mi /NS 13 0 R  /P 165 0 R /K <</Type /MCR /Pg 232 0 R /MCID 50>>  /ID (ID.0127) >>
+endobj
+167 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 165 0 R /K <</Type /MCR /Pg 232 0 R /MCID 51>>  /ID (ID.0128) >>
+endobj
+168 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 200 0 R /K [169 0 R 170 0 R 172 0 R 173 0 R] /ID (ID.0129) >>
+endobj
+169 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 168 0 R /ID (ID.0130) >>
+endobj
+170 0 obj
+<<  /Type /StructElem /A  171 0 R /S /mo /NS 13 0 R  /P 168 0 R /K <</Type /MCR /Pg 232 0 R /MCID 52>>  /ID (ID.0131) >>
+endobj
+172 0 obj
+<<  /Type /StructElem /A  171 0 R /S /mo /NS 13 0 R  /P 168 0 R /K <</Type /MCR /Pg 232 0 R /MCID 53>>  /ID (ID.0132) >>
+endobj
+173 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 168 0 R /K <</Type /MCR /Pg 232 0 R /MCID 54>>  /ID (ID.0133) >>
+endobj
+174 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 204 0 R /K [175 0 R 177 0 R 178 0 R 179 0 R] /ID (ID.0134) >>
+endobj
+175 0 obj
+<<  /Type /StructElem /A  176 0 R /ActualText <FEFF0028> /S /mo /NS 13 0 R  /P 174 0 R /K <</Type /MCR /Pg 232 0 R /MCID 55>>  /ID (ID.0135) >>
+endobj
+177 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 174 0 R /K <</Type /MCR /Pg 232 0 R /MCID 56>>  /ID (ID.0136) >>
+endobj
+178 0 obj
+<<  /Type /StructElem /A  115 0 R /S /mo /NS 13 0 R  /P 174 0 R /K <</Type /MCR /Pg 232 0 R /MCID 57>>  /ID (ID.0137) >>
+endobj
+179 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 174 0 R /K <</Type /MCR /Pg 232 0 R /MCID 58>>  /ID (ID.0138) >>
+endobj
+180 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 204 0 R /K [181 0 R 182 0 R 183 0 R 184 0 R] /ID (ID.0139) >>
+endobj
+181 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 180 0 R /ID (ID.0140) >>
+endobj
+182 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 180 0 R /K <</Type /MCR /Pg 232 0 R /MCID 59>>  /ID (ID.0141) >>
+endobj
+183 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 180 0 R /K <</Type /MCR /Pg 232 0 R /MCID 60>>  /ID (ID.0142) >>
+endobj
+184 0 obj
+<<  /Type /StructElem /A  176 0 R /ActualText <FEFF0029> /S /mo /NS 13 0 R  /P 180 0 R /K <</Type /MCR /Pg 232 0 R /MCID 61>>  /ID (ID.0143) >>
+endobj
+185 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 204 0 R /K 186 0 R /ID (ID.0144) >>
+endobj
+186 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 185 0 R /ID (ID.0145) >>
+endobj
+187 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 204 0 R /K 188 0 R /ID (ID.0146) >>
+endobj
+188 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 187 0 R /ID (ID.0147) >>
+endobj
+189 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 207 0 R /K 190 0 R /ID (ID.0148) >>
+endobj
+190 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 189 0 R /K <</Type /MCR /Pg 232 0 R /MCID 62>>  /ID (ID.0149) >>
+endobj
+191 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 207 0 R /K 192 0 R /ID (ID.0150) >>
+endobj
+192 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 191 0 R /ID (ID.0151) >>
+endobj
+193 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 207 0 R /K 194 0 R /ID (ID.0152) >>
+endobj
+194 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 193 0 R /ID (ID.0153) >>
+endobj
+195 0 obj
+<<  /Type /StructElem /S /mtd /NS 13 0 R  /P 207 0 R /K 196 0 R /ID (ID.0154) >>
+endobj
+196 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 195 0 R /ID (ID.0155) >>
+endobj
+197 0 obj
+<<  /Type /StructElem /A  80 0 R /S /math /NS 13 0 R  /P 151 0 R /K 198 0 R /ID (ID.0156) >>
+endobj
+198 0 obj
+<<  /Type /StructElem /A  199 0 R /S /mtable /NS 13 0 R  /P 197 0 R /K [200 0 R 204 0 R 207 0 R] /ID (ID.0157) >>
+endobj
+200 0 obj
+<<  /Type /StructElem /S /mtr /NS 13 0 R  /P 198 0 R /K [201 0 R 152 0 R 156 0 R 162 0 R 168 0 R] /ID (ID.0158) >>
+endobj
+201 0 obj
+<<  /Type /StructElem /A  202 0 R /S /mtd /NS 13 0 R  /P 200 0 R /K 203 0 R /ID (ID.0159) >>
+endobj
+203 0 obj
+<<  /Type /StructElem /S /mtext /NS 13 0 R  /P 201 0 R /ID (ID.0160) >>
+endobj
+204 0 obj
+<<  /Type /StructElem /S /mtr /NS 13 0 R  /P 198 0 R /K [205 0 R 174 0 R 180 0 R 185 0 R 187 0 R] /ID (ID.0161) >>
+endobj
+205 0 obj
+<<  /Type /StructElem /A  202 0 R /S /mtd /NS 13 0 R  /P 204 0 R /K 206 0 R /ID (ID.0162) >>
+endobj
+206 0 obj
+<<  /Type /StructElem /S /mtext /NS 13 0 R  /P 205 0 R /ID (ID.0163) >>
+endobj
+207 0 obj
+<<  /Type /StructElem /S /mtr /NS 13 0 R  /P 198 0 R /K [208 0 R 189 0 R 191 0 R 193 0 R 195 0 R] /ID (ID.0164) >>
+endobj
+208 0 obj
+<<  /Type /StructElem /A  202 0 R /S /mtd /NS 13 0 R  /P 207 0 R /K 209 0 R /ID (ID.0165) >>
+endobj
+209 0 obj
+<<  /Type /StructElem /S /mtext /NS 13 0 R  /P 208 0 R /ID (ID.0166) >>
+endobj
+212 0 obj
+<<  /Type /StructElem /AF [211 0 R] /S /Formula /NS 11 0 R  /P 22 0 R /K 213 0 R /ID (ID.0167) >>
+endobj
+213 0 obj
+<<  /Type /StructElem /S /math /NS 13 0 R  /P 212 0 R /K [214 0 R 215 0 R 217 0 R 218 0 R 219 0 R 220 0 R 221 0 R 222 0 R 223 0 R 224 0 R 225 0 R 226 0 R 227 0 R 228 0 R] /ID (ID.0168) >>
+endobj
+214 0 obj
+<<  /Type /StructElem /A  148 0 R /S /mi /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 63>>  /ID (ID.0169) >>
+endobj
+215 0 obj
+<<  /Type /StructElem /A  216 0 R /S /mo /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 64>>  /ID (ID.0170) >>
+endobj
+217 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 65>>  /ID (ID.0171) >>
+endobj
+218 0 obj
+<<  /Type /StructElem /A  216 0 R /S /mo /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 66>>  /ID (ID.0172) >>
+endobj
+219 0 obj
+<<  /Type /StructElem /A  115 0 R /S /mo /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 67>>  /ID (ID.0173) >>
+endobj
+220 0 obj
+<<  /Type /StructElem /A  148 0 R /S /mi /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 68>>  /ID (ID.0174) >>
+endobj
+221 0 obj
+<<  /Type /StructElem /A  216 0 R /S /mo /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 69>>  /ID (ID.0175) >>
+endobj
+222 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 70>>  /ID (ID.0176) >>
+endobj
+223 0 obj
+<<  /Type /StructElem /A  115 0 R /S /mo /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 71>>  /ID (ID.0177) >>
+endobj
+224 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 72>>  /ID (ID.0178) >>
+endobj
+225 0 obj
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 73>>  /ID (ID.0179) >>
+endobj
+226 0 obj
+<<  /Type /StructElem /A  216 0 R /S /mo /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 74>>  /ID (ID.0180) >>
+endobj
+227 0 obj
+<<  /Type /StructElem /A  52 0 R /S /mo /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 75>>  /ID (ID.0181) >>
+endobj
+228 0 obj
+<<  /Type /StructElem /S /mn /NS 13 0 R  /P 213 0 R /K <</Type /MCR /Pg 232 0 R /MCID 76>>  /ID (ID.0182) >>
+endobj
+5 0 obj
+<<  /Type /StructTreeRoot /Namespaces 8 0 R /IDTree 244 0 R /ParentTree 6 0 R /RoleMap 7 0 R /K 21 0 R >>
+endobj
+245 0 obj
+[ 66 [ 323 ] ]
+endobj
+247 0 obj
+<< /Subtype /CIDFontType0C /Length 592 >>        
+[BINARY STREAM]
+endobj
+246 0 obj
+<< /Type /FontDescriptor /FontName /QTQISS+LMRoman7-Regular /Flags 4 /FontBBox [ -483 -292 1562 1124 ] /Ascent 1124 /CapHeight 683 /Descent -292 /ItalicAngle 0 /StemV 108 /XHeight 431 /FontFile3 247 0 R >>
+endobj
+248 0 obj
+<< /Length 687 >>        
+stream
+%!PS-Adobe-3.0 Resource-CMap
+%%DocumentNeededResources: ProcSet (CIDInit)
+%%IncludeResource: ProcSet (CIDInit)
+%%BeginResource: CMap (TeX-QTQISS-LMRoman7-Regular-0)
+%%Title: (TeX-QTQISS-LMRoman7-Regular-0 TeX QTQISS-LMRoman7-Regular 0)
+%%Version: 1.000
+%%EndComments
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<< /Registry (TeX)
+/Ordering (QTQISS-LMRoman7-Regular)
+/Supplement 0
+>> def
+/CMapName /TeX-Identity-QTQISS-LMRoman7-Regular def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+0 beginbfrange
+endbfrange
+1 beginbfchar
+<0042> <0069>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+%%EndResource
+%%EOF
+endstream
+endobj
+237 0 obj
+<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /QTQISS+LMRoman7-Regular /DescendantFonts [ 249 0 R ] /ToUnicode 248 0 R >>
+endobj
+249 0 obj
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /QTQISS+LMRoman7-Regular /FontDescriptor 246 0 R /W 245 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+endobj
+250 0 obj
+[ 1013 [ 569 ] 1404 [ 620 ] 2981 [ 407 ] 4558 [ 668 ] ]
+endobj
+252 0 obj
+<< /Subtype /CIDFontType0C /Length 1102 >>       
+[BINARY STREAM]
+endobj
+251 0 obj
+<< /Type /FontDescriptor /FontName /ZIIHRW+LatinModernMath-Regular /Flags 4 /FontBBox [ -1042 -3060 4082 3560 ] /Ascent 806 /CapHeight 683 /Descent -194 /ItalicAngle 0 /StemV 113 /XHeight 431 /FontFile3 252 0 R >>
+endobj
+253 0 obj
+<< /Length 772 >>        
+stream
+%!PS-Adobe-3.0 Resource-CMap
+%%DocumentNeededResources: ProcSet (CIDInit)
+%%IncludeResource: ProcSet (CIDInit)
+%%BeginResource: CMap (TeX-ZIIHRW-LatinModernMath-Regular-0)
+%%Title: (TeX-ZIIHRW-LatinModernMath-Regular-0 TeX ZIIHRW-LatinModernMath-Regular 0)
+%%Version: 1.000
+%%EndComments
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<< /Registry (TeX)
+/Ordering (ZIIHRW-LatinModernMath-Regular)
+/Supplement 0
+>> def
+/CMapName /TeX-Identity-ZIIHRW-LatinModernMath-Regular def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+0 beginbfrange
+endbfrange
+4 beginbfchar
+<03F5> <0032>
+<057C> <D835DC4E>
+<0BA5> <2032>
+<11CE> <D835DF0B>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+%%EndResource
+%%EOF
+endstream
+endobj
+236 0 obj
+<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /ZIIHRW+LatinModernMath-Regular /DescendantFonts [ 254 0 R ] /ToUnicode 253 0 R >>
+endobj
+254 0 obj
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /ZIIHRW+LatinModernMath-Regular /FontDescriptor 251 0 R /W 250 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+endobj
+255 0 obj
+[ 9 [ 389 389 ] 12 [ 778 ] 15 [ 278 ] 17 [ 500 500 500 500 500 500 ] 30 [ 778 ] 1296 [ 529 429 433 520 466 490 ] 1319 [ 572 ] 1790 [ 0 ] 2455 [ 663 663 ] 2503 [ 875 875 875 875 875 875 ] 2515 [ 902 ] 2615 [ 778 ] 2619 [ 778 ] 3074 [ 1444 ] 3077 [ 833 ] 4474 [ 570 ] ]
+endobj
+257 0 obj
+<< /Subtype /CIDFontType0C /Length 4088 >>       
+[BINARY STREAM]
+endobj
+256 0 obj
+<< /Type /FontDescriptor /FontName /RHJXIX+LatinModernMath-Regular /Flags 4 /FontBBox [ -1042 -3060 4082 3560 ] /Ascent 806 /CapHeight 683 /Descent -194 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 257 0 R >>
+endobj
+258 0 obj
+<< /Length 1203 >>       
+stream
+%!PS-Adobe-3.0 Resource-CMap
+%%DocumentNeededResources: ProcSet (CIDInit)
+%%IncludeResource: ProcSet (CIDInit)
+%%BeginResource: CMap (TeX-RHJXIX-LatinModernMath-Regular-0)
+%%Title: (TeX-RHJXIX-LatinModernMath-Regular-0 TeX RHJXIX-LatinModernMath-Regular 0)
+%%Version: 1.000
+%%EndComments
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<< /Registry (TeX)
+/Ordering (RHJXIX-LatinModernMath-Regular)
+/Supplement 0
+>> def
+/CMapName /TeX-Identity-RHJXIX-LatinModernMath-Regular def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+0 beginbfrange
+endbfrange
+33 beginbfchar
+<0009> <0028>
+<000A> <0029>
+<000C> <002B>
+<000F> <002E>
+<0011> <0030>
+<0012> <0031>
+<0013> <0032>
+<0014> <0033>
+<0015> <0034>
+<0016> <0035>
+<001E> <003D>
+<0510> <D835DC4E>
+<0511> <D835DC4F>
+<0512> <D835DC50>
+<0513> <D835DC51>
+<0514> <D835DC52>
+<0515> <D835DC53>
+<0527> <D835DC65>
+<06FE> <0307>
+<0997> <0028>
+<0998> <0029>
+<09C7> <239D>
+<09C8> <239C>
+<09C9> <239B>
+<09CA> <23A0>
+<09CB> <239F>
+<09CC> <239E>
+<09D3> <007B>
+<0A37> <2212>
+<0A3B> <00B1>
+<0C02> <2211>
+<0C05> <221A>
+<117A> <D835DF0B>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+%%EndResource
+%%EOF
+endstream
+endobj
+235 0 obj
+<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /RHJXIX+LatinModernMath-Regular /DescendantFonts [ 259 0 R ] /ToUnicode 258 0 R >>
+endobj
+259 0 obj
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /RHJXIX+LatinModernMath-Regular /FontDescriptor 256 0 R /W 255 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+endobj
+260 0 obj
+[ 49 [ 681 444 ] 55 [ 306 ] 59 [ 500 ] 63 [ 556 ] 66 [ 278 ] 72 [ 278 ] 77 [ 556 ] 81 [ 500 500 ] 85 [ 389 389 ] 88 [ 278 ] 98 [ 394 ] 103 [ 333 ] 105 [ 389 500 500 ] ]
+endobj
+262 0 obj
+<< /Subtype /CIDFontType0C /Length 2411 >>       
+[BINARY STREAM]
+endobj
+261 0 obj
+<< /Type /FontDescriptor /FontName /RYKTJL+LMRoman10-Regular /Flags 4 /FontBBox [ -430 -290 1417 1127 ] /Ascent 1127 /CapHeight 683 /Descent -290 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 262 0 R >>
+endobj
+263 0 obj
+<< /Length 931 >>        
+stream
+%!PS-Adobe-3.0 Resource-CMap
+%%DocumentNeededResources: ProcSet (CIDInit)
+%%IncludeResource: ProcSet (CIDInit)
+%%BeginResource: CMap (TeX-RYKTJL-LMRoman10-Regular-0)
+%%Title: (TeX-RYKTJL-LMRoman10-Regular-0 TeX RYKTJL-LMRoman10-Regular 0)
+%%Version: 1.000
+%%EndComments
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<< /Registry (TeX)
+/Ordering (RYKTJL-LMRoman10-Regular)
+/Supplement 0
+>> def
+/CMapName /TeX-Identity-RYKTJL-LMRoman10-Regular def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+0 beginbfrange
+endbfrange
+18 beginbfchar
+<0031> <0045>
+<0032> <0065>
+<0037> <0066>
+<003B> <0067>
+<003F> <0068>
+<0042> <0069>
+<0048> <006C>
+<004D> <006E>
+<0051> <006F>
+<0052> <0031>
+<0055> <0028>
+<0056> <0029>
+<0058> <002E>
+<0062> <0073>
+<0067> <0020>
+<0069> <0074>
+<006A> <0033>
+<006B> <0032>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+%%EndResource
+%%EOF
+endstream
+endobj
+234 0 obj
+<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /RYKTJL+LMRoman10-Regular /DescendantFonts [ 264 0 R ] /ToUnicode 263 0 R >>
+endobj
+264 0 obj
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /RYKTJL+LMRoman10-Regular /FontDescriptor 261 0 R /W 260 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+endobj
+238 0 obj
+<< /Type /Pages  /Count 1 /Kids [ 232 0 R ] >>
+endobj
+265 0 obj
+<< /Type /Catalog /Pages 238 0 R /MarkInfo 239 0 R/Lang (en)/Metadata 230 0 R/StructTreeRoot 5 0 R >>
+endobj
+266 0 obj
+<< /Producer (LuaTeX)/Creator (TeX)/CreationDate (D:20160520090000Z)/ModDate (D:20160520090000Z) /Trapped /False >>
+endobj
+xref
+0 267
+0000000002 65535 f 
+0000026064 00000 n 
+0000000003 00000 f 
+0000000004 00000 f 
+0000000010 00000 f 
+0000053379 00000 n 
+0000026148 00000 n 
+0000030276 00000 n 
+0000032230 00000 n 
+0000030855 00000 n 
+0000000012 00000 f 
+0000030923 00000 n 
+0000000014 00000 f 
+0000030993 00000 n 
+0000000020 00000 f 
+0000031756 00000 n 
+0000031074 00000 n 
+0000032034 00000 n 
+0000031863 00000 n 
+0000032141 00000 n 
+0000000000 00000 f 
+0000032291 00000 n 
+0000032390 00000 n 
+0000032531 00000 n 
+0000001687 00000 n 
+0000032653 00000 n 
+0000032765 00000 n 
+0000032860 00000 n 
+0000032983 00000 n 
+0000033078 00000 n 
+0000033201 00000 n 
+0000033296 00000 n 
+0000033419 00000 n 
+0000033514 00000 n 
+0000033637 00000 n 
+0000033732 00000 n 
+0000033855 00000 n 
+0000033950 00000 n 
+0000034073 00000 n 
+0000034168 00000 n 
+0000034291 00000 n 
+0000034386 00000 n 
+0000034509 00000 n 
+0000034604 00000 n 
+0000034728 00000 n 
+0000034823 00000 n 
+0000034947 00000 n 
+0000035049 00000 n 
+0000035145 00000 n 
+0000000020 00000 n 
+0000035270 00000 n 
+0000035354 00000 n 
+0000000093 00000 n 
+0000035449 00000 n 
+0000035533 00000 n 
+0000035669 00000 n 
+0000035781 00000 n 
+0000035905 00000 n 
+0000036040 00000 n 
+0000036164 00000 n 
+0000036266 00000 n 
+0000036378 00000 n 
+0000036462 00000 n 
+0000036557 00000 n 
+0000036641 00000 n 
+0000036743 00000 n 
+0000036855 00000 n 
+0000036939 00000 n 
+0000037034 00000 n 
+0000037118 00000 n 
+0000037222 00000 n 
+0000037306 00000 n 
+0000037402 00000 n 
+0000037526 00000 n 
+0000037615 00000 n 
+0000037742 00000 n 
+0000037831 00000 n 
+0000037920 00000 n 
+0000038025 00000 n 
+0000038109 00000 n 
+0000000164 00000 n 
+0000038232 00000 n 
+0000038358 00000 n 
+0000000218 00000 n 
+0000038515 00000 n 
+0000000305 00000 n 
+0000038614 00000 n 
+0000000360 00000 n 
+0000038724 00000 n 
+0000038838 00000 n 
+0000038949 00000 n 
+0000039060 00000 n 
+0000039171 00000 n 
+0000039270 00000 n 
+0000039428 00000 n 
+0000039563 00000 n 
+0000039676 00000 n 
+0000039834 00000 n 
+0000039944 00000 n 
+0000040052 00000 n 
+0000040156 00000 n 
+0000040261 00000 n 
+0000000432 00000 n 
+0000000487 00000 n 
+0000002601 00000 n 
+0000040362 00000 n 
+0000040477 00000 n 
+0000040613 00000 n 
+0000040739 00000 n 
+0000040876 00000 n 
+0000040986 00000 n 
+0000041111 00000 n 
+0000001839 00000 n 
+0000041249 00000 n 
+0000041375 00000 n 
+0000001905 00000 n 
+0000041513 00000 n 
+0000041613 00000 n 
+0000041746 00000 n 
+0000041855 00000 n 
+0000041981 00000 n 
+0000042107 00000 n 
+0000042245 00000 n 
+0000042371 00000 n 
+0000042497 00000 n 
+0000042623 00000 n 
+0000042732 00000 n 
+0000042858 00000 n 
+0000042984 00000 n 
+0000001977 00000 n 
+0000002037 00000 n 
+0000003366 00000 n 
+0000043122 00000 n 
+0000043237 00000 n 
+0000043373 00000 n 
+0000043484 00000 n 
+0000002754 00000 n 
+0000043622 00000 n 
+0000043748 00000 n 
+0000043859 00000 n 
+0000043985 00000 n 
+0000044071 00000 n 
+0000044181 00000 n 
+0000044307 00000 n 
+0000002840 00000 n 
+0000044468 00000 n 
+0000044577 00000 n 
+0000044703 00000 n 
+0000002895 00000 n 
+0000002955 00000 n 
+0000005140 00000 n 
+0000044841 00000 n 
+0000044956 00000 n 
+0000045072 00000 n 
+0000045198 00000 n 
+0000045324 00000 n 
+0000045450 00000 n 
+0000045582 00000 n 
+0000045668 00000 n 
+0000045805 00000 n 
+0000045931 00000 n 
+0000046057 00000 n 
+0000046183 00000 n 
+0000046281 00000 n 
+0000046390 00000 n 
+0000046516 00000 n 
+0000046625 00000 n 
+0000046763 00000 n 
+0000046889 00000 n 
+0000047013 00000 n 
+0000047099 00000 n 
+0000003519 00000 n 
+0000047237 00000 n 
+0000047375 00000 n 
+0000047501 00000 n 
+0000047625 00000 n 
+0000003585 00000 n 
+0000047786 00000 n 
+0000047912 00000 n 
+0000048050 00000 n 
+0000048176 00000 n 
+0000048300 00000 n 
+0000048386 00000 n 
+0000048523 00000 n 
+0000048649 00000 n 
+0000048810 00000 n 
+0000048908 00000 n 
+0000048994 00000 n 
+0000049092 00000 n 
+0000049178 00000 n 
+0000049276 00000 n 
+0000049402 00000 n 
+0000049500 00000 n 
+0000049586 00000 n 
+0000049684 00000 n 
+0000049770 00000 n 
+0000049868 00000 n 
+0000049954 00000 n 
+0000050064 00000 n 
+0000003709 00000 n 
+0000050195 00000 n 
+0000050327 00000 n 
+0000003827 00000 n 
+0000050437 00000 n 
+0000050526 00000 n 
+0000050658 00000 n 
+0000050768 00000 n 
+0000050857 00000 n 
+0000050989 00000 n 
+0000051099 00000 n 
+0000003890 00000 n 
+0000005975 00000 n 
+0000051188 00000 n 
+0000051303 00000 n 
+0000051508 00000 n 
+0000051646 00000 n 
+0000005293 00000 n 
+0000051784 00000 n 
+0000051910 00000 n 
+0000052048 00000 n 
+0000052186 00000 n 
+0000052324 00000 n 
+0000052462 00000 n 
+0000052588 00000 n 
+0000052726 00000 n 
+0000052852 00000 n 
+0000052978 00000 n 
+0000053116 00000 n 
+0000053253 00000 n 
+0000005369 00000 n 
+0000006128 00000 n 
+0000025960 00000 n 
+0000025821 00000 n 
+0000017912 00000 n 
+0000068455 00000 n 
+0000064186 00000 n 
+0000057862 00000 n 
+0000055180 00000 n 
+0000068815 00000 n 
+0000026111 00000 n 
+0000026779 00000 n 
+0000027691 00000 n 
+0000028631 00000 n 
+0000029593 00000 n 
+0000030213 00000 n 
+0000053500 00000 n 
+0000054209 00000 n 
+0000053532 00000 n 
+0000054432 00000 n 
+0000055336 00000 n 
+0000055538 00000 n 
+0000056798 00000 n 
+0000055611 00000 n 
+0000057029 00000 n 
+0000058025 00000 n 
+0000058234 00000 n 
+0000062692 00000 n 
+0000058519 00000 n 
+0000062922 00000 n 
+0000064349 00000 n 
+0000064558 00000 n 
+0000067240 00000 n 
+0000064744 00000 n 
+0000067463 00000 n 
+0000068612 00000 n 
+0000068879 00000 n 
+0000068998 00000 n 
+trailer
+<< /Size 267 /Root 265 0 R /Info 266 0 R /ID [ <2350CAD05F8A7AF0AA4058486855344F> <2350CAD05F8A7AF0AA4058486855344F> ] >>
+startxref
+69131
+%%EOF
