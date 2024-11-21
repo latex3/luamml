@@ -1,0 +1,35 @@
+\ExplSyntaxOn
+\sys_gset_rand_seed:n{42}
+\ExplSyntaxOff
+\DocumentMetadata{
+ lang=en,
+ testphase={phase-III,math},
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ uncompress
+}
+\input{regression-test}
+\documentclass{article}
+
+\usepackage{unicode-math}
+
+% suppress writing of luamml-mathml
+\tagpdfsetup{math/mathml/luamml/write=false} %
+
+% suppress mathml-AF reading
+\tagpdfsetup{math/mathml/sources=} %
+\tagpdfsetup{math/mathml/AF=false}
+\begin{document}
+\ExplSyntaxOn
+
+\luamml_structelem:
+$a = b \quad
+ \tagstructbegin{tag=mtext,stash}\tagmcbegin{}
+ \luamml_annotate:en{nucleus=true,structnum=\tag_get:n{struct_num}}
+  {\mbox{some~text~with~\emph{structure}}}
+ \tagmcend\tagstructend 
+$
+\ExplSyntaxOff
+\end{document}
+

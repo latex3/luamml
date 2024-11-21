@@ -93,7 +93,23 @@
 % }
 % \end{verbatim}
 % produces a |<mi>TeX</mi>| element in the output instead of trying to import \TeX~as a mathematical expression.
-% The table structure is explained in an appendix.
+% 
+% It it possible to add a structure around the construct, stash that structure
+% and then to tell \cmd{luamml_annotate:en} to insert it later inside the math. 
+% For this the keys \texttt{struct} (which takes a label as argument) or \texttt{structnum}
+% (which takes a structure number) can be used. For example
+% \begin{verbatim}
+% $a = b \quad
+%  \tagstructbegin{tag=mtext,stash}\tagmcbegin{}
+%  \luamml_annotate:en{nucleus=true,structnum=\tag_get:n{struct_num}}
+%  {\mbox{some~text~with~\emph{structure}}}
+%  \tagmcend\tagstructend 
+% $
+% \end{verbatim}
+% Such a construction should check that the flag for structure elements has actually 
+% been set to avoid orphaned structures if the stashed structure is ignored.
+% 
+% More about the table structure is explained in an appendix.
 %
 % \section{Features \& Limitations}
 % Currently all mathematical expressions which purely contain Unicode encoded math mode material without embedded non-math should get converted successfully.
