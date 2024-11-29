@@ -81,10 +81,8 @@ local function write_elem(tree, stash)
   table.sort(attrs)
 
   if stash then
-    stash_cnt = stash_cnt + 1
-    stash = '__luamml_stashed_' .. stash_cnt
-    tree[':struct'] = stash
-    stash = ', stash, label = ' .. stash
+    tree[':structnum'] = get_ltx().tag.get_struct_num_next() 
+    stash = ', stash, '
   end
 
   local attr_flag = i ~= 0 and ', attribute=' .. attributes[table.concat(attrs)]
