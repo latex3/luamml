@@ -7,6 +7,8 @@ this project uses date-based 'snapshot' version identifiers.
 ## [Unreleased]
 
 ### Changed
+- Ulrike Fischer, 2024-03-03
+  luamml.dtx: add plug for mbox socket to correctly annotate them in math.
 
 - Ulrike Fischer, 2024-11-29
   luamml-structelemwriter.lua: use structnum instead of label when stashing. 

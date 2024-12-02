@@ -93,9 +93,9 @@
 % }
 % \end{verbatim}
 % produces a |<mi>TeX</mi>| element in the output instead of trying to import \TeX~as a mathematical expression.
-% 
+%
 % It it possible to add a structure around the construct, stash that structure
-% and then to tell \cmd{luamml_annotate:en} to insert it later inside the math. 
+% and then to tell \cmd{luamml_annotate:en} to insert it later inside the math.
 % For this the keys \texttt{struct} (which takes a label as argument) or \texttt{structnum}
 % (which takes a structure number) can be used. For example
 % \begin{verbatim}
@@ -103,12 +103,12 @@
 %  \tagstructbegin{tag=mtext,stash}\tagmcbegin{}
 %  \luamml_annotate:en{nucleus=true,structnum=\tag_get:n{struct_num}}
 %  {\mbox{some~text~with~\emph{structure}}}
-%  \tagmcend\tagstructend 
+%  \tagmcend\tagstructend
 % $
 % \end{verbatim}
-% Such a construction should check that the flag for structure elements has actually 
+% Such a construction should check that the flag for structure elements has actually
 % been set to avoid orphaned structures if the stashed structure is ignored.
-% 
+%
 % More about the table structure is explained in an appendix.
 %
 % \section{Features \& Limitations}
@@ -316,7 +316,7 @@
 %   written by a previous formula. Therefore this has to be called separately
 %   for every formula or it must expand to different values to be useful.
 %   The value is fully expanded when the file is written.
-%   
+%
 %   Only complete formulas get written into files (so formulas where
 %   \cs{luamml_process:} or \cs{luamml_structelem:} are in effect).
 %
@@ -523,11 +523,51 @@
 %    \end{macrocode}
 % \end{macro}
 %
+% \subsection{Sockets}
+% In various places luamml has to add code to kernel commands. This is done through
+% sockets which are predeclared in lttagging.
 %
+% \subsubsection{mbox}
+% This socket annotates an \cs{mbox} inside math.
+% We test for the socket until the release 2025-06-01.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mbox_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mbox}{2}
+   \NewSocketPlug{tagsupport/math/luamml/mbox}{default}{#2}
+   \AssignSocketPlug{tagsupport/math/luamml/mbox}{default}
+ }
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mbox}{luamml}
+ {
+   \bool_lazy_and:nnTF
+    { \mode_if_math_p: }
+    { \int_if_odd_p:n { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } } }
+    {
+      \tag_struct_begin:n
+       {
+         tag=mtext,
+         stash,
+       }
+      \tag_mc_begin:n {}
+      \luamml_annotate:en
+       {
+         nucleus = true,
+         structnum=\tag_get:n{struct_num}
+       }
+       { #2 }
+      \tag_mc_end:
+      \tag_struct_end:
+    }
+    { #2 }
+  }
+\AssignSocketPlug{tagsupport/math/luamml/mbox}{luamml}
+%</luatex>
+%    \end{macrocode}
 % \subsection{Patching}
 % For some packages, we ship with patches to make them more compatible and to
 % demonstrate how other code can be patched to work with \texttt{luamml}.
-% 
+%
 % These are either loaded directly if the packages are loaded or delayed using
 % \LaTeX's hook system otherwise.
 % \begin{macro}{\__luamml_patch_package:nn, \__luamml_patch_package:n}
