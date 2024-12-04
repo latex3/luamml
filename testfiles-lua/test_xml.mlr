@@ -1,21 +1,4 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="true" scriptlevel="0">
-    <mi>𝑎</mi>
-    <mo lspace="0.278em" rspace="0.278em">=</mo>
-    <mi>𝑏</mi>
-  </mstyle>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mo lspace="0.278em" rspace="0.278em">=</mo>
-  <mi>𝑏</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mo lspace="0.278em" rspace="0.278em">=</mo>
-  <mi>𝑏</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi>𝑎</mi>
   <mo lspace="0.278em" rspace="0.278em">=</mo>
   <mi>𝑏</mi>
@@ -80,7 +63,6 @@
               <mo lspace="0.278em" rspace="0.278em">=</mo>
               <mi>𝑏</mi>
             </math></mtext>
-            <mi />
           </mtd>
         </mtr>
         <mtr>
@@ -89,7 +71,6 @@
           </mtd>
           <mtd columnalign="left">
             <mtext>else</mtext>
-            <mi />
           </mtd>
         </mtr>
       </mtable>
@@ -146,9 +127,6 @@
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
   <mtable columnalign="right left right left" columnspacing="0 .8em 0" displaystyle="true">
     <mtr>
-      <mtd intent=":equationlabel">
-        <mtext>(1)</mtext>
-      </mtd>
       <mtd>
         <mi>𝑎</mi>
         <mi>𝑏</mi>
@@ -178,9 +156,6 @@
       </mtd>
     </mtr>
     <mtr>
-      <mtd intent=":equationlabel">
-        <mtext>(2)</mtext>
-      </mtd>
       <mtd>
         <mo fence="true" lspace="0" maxsize="17.861pt" minsize="17.861pt" rspace="0" symmetric="true">(</mo>
         <mn>1</mn>
@@ -201,9 +176,6 @@
       </mtd>
     </mtr>
     <mtr>
-      <mtd intent=":equationlabel">
-        <mtext>(3)</mtext>
-      </mtd>
       <mtd>
         <mn>5</mn>
       </mtd>

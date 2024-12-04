@@ -1,17 +1,21 @@
 \DocumentMetadata{
   uncompress,
   pdfversion = 2.0,
-  testphase = phase-I,
+  testphase = {phase-III,table,math},
 }
 \input{regression-test}
 \documentclass{article}
-\usepackage[l3build]{luamml-demo}
-
 \usepackage{unicode-math}
 
 \begin{document}
-\tagstructbegin{tag=Document}
-\LuaMMLTagAF{} {
+\ExplSyntaxOn
+\luamml_set_filename:n {
+    \jobname .mml
+  }
+\luamml_process:  
+\luamml_begin_single_file:
+\ExplSyntaxOff
+
 \[
   \begin{pmatrix}
     1 & 0 & 0 \\
@@ -24,26 +28,21 @@
     2 & \text{else}
   \end{cases}
 \]
-}
-\LuaMMLTagAF{} {
+
 \[
   x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.
 \]
-}
-\LuaMMLTagAF{} {
+
 \[
   \sum_a\underline c\dot bc'
 \]
-}
 
-\LuaMMLTagAF{} {
 \begin{align}
   abc&=def & e^{\mathrm{i}\pi}&=-1\\
   \Big(1+2&=3\Big)\\
   5
 \end{align}
-}
 
-Es gilt \LuaMMLTagAF{}{$\sin(x)-\sin(x+2\pi)=0$}.
-\tagstructend
+Es gilt $\sin(x)-\sin(x+2\pi)=0$.
+
 \end{document}
