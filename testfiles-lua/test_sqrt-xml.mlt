@@ -1,0 +1,28 @@
+\DocumentMetadata{
+  uncompress,
+  pdfversion = 2.0,
+  testphase = {phase-III,table,math},
+}
+\input{regression-test}
+\documentclass{article}
+\usepackage{unicode-math}
+
+\begin{document}
+\ExplSyntaxOn
+\luamml_set_filename:n {
+    \jobname .mml
+  }
+\luamml_process:  
+\luamml_begin_single_file:
+\ExplSyntaxOff
+
+$ \sqrt{x} $
+
+$ \sqrt{\sqrt{x}} + 2 $
+
+$ x = \sqrt{\sqrt[3]{y^2}} $
+
+$\sqrt[3]{y}$
+\end{document}
+
+
