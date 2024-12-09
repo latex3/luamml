@@ -527,8 +527,8 @@
 % In various places luamml has to add code to kernel commands. This is done through
 % sockets which are predeclared in lttagging.
 %
-% \subsubsection{mbox}
-% This socket annotates an \cs{hbox} inside box command use in math.
+% \subsubsection{Horizontal boxes}
+% This socket annotates an \cs{hbox} inside box commands used in math.
 % We test for the socket until the release 2025-06-01.
 %    \begin{macrocode}
 \str_if_exist:cF { l__socket_tagsupport/math/luamml/hbox_plug_str }
@@ -566,8 +566,8 @@
 %    \end{macrocode}
 %
 % \subsubsection{Artifact characters}
-% Unicode characters like a root sign should be marked as artifacts 
-% to avoid duplication e.g. in derivation if mathml 
+% Unicode characters like a root sign should be marked as artifacts
+% to avoid duplication e.g. in derivation if mathml
 % structure elements are used that imply the meaning.
 % We test for the socket until the release 2025-06-01.
 %    \begin{macrocode}
@@ -578,7 +578,7 @@
 %<*luatex>
 \NewSocketPlug{tagsupport/math/luamml/artifact}{default}
  {
-   \int_if_odd:nT { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } } 
+   \int_if_odd:nT { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } }
     {
       \tag_mc_begin:n{artifact}
     }
