@@ -564,6 +564,28 @@
 \AssignSocketPlug{tagsupport/math/luamml/hbox}{luamml}
 %</luatex>
 %    \end{macrocode}
+%
+% \subsubsection{Artifact characters}
+% Unicode characters like a root sign should be marked as artifacts 
+% to avoid duplication e.g. in derivation if mathml 
+% structure elements are used that imply the meaning.
+% We test for the socket until the release 2025-06-01.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/artifact_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/artifact}{0}
+ }
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/artifact}{default}
+ {
+   \int_if_odd:nT { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } } 
+    {
+      \tag_mc_begin:n{artifact}
+    }
+ }
+\AssignSocketPlug{tagsupport/math/luamml/hbox}{luamml}
+%</luatex>
+%    \end{macrocode}
 % \subsection{Patching}
 % For some packages, we ship with patches to make them more compatible and to
 % demonstrate how other code can be patched to work with \texttt{luamml}.
