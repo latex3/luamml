@@ -527,6 +527,29 @@
 % In various places luamml has to add code to kernel commands. This is done through
 % sockets which are predeclared in lttagging.
 %
+% \subsubsection{amsmath alignments}
+%
+% This socket finalize the \texttt{mtable} in alignments like align or gather.
+% It takes an argument, the environment.
+% It should be used normally with \cs{UseExpandableTaggingSocket}.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/finalize_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mtable/finalize}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/mtable/finalize}{noop}
+ }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mtable/finalize}{luamml}
+ {
+   \__luamml_amsmath_finalize_table:n {#1}
+ }
+%</luatex>
+%    \end{macrocode}
+%
+%
 % \subsubsection{Horizontal boxes}
 % This socket annotates an \cs{hbox} inside box commands used in math.
 % We test for the socket until the release 2025-06-01.
