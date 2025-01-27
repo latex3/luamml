@@ -527,6 +527,25 @@
 % In various places luamml has to add code to kernel commands. This is done through
 % sockets which are predeclared in lttagging.
 %
+% \subsubsection{Save socket}
+% This socket is a wrapper around the \cs{luamml_save:nNn} command
+% It should provided until 2025-06-01
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/save_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/save}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/save}{noop}
+ }  
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/save}{luamml}
+ {
+   \luamml_save:nNn #1
+ }
+\AssignSocketPlug{tagsupport/math/luamml/save}{luamml}
+%    \end{macrocode}
+%  
 % \subsubsection{amsmath alignments}
 %
 % This socket finalize the \texttt{mtable} in alignments like align or gather.
@@ -610,6 +629,44 @@
 \AssignSocketPlug{tagsupport/math/luamml/artifact}{default}
 %</luatex>
 %    \end{macrocode}
+%
+% \subsubsection{Math phantom socket}
+% This socket is used around \cs{finph@nt}. 
+% It should provided until 2025-06-01
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/finph@nt_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/finph@nt}{2}
+   \NewSocketPlug{tagsupport/math/luamml/finph@nt}{default}{#2}
+   \AssignSocketPlug{tagsupport/math/luamml/finph@nt}{default}
+ }  
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/finph@nt}{luamml}
+ {
+   \luamml_annotate:nen {1} 
+    {
+     nucleus = true,
+     core = 
+       {
+        [0] = 'mpadded',
+        \ifh@\else
+         width = 0,
+        \fi
+        \ifv@\else
+         height = 0, depth = 0,
+        \fi
+        consume_label'mathphant',
+      }
+    }
+    { #2 }  
+ }
+\AssignSocketPlug{tagsupport/math/luamml/finph@nt}{luamml}
+%</luatex>
+%    \end{macrocode} 
+% 
 % \subsection{Patching}
 % For some packages, we ship with patches to make them more compatible and to
 % demonstrate how other code can be patched to work with \texttt{luamml}.
