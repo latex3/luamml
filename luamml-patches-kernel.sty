@@ -25,6 +25,7 @@
 \IfPackageAtLeastTF{latex-lab-testphase-text}{2025-01-27}
  {}
  {
+   \PackageInfo{luamml}{patching~\string\mathph@nt}
    \cs_set:Npn \mathph@nt #1 #2 {
      \setbox \z@ = \hbox {
        $
