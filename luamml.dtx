@@ -37,6 +37,9 @@
 \usepackage{csquotes,luacolor}
 \MakeShortVerb{\|}
 \RecordChanges
+\ProvideDocElement[printtype=\textit{socket},idxtype=socket,idxgroup=Sockets]{Socket}{socketdecl}
+\ProvideDocElement[printtype=\textit{plug},idxtype=plug,idxgroup=Plugs]{Plug}{plugdecl}
+
 \begin{document}
 \tracingmathml2
 \DocInput{luamml.dtx}
@@ -535,7 +538,7 @@
  {
    \NewSocket{tagsupport/math/luamml/save}{1}
    \AssignSocketPlug{tagsupport/math/luamml/save}{noop}
- }  
+ }
 %    \end{macrocode}
 %
 %    \begin{macrocode}
@@ -545,7 +548,84 @@
  }
 \AssignSocketPlug{tagsupport/math/luamml/save}{luamml}
 %    \end{macrocode}
-%  
+%
+% \subsection{socket plugs for the array package}
+%
+% The socket declaration can go with the 2025-06-01 release
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/array/save_plug_str }
+  {
+     \NewSocket{tagsupport/math/luamml/array/save}{0}
+     \NewSocket{tagsupport/math/luamml/array/finalize}{0}
+     \NewSocket{tagsupport/math/luamml/array/initcol}{0}
+     \NewSocket{tagsupport/math/luamml/array/savecol}{0}
+     \NewSocket{tagsupport/math/luamml/array/finalizecol}{1}
+     \AssignSocketPlug{tagsupport/math/luamml/array/finalizecol}{noop}
+  }
+%    \end{macrocode}
+%
+% The luamml support makes only sense with luatex.
+%    \begin{macrocode}
+%<*luatex>
+\AddToHook{package/array/after}{\lua_now:n { require'luamml-array' }}
+%    \end{macrocode}
+% \begin{plugdecl}{tagsupport/math/luamml/array/save}
+%  The socket of this plug is used in \cs{endarray}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/save}{luamml}
+ {
+   \__luamml_array_save_array:
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%
+% \begin{plugdecl}{tagsupport/math/luamml/array/finalize}
+%  This socket of this plug is used in \cs{endarray}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/finalize}{luamml}
+ {
+   \mode_if_math:T { \__luamml_array_finalize_array: }
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%
+% \begin{plugdecl}{tagsupport/math/luamml/array/initcol}
+%  The socket of this plug is used in \cs{@classz}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/initcol}{luamml}
+ {
+   \__luamml_array_init_col:
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%
+% \begin{plugdecl}{tagsupport/math/luamml/array/savecol}
+%  The socket of this plug is used in \cs{@classz}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/savecol}{luamml}
+ {
+   \luamml_save:nn {} {mtd}
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%
+% \begin{plugdecl}{tagsupport/math/luamml/array/finalizecol}
+%  The socket of this plug is used used in \cs{@classz}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/finalizecol}{luamml}
+ {
+   \__luamml_array_finalize_col:w #1~
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%    \begin{macrocode}
+\AssignSocketPlug{tagsupport/math/luamml/array/save}{luamml}
+\AssignSocketPlug{tagsupport/math/luamml/array/finalize}{luamml}
+\AssignSocketPlug{tagsupport/math/luamml/array/initcol}{luamml}
+\AssignSocketPlug{tagsupport/math/luamml/array/savecol}{luamml}
+\AssignSocketPlug{tagsupport/math/luamml/array/finalizecol}{luamml}
+%</luatex>
+%    \end{macrocode}
 % \subsubsection{amsmath alignments}
 %
 % This socket finalize the \texttt{mtable} in alignments like align or gather.
@@ -619,19 +699,19 @@
    \NewSocket{tagsupport/math/luamml/artifact}{0}
  }
 %<*luatex>
-\NewSocketPlug{tagsupport/math/luamml/artifact}{default}
+\NewSocketPlug{tagsupport/math/luamml/artifact}{luamml}
  {
    \int_if_odd:nT { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } }
     {
       \tag_mc_begin:n{artifact}
     }
  }
-\AssignSocketPlug{tagsupport/math/luamml/artifact}{default}
+\AssignSocketPlug{tagsupport/math/luamml/artifact}{luamml}
 %</luatex>
 %    \end{macrocode}
 %
 % \subsubsection{Math phantom socket}
-% This socket is used around \cs{finph@nt}. 
+% This socket is used around \cs{finph@nt}.
 % It should provided until 2025-06-01
 %    \begin{macrocode}
 \str_if_exist:cF { l__socket_tagsupport/math/luamml/finph@nt_plug_str }
@@ -639,17 +719,17 @@
    \NewSocket{tagsupport/math/luamml/finph@nt}{2}
    \NewSocketPlug{tagsupport/math/luamml/finph@nt}{default}{#2}
    \AssignSocketPlug{tagsupport/math/luamml/finph@nt}{default}
- }  
+ }
 %    \end{macrocode}
 %
 %    \begin{macrocode}
 %<*luatex>
 \NewSocketPlug{tagsupport/math/luamml/finph@nt}{luamml}
  {
-   \luamml_annotate:nen {1} 
+   \luamml_annotate:nen {1}
     {
      nucleus = true,
-     core = 
+     core =
        {
         [0] = 'mpadded',
         \ifh@\else
@@ -661,14 +741,14 @@
         consume_label'mathphant',
       }
     }
-    { #2 }  
+    { #2 }
  }
 \AssignSocketPlug{tagsupport/math/luamml/finph@nt}{luamml}
 %</luatex>
-%    \end{macrocode} 
+%    \end{macrocode}
 
 % \subsubsection{Math smash socket}
-% This socket is used around \cs{finsm@sh}. 
+% This socket is used around \cs{finsm@sh}.
 % It should provided until 2025-06-01
 %    \begin{macrocode}
 \str_if_exist:cF { l__socket_tagsupport/math/luamml/finsm@sh_plug_str }
@@ -676,27 +756,27 @@
    \NewSocket{tagsupport/math/luamml/finsm@sh}{2}
    \NewSocketPlug{tagsupport/math/luamml/finsm@sh}{default}{#2}
    \AssignSocketPlug{tagsupport/math/luamml/finsm@sh}{default}
- }  
+ }
 %    \end{macrocode}
 %
 %    \begin{macrocode}
 %<*luatex>
 \NewSocketPlug{tagsupport/math/luamml/finsm@sh}{luamml}
  {
-   \luamml_annotate:nen {2} 
+   \luamml_annotate:nen {2}
     {
      nucleus = true,
-     core = 
-       consume_label('mathsmash', 
+     core =
+       consume_label('mathsmash',
            function(padded)
              padded.height, padded.depth = 0, 0~
            end),
     }
-    { #2 }  
+    { #2 }
  }
 \AssignSocketPlug{tagsupport/math/luamml/finsm@sh}{luamml}
 %</luatex>
-%    \end{macrocode} 
+%    \end{macrocode}
 % \subsection{Patching}
 % For some packages, we ship with patches to make them more compatible and to
 % demonstrate how other code can be patched to work with \texttt{luamml}.
@@ -722,7 +802,7 @@
 %    \end{macrocode}
 % \end{macro}
 %
-% We currently provide minimal patching for the kernel, \pkg{amsmath} and \pkg{array}.
+% We currently provide minimal patching for the kernel, \pkg{amsmath}.
 % Currently only the kernel code supports pdf\TeX, but it's planned to extend this.
 %    \begin{macrocode}
 \RequirePackage { luamml-patches-kernel }
@@ -730,7 +810,6 @@
 \__luamml_patch_package:n {amstext}
 \__luamml_patch_package:n {amsmath}
 \__luamml_patch_package:n {mathtools}
-\__luamml_patch_package:n {array}
 %</luatex>
 %    \end{macrocode}
 
