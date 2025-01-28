@@ -666,7 +666,37 @@
 \AssignSocketPlug{tagsupport/math/luamml/finph@nt}{luamml}
 %</luatex>
 %    \end{macrocode} 
-% 
+
+% \subsubsection{Math smash socket}
+% This socket is used around \cs{finsm@sh}. 
+% It should provided until 2025-06-01
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/finsm@sh_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/finsm@sh}{2}
+   \NewSocketPlug{tagsupport/math/luamml/finsm@sh}{default}{#2}
+   \AssignSocketPlug{tagsupport/math/luamml/finsm@sh}{default}
+ }  
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/finsm@sh}{luamml}
+ {
+   \luamml_annotate:nen {2} 
+    {
+     nucleus = true,
+     core = 
+       consume_label('mathsmash', 
+           function(padded)
+             padded.height, padded.depth = 0, 0~
+           end),
+    }
+    { #2 }  
+ }
+\AssignSocketPlug{tagsupport/math/luamml/finsm@sh}{luamml}
+%</luatex>
+%    \end{macrocode} 
 % \subsection{Patching}
 % For some packages, we ship with patches to make them more compatible and to
 % demonstrate how other code can be patched to work with \texttt{luamml}.
