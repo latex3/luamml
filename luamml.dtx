@@ -530,35 +530,40 @@
 % In various places luamml has to add code to kernel commands. This is done through
 % sockets which are predeclared in lttagging.
 %
-% \subsubsection{Save socket}
-% This socket is a wrapper around the \cs{luamml_save:nNn} command
-% It should provided until 2025-06-01
+% \subsubsection{Save sockets}
+% These sockets are wrappers around the \cs{luamml_save:...} commands
+% They should be provided until 2025-06-01
 %    \begin{macrocode}
-\str_if_exist:cF { l__socket_tagsupport/math/luamml/save_plug_str }
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/save/nn_plug_str }
  {
-   \NewSocket{tagsupport/math/luamml/save}{1}
-   \AssignSocketPlug{tagsupport/math/luamml/save}{noop}
+   \NewSocket{tagsupport/math/luamml/save/nn}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/save/nn}{noop}
+   \NewSocket{tagsupport/math/luamml/save/nNn}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/save/nNn}{noop}
  }
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\NewSocketPlug{tagsupport/math/luamml/save}{luamml}
+\NewSocketPlug{tagsupport/math/luamml/save/nNn}{luamml}
  {
    \luamml_save:nNn #1
  }
-\AssignSocketPlug{tagsupport/math/luamml/save}{luamml}
+\NewSocketPlug{tagsupport/math/luamml/save/nn}{luamml}
+ {
+   \luamml_save:nn #1
+ }
+\AssignSocketPlug{tagsupport/math/luamml/save/nn}{luamml}
 %    \end{macrocode}
 %
 % \subsection{socket plugs for the array package}
 %
 % The socket declaration can go with the 2025-06-01 release
 %    \begin{macrocode}
-\str_if_exist:cF { l__socket_tagsupport/math/luamml/array/save_plug_str }
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/array/finalize_plug_str }
   {
      \NewSocket{tagsupport/math/luamml/array/save}{0}
      \NewSocket{tagsupport/math/luamml/array/finalize}{0}
      \NewSocket{tagsupport/math/luamml/array/initcol}{0}
-     \NewSocket{tagsupport/math/luamml/array/savecol}{0}
      \NewSocket{tagsupport/math/luamml/array/finalizecol}{1}
      \AssignSocketPlug{tagsupport/math/luamml/array/finalizecol}{noop}
   }
@@ -599,15 +604,6 @@
 %    \end{macrocode}
 % \end{plugdecl}
 %
-% \begin{plugdecl}{tagsupport/math/luamml/array/savecol}
-%  The socket of this plug is used in \cs{@classz}.
-%    \begin{macrocode}
-\NewSocketPlug{tagsupport/math/luamml/array/savecol}{luamml}
- {
-   \luamml_save:nn {} {mtd}
- }
-%    \end{macrocode}
-% \end{plugdecl}
 %
 % \begin{plugdecl}{tagsupport/math/luamml/array/finalizecol}
 %  The socket of this plug is used used in \cs{@classz}.
