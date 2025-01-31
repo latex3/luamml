@@ -556,7 +556,27 @@
 \AssignSocketPlug{tagsupport/math/luamml/save/nn}{luamml}
 %    \end{macrocode}
 %
-% \subsection{socket plugs for the array package}
+% \subsubsection{sockets to annotate content}
+%
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/annotate/false_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/annotate/false}{2}
+   \NewSocketPlug{tagsupport/math/luamml/annotate/false}{default}{#2}
+   \AssignSocketPlug{tagsupport/math/luamml/annotate/false}{default}
+ }
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/annotate/false}{luamml}
+ {
+   \luamml_annotate:en { core = false } 
+    {
+      #2
+    }
+ }
+\AssignSocketPlug{tagsupport/math/luamml/annotate/false}{luamml} 
+%</luatex>   
+%    \end{macrocode}
+% \subsubsection{socket plugs for the array package}
 %
 % The socket declaration can go with the 2025-06-01 release
 %    \begin{macrocode}
@@ -623,6 +643,26 @@
 %</luatex>
 %    \end{macrocode}
 % \subsubsection{amsmath alignments}
+%
+% This socket is used at the end of alignment cells and adds the content to
+% the current row.
+%
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/finalizecol_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mtable/finalizecol}{0}
+ }
+%    \end{macrocode}
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mtable/finalizecol}{luamml}
+ {
+   \__luamml_amsmath_add_last_to_row:
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/finalizecol}{luamml}
+
+%</luatex>
+%    \end{macrocode}
 %
 % This socket finalize the \texttt{mtable} in alignments like align or gather.
 % It takes an argument, the environment.
