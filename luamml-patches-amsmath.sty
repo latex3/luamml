@@ -9,7 +9,7 @@
 % mostly disappear if there were enough hooks in amsmath.
 \IfPackageAtLeastTF{latex-lab-testphase-math}{2025-01-24}
  {}
- { 
+ {
    \PackageInfo{luamml}{patching~\string\start@aligned}
     % aligned and friends
     \cs_set:Npn \start@aligned #1#2 {
@@ -61,7 +61,7 @@
           \crcr
           \ams@return@opt@arg
     }
-  \PackageInfo{luamml}{patching~gathered}
+   \PackageInfo{luamml}{patching~gathered}
      \renewcommand \gathered [1] [c] {
        \RIfM@
        \else
@@ -87,7 +87,7 @@
            \crcr
              \ams@return@opt@arg
      }
-   \PackageInfo{luamml}{patching~\string\endaligned}  
+   \PackageInfo{luamml}{patching~\string\endaligned}
    \cs_set:Npn \endaligned {
          \crcr
          \UseExpandableTaggingSocket{math/luamml/mtable/innertable/save}
@@ -96,67 +96,66 @@
      \egroup
      \UseTaggingSocket{math/luamml/mtable/innertable/finalize}
    }
- }
+   \PackageInfo{luamml}{patching~\string\gather@}
+     \cs_set:Npn \gather@ #1 {
+       \ingather@true
+       \let \split \insplit@
+       \let \tag \tag@in@align
+       \let \label \label@in@display
+       \chardef \dspbrk@context \z@
+       \intertext@ \displ@y@ \Let@
+       \let \math@cr@@@ \math@cr@@@gather
+       \gmeasure@ {#1}
+       \global \shifttag@false
+       \tabskip \z@skip
+       \global \row@ \@ne
+       \halign to \displaywidth \bgroup
+           \strut@
+           \setboxz@h {
+             $
+               \m@th
+               \displaystyle
+               {##}
+               \UseTaggingSocket{math/luamml/save/nNn}{ {} \displaystyle {mtd}}
+             $
+           }
+           \UseTaggingSocket{math/luamml/mtable/finalizecol}{box}
+           \calc@shift@gather
+           \set@gather@field
+           \tabskip\@centering
+         &
+           \setboxz@h {
+             \strut@
+             {##}
+           }
+           \dim_compare:nNnTF {0pt} = {
+             \box_wd:N \c_zero_int
+           }
+           { \place@tag@gather }
+           {
+             \place@tag@gather
+             \UseTaggingSocket{math/luamml/mtable/tag/set}
+           }
+           \tabskip \iftagsleft@
+             \gdisplaywidth@
+           \else
+             \z@skip
+           \span \fi
+           \crcr
+           #1
+     }
+% in latex lab, add the luamml_ignore to \measuring@true instead.
+    \PackageInfo{luamml}{patching~\string\gmeasure@}
+    \cs_new_eq:NN \__luamml_amsmath_original_gmeasure:n \gmeasure@
+    \cs_set:Npn \gmeasure@ #1 {
+      \exp_last_unbraced:Nno
+        \use_ii_i:nn
+        { \luamml_ignore: }
+        { \__luamml_amsmath_original_gmeasure:n {#1} }
+    }
 
-% gather
-\cs_set:Npn \gather@ #1 {
-  \ingather@true
-  \let \split \insplit@
-  \let \tag \tag@in@align
-  \let \label \label@in@display
-  \chardef \dspbrk@context \z@
-  \intertext@ \displ@y@ \Let@
-  \let \math@cr@@@ \math@cr@@@gather
-  \gmeasure@ {#1}
-  \global \shifttag@false
-  \tabskip \z@skip
-  \global \row@ \@ne
-  \halign to \displaywidth \bgroup
-      \strut@
-      \setboxz@h {
-        $
-          \m@th
-          \displaystyle
-          {##}
-          \UseTaggingSocket{math/luamml/save/nNn}{ {} \displaystyle {mtd}}
-        $
-      }
-      \UseTaggingSocket{math/luamml/mtable/finalizecol}{box}
-      \calc@shift@gather
-      \set@gather@field
-      \tabskip\@centering
-    &
-      \setboxz@h {
-        \strut@
-        {##}
-      }
-      \dim_compare:nNnTF {0pt} = {
-        \box_wd:N \c_zero_int
-      }
-      { \place@tag@gather }
-      {
-        \place@tag@gather
-        \UseTaggingSocket{math/luamml/mtable/tag/set}
-      }
-      \tabskip \iftagsleft@
-        \gdisplaywidth@
-      \else
-        \z@skip
-      \span \fi
-      \crcr
-      #1
-}
 
-\cs_new_eq:NN \__luamml_amsmath_original_gmeasure:n \gmeasure@
-\cs_set:Npn \gmeasure@ #1 {
-  \exp_last_unbraced:Nno
-    \use_ii_i:nn
-    { \luamml_ignore: }
-    { \__luamml_amsmath_original_gmeasure:n {#1} }
-}
-\IfPackageAtLeastTF{latex-lab-testphase-math}{2025-01-24}
- {}
- { \PackageInfo{luamml}{patching~\string\endgather}
+   \PackageInfo{luamml}{patching~\string\endgather}
    \cs_set:Npn \endgather {
          \math@cr
          \black@ \totwidth@
@@ -252,7 +251,7 @@
 \IfPackageAtLeastTF{latex-lab-testphase-math}{2025-01-24}
  {}
  { \PackageInfo{luamml}{patching~\string\maketag@@@}
-   \cs_set:Npn \maketag@@@ #1 
+   \cs_set:Npn \maketag@@@ #1
     {
       \hbox {
        \m@th
@@ -261,7 +260,7 @@
        \UseTaggingSocket{math/luamml/mtable/tag/save}
      }
     }
-% this handled in latex-lab through \common@align@ending    
+% this handled in latex-lab through \common@align@ending
     \cs_set:Npn \endalign {
       \math@cr
       \black@ \totwidth@
@@ -392,7 +391,7 @@
             \scriptstyle
             ##
             % No \scriptsize here since we want to add the mstyle nodes
-            \UseTaggingSocket{math/luamml/save/nn}{ {} {mtd}}        
+            \UseTaggingSocket{math/luamml/save/nn}{ {} {mtd}}
             $
             \UseTaggingSocket{math/luamml/mtable/finalizecol}{last}
             \hfil
@@ -405,7 +404,7 @@
       \UseTaggingSocket{math/luamml/mtable/innertable/finalize}
       \UseTaggingSocket{ math/luamml/annotate/false } {}{ \, }
     }
-  } 
+  }
 
 % {cases} is defined by the kernel, but we patch the overwritten version by amsmath.
 \cs_set:Npn \env@cases {
