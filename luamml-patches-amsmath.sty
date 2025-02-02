@@ -305,14 +305,14 @@
 % Less luckily, \endmultline@math sometimes get overwritten for the last line.
 % But that isn't a problem since we want special behavior there anyway.
 \cs_set:Npn \endmultline@math {
-  \luamml_save:nNn {} \displaystyle {mtd}
+  \UseTaggingSocket{math/luamml/save/nNn}{{} \displaystyle {mtd}}
   $
   \UseTaggingSocket{math/luamml/mtable/finalizecol}{last}
 }
 
 \cs_set:Npn \rendmultline@ {
     \iftag@
-      \luamml_save:nNn {} \displaystyle {mtd}
+      \UseTaggingSocket{math/luamml/save/nNn}{{} \displaystyle {mtd}}
       $
       \UseTaggingSocket{math/luamml/mtable/finalizecol}{last}
       \let \endmultline@math \relax
@@ -402,7 +402,7 @@
         \egroup
       \egroup
       \UseTaggingSocket{math/luamml/mtable/innertable/finalize}
-      \UseTaggingSocket{ math/luamml/annotate/false } {}{ \, }
+      \UseTaggingSocket{math/luamml/annotate/false} {}{ \, }
     }
   }
 
