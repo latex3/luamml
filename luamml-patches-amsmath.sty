@@ -164,88 +164,89 @@
      $$
      \ignorespacesafterend
    }
- }
+
 
 % align and friends
-\cs_set:Npn \align@preamble {
-  &
-    \hfil
-    \strut@
-    \setboxz@h {
-      \@lign
-      $
-        \m@th
-        \displaystyle
-        {##}
-        \ifmeasuring@
-          \luamml_ignore:
-        \else
-          \UseTaggingSocket{math/luamml/save/nNn}{ {} \displaystyle {mtd}}
-        \fi
-      $
-    }
-    \ifmeasuring@
-      \savefieldlength@
-    \else
-      \UseTaggingSocket{math/luamml/mtable/finalizecol}{box}
-    \fi
-    \set@field
-    \tabskip\z@skip
-  &
-    \setboxz@h {
-      \@lign
-      $
-      \m@th
-      \displaystyle
-      {
-        {}
-        ##
-      }
-      \ifmeasuring@
-        \luamml_ignore:
-      \else
-        \UseTaggingSocket{math/luamml/save/nNn}{ {} \displaystyle {mtd}}
-      \fi
-      $
-    }
-    \ifmeasuring@
-      \savefieldlength@
-    \else
-      \UseTaggingSocket{math/luamml/mtable/finalizecol}{box}
-    \fi
-    \set@field
-    \hfil
-    \tabskip\alignsep@
+   \PackageInfo{luamml}{patching~\string\align@preamble}
+   \cs_set:Npn \align@preamble {
+     &
+       \hfil
+       \strut@
+       \setboxz@h {
+         \@lign
+         $
+           \m@th
+           \displaystyle
+           {##}
+           \ifmeasuring@
+             \luamml_ignore:
+           \else
+             \UseTaggingSocket{math/luamml/save/nNn}{ {} \displaystyle {mtd}}
+           \fi
+         $
+       }
+       \ifmeasuring@
+         \savefieldlength@
+       \else
+         \UseTaggingSocket{math/luamml/mtable/finalizecol}{box}
+       \fi
+       \set@field
+       \tabskip\z@skip
+     &
+       \setboxz@h {
+         \@lign
+         $
+         \m@th
+         \displaystyle
+         {
+           {}
+           ##
+         }
+         \ifmeasuring@
+           \luamml_ignore:
+         \else
+           \UseTaggingSocket{math/luamml/save/nNn}{ {} \displaystyle {mtd}}
+         \fi
+         $
+       }
+       \ifmeasuring@
+         \savefieldlength@
+       \else
+         \UseTaggingSocket{math/luamml/mtable/finalizecol}{box}
+       \fi
+       \set@field
+       \hfil
+       \tabskip\alignsep@
+   }
+   \PackageInfo{luamml}{patching~\string\math@cr@@@align}
+   \cs_set:Npn \math@cr@@@align {
+     \ifst@rred
+       \nonumber
+     \fi
+     \if@eqnsw
+       \global \tag@true
+     \fi
+     \global \advance \row@ \@ne
+     \add@amps \maxfields@
+     \omit
+     \kern -\alignsep@
+     \iftag@
+       \setboxz@h {
+         \@lign
+         \strut@
+         { \make@display@tag }
+       }
+       \place@tag
+       \UseTaggingSocket{math/luamml/mtable/tag/set}
+     \fi
+     \ifst@rred
+     \else
+       \global \@eqnswtrue
+     \fi
+     \global \lineht@ \z@
+     \cr
+   }
 }
-
-\cs_set:Npn \math@cr@@@align {
-  \ifst@rred
-    \nonumber
-  \fi
-  \if@eqnsw
-    \global \tag@true
-  \fi
-  \global \advance \row@ \@ne
-  \add@amps \maxfields@
-  \omit
-  \kern -\alignsep@
-  \iftag@
-    \setboxz@h {
-      \@lign
-      \strut@
-      { \make@display@tag }
-    }
-    \place@tag
-    \UseTaggingSocket{math/luamml/mtable/tag/set}
-  \fi
-  \ifst@rred
-  \else
-    \global \@eqnswtrue
-  \fi
-  \global \lineht@ \z@
-  \cr
-}
-
 % This was lost anyway, as the latex-lab code overwrites
 % the definition again.
 \IfPackageAtLeastTF{latex-lab-testphase-math}{2025-01-24}
