@@ -715,6 +715,7 @@
 %</luatex>
 %    \end{macrocode}
 %
+% \subsubsection{Tags and labels}
 % These sockets save and set tags and labels in alignments.
 %    \begin{macrocode}
 \str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/tag/save_plug_str }
@@ -738,6 +739,55 @@
 
 %</luatex>
 %    \end{macrocode}
+%
+% If math structure elements are created the Lbl-structure of a tag
+% must be moved inside the math structure, typically as an additional column in an
+% \texttt{mtable} with an intent \texttt{:equationlabel}.
+% 
+% The luamml-code handles this by stashing the Lbl-structure, storing the
+% structure number in an array and reusing it once it creates the math structure elements.
+% 
+% This should only be done for specific environments, we define
+% a constant to test: 
+%    \begin{macrocode}
+%<*luatex>
+\clist_map_inline:nn 
+  {
+    align,
+    alignat,
+    xalignat,
+    xxalignat,
+    flalign,
+    gather,
+    %multline, % NO
+    %equation, % NO
+  }
+  {\tl_const:cn { c__luamml_label_#1_tl}{}}
+%    \end{macrocode}
+% 
+% 
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/display/tag/begin}{luamml}
+ { 
+   \tag_mc_end: 
+   \bool_lazy_and:nnTF
+    { \tl_if_exist_p:c { c__luamml_label_ \@currenvir _tl } }
+    { \int_if_odd_p:n { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } } }
+    {   
+      \typeout{Stash~and~move~\@currenvir~Lbl}   
+      \tag_struct_begin:n {tag=Lbl,stash}
+      \directlua{table.insert(ltx.__tag.struct.luamml.labels,\tag_get:n{struct_num})}
+    }
+    {     
+      \tag_struct_begin:n {tag=Lbl}
+    } 
+   \tag_mc_begin:n {}
+ }
+\AssignSocketPlug{tagsupport/math/display/tag/begin}{luamml} 
+%</luatex>
+%    \end{macrocode}
+%
+%
 % \subsubsection{Horizontal boxes}
 % This socket annotates an \cs{hbox} inside box commands used in math.
 % We test for the socket until the release 2025-06-01.
