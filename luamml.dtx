@@ -692,7 +692,7 @@
 \AssignSocketPlug{tagsupport/math/luamml/mtable/innertable/finalize}{luamml}
 %</luatex>
 %    \end{macrocode}
-
+%
 %
 % This socket finalize the \texttt{mtable} in alignments like align or gather.
 % It takes an argument, the environment.
@@ -714,6 +714,27 @@
 \AssignSocketPlug{tagsupport/math/luamml/mtable/finalize}{luamml}
 %</luatex>
 %    \end{macrocode}
+%
+% This socket adds attributes for the alignment in \texttt{multline}.
+% It takes an argument, the alignment.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/aligncol_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mtable/aligncol}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/mtable/aligncol}{noop}
+ }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mtable/aligncol}{luamml}
+ {
+   \__luamml_amsmath_set_row_columnalign:n {#1}
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/aligncol}{luamml}
+%</luatex>
+%    \end{macrocode}
+
 %
 % \subsubsection{Tags and labels}
 % These sockets save and set tags and labels in alignments.
