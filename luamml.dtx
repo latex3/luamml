@@ -775,13 +775,32 @@
 \clist_map_inline:nn 
   {
     align,
+    align*,
     alignat,
+    alignat*,
     xalignat,
-    xxalignat,
+    xalignat*,
+%    \end{macrocode}
+%  there is never a tag/label in xxalignat, so does it make sense to add a label column? 
+%  Left out for now.
+%    \begin{macrocode}
+    %xxalignat, 
     flalign,
+    flalign*,
     gather,
+    gather*,
+%    \end{macrocode}
+% equation and multline have at most one tag, so we do not use a label column
+% but rely on the external Lbl for now.
+%    \begin{macrocode}
     %multline, % NO
+    %multline*, % NO
     %equation, % NO
+    %equation*, % NO
+%    \end{macrocode}
+%   split has never a numbering so is ignored
+%    \begin{macrocode}
+    %split, % NO
   }
   {\tl_const:cn { c__luamml_label_#1_tl}{}}
 %    \end{macrocode}
@@ -795,7 +814,7 @@
     { \tl_if_exist_p:c { c__luamml_label_ \@currenvir _tl } }
     { \int_if_odd_p:n { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } } }
     {   
-      \typeout{Stash~and~move~\@currenvir~Lbl}   
+      %\typeout{Stash~and~move~\@currenvir\c_space_tl Lbl}   
       \tag_struct_begin:n {tag=Lbl,stash}
       \directlua{table.insert(ltx.__tag.struct.luamml.labels,\tag_get:n{struct_num})}
     }
