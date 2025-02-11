@@ -133,7 +133,6 @@
         <mi>𝑐</mi>
       </mtd>
       <mtd>
-        <mi />
         <mo lspace="0.278em" rspace="0.278em">=</mo>
         <mi>𝑑</mi>
         <mi>𝑒</mi>
@@ -149,7 +148,6 @@
         </msup>
       </mtd>
       <mtd>
-        <mi />
         <mo lspace="0.278em" rspace="0">=</mo>
         <mo lspace="0.278em" rspace="0">−</mo>
         <mn>1</mn>
@@ -163,31 +161,20 @@
         <mn>2</mn>
       </mtd>
       <mtd>
-        <mi />
         <mo lspace="0.278em" rspace="0.278em">=</mo>
         <mn>3</mn>
         <mo fence="true" lspace="0" maxsize="17.861pt" minsize="17.861pt" rspace="0" symmetric="true">)</mo>
       </mtd>
-      <mtd>
-        <mi />
-      </mtd>
-      <mtd>
-        <mi />
-      </mtd>
+      <mtd></mtd>
+      <mtd></mtd>
     </mtr>
     <mtr>
       <mtd>
         <mn>5</mn>
       </mtd>
-      <mtd>
-        <mi />
-      </mtd>
-      <mtd>
-        <mi />
-      </mtd>
-      <mtd>
-        <mi />
-      </mtd>
+      <mtd></mtd>
+      <mtd></mtd>
+      <mtd></mtd>
     </mtr>
   </mtable>
 </math>
