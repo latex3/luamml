@@ -1,0 +1,22 @@
+\ExplSyntaxOn
+\sys_gset_rand_seed:n{42}
+\ExplSyntaxOff
+\DocumentMetadata{
+  uncompress,
+  pdfversion = 2.0,
+  testphase = {phase-III,math,table},
+}
+\input{regression-test}
+\documentclass{article}
+\usepackage{unicode-math}
+\tagpdfsetup{math/mathml/structelem}
+\begin{document}
+
+$ \sqrt{x} $
+
+$ \sqrt{\sqrt{x}} + 2 $
+
+$ x = \sqrt{\sqrt[3]{y^2}} $
+
+$\sqrt[3]{y}$
+\end{document}

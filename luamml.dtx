@@ -37,6 +37,9 @@
 \usepackage{csquotes,luacolor}
 \MakeShortVerb{\|}
 \RecordChanges
+\ProvideDocElement[printtype=\textit{socket},idxtype=socket,idxgroup=Sockets]{Socket}{socketdecl}
+\ProvideDocElement[printtype=\textit{plug},idxtype=plug,idxgroup=Plugs]{Plug}{plugdecl}
+
 \begin{document}
 \tracingmathml2
 \DocInput{luamml.dtx}
@@ -93,9 +96,9 @@
 % }
 % \end{verbatim}
 % produces a |<mi>TeX</mi>| element in the output instead of trying to import \TeX~as a mathematical expression.
-% 
+%
 % It it possible to add a structure around the construct, stash that structure
-% and then to tell \cmd{luamml_annotate:en} to insert it later inside the math. 
+% and then to tell \cmd{luamml_annotate:en} to insert it later inside the math.
 % For this the keys \texttt{struct} (which takes a label as argument) or \texttt{structnum}
 % (which takes a structure number) can be used. For example
 % \begin{verbatim}
@@ -103,12 +106,12 @@
 %  \tagstructbegin{tag=mtext,stash}\tagmcbegin{}
 %  \luamml_annotate:en{nucleus=true,structnum=\tag_get:n{struct_num}}
 %  {\mbox{some~text~with~\emph{structure}}}
-%  \tagmcend\tagstructend 
+%  \tagmcend\tagstructend
 % $
 % \end{verbatim}
-% Such a construction should check that the flag for structure elements has actually 
+% Such a construction should check that the flag for structure elements has actually
 % been set to avoid orphaned structures if the stashed structure is ignored.
-% 
+%
 % More about the table structure is explained in an appendix.
 %
 % \section{Features \& Limitations}
@@ -316,7 +319,7 @@
 %   written by a previous formula. Therefore this has to be called separately
 %   for every formula or it must expand to different values to be useful.
 %   The value is fully expanded when the file is written.
-%   
+%
 %   Only complete formulas get written into files (so formulas where
 %   \cs{luamml_process:} or \cs{luamml_structelem:} are in effect).
 %
@@ -523,11 +526,447 @@
 %    \end{macrocode}
 % \end{macro}
 %
+% \subsection{Sockets}
+% In various places luamml has to add code to kernel commands. This is done through
+% sockets which are predeclared in lttagging.
 %
+% \subsubsection{Save sockets}
+% These sockets are wrappers around the \cs{luamml_save:...} commands
+% They should be provided until 2025-06-01
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/save/nn_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/save/nn}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/save/nn}{noop}
+   \NewSocket{tagsupport/math/luamml/save/nNn}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/save/nNn}{noop}
+ }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/save/nNn}{luamml}
+ {
+   \luamml_save:nNn #1
+ }
+\AssignSocketPlug{tagsupport/math/luamml/save/nNn}{luamml}
+\NewSocketPlug{tagsupport/math/luamml/save/nn}{luamml}
+ {
+   \luamml_save:nn #1
+ }
+\AssignSocketPlug{tagsupport/math/luamml/save/nn}{luamml}
+%    \end{macrocode}
+%
+% \subsubsection{sockets to annotate content}
+%
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/annotate/false_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/annotate/false}{2}
+   \NewSocketPlug{tagsupport/math/luamml/annotate/false}{default}{#2}
+   \AssignSocketPlug{tagsupport/math/luamml/annotate/false}{default}
+ }
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/annotate/false}{luamml}
+ {
+   \luamml_annotate:en { core = false } 
+    {
+      #2
+    }
+ }
+\AssignSocketPlug{tagsupport/math/luamml/annotate/false}{luamml} 
+%</luatex>   
+%    \end{macrocode}
+% \subsubsection{socket plugs for the array package}
+%
+% The socket declaration can go with the 2025-06-01 release
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/array/finalize_plug_str }
+  {
+     \NewSocket{tagsupport/math/luamml/array/save}{0}
+     \NewSocket{tagsupport/math/luamml/array/finalize}{0}
+     \NewSocket{tagsupport/math/luamml/array/initcol}{0}
+     \NewSocket{tagsupport/math/luamml/array/finalizecol}{1}
+     \AssignSocketPlug{tagsupport/math/luamml/array/finalizecol}{noop}
+  }
+%    \end{macrocode}
+%
+% The luamml support makes only sense with luatex.
+%    \begin{macrocode}
+%<*luatex>
+\AddToHook{package/array/after}{\lua_now:n { require'luamml-array' }}
+%    \end{macrocode}
+% \begin{plugdecl}{tagsupport/math/luamml/array/save}
+%  The socket of this plug is used in \cs{endarray}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/save}{luamml}
+ {
+   \__luamml_array_save_array:
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%
+% \begin{plugdecl}{tagsupport/math/luamml/array/finalize}
+%  This socket of this plug is used in \cs{endarray}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/finalize}{luamml}
+ {
+   \mode_if_math:T { \__luamml_array_finalize_array: }
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%
+% \begin{plugdecl}{tagsupport/math/luamml/array/initcol}
+%  The socket of this plug is used in \cs{@classz}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/initcol}{luamml}
+ {
+   \__luamml_array_init_col:
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%
+%
+% \begin{plugdecl}{tagsupport/math/luamml/array/finalizecol}
+%  The socket of this plug is used used in \cs{@classz}.
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/luamml/array/finalizecol}{luamml}
+ {
+   \__luamml_array_finalize_col:w #1~
+ }
+%    \end{macrocode}
+% \end{plugdecl}
+%    \begin{macrocode}
+\AssignSocketPlug{tagsupport/math/luamml/array/save}{luamml}
+\AssignSocketPlug{tagsupport/math/luamml/array/finalize}{luamml}
+\AssignSocketPlug{tagsupport/math/luamml/array/initcol}{luamml}
+\AssignSocketPlug{tagsupport/math/luamml/array/finalizecol}{luamml}
+%</luatex>
+%    \end{macrocode}
+% \subsubsection{amsmath alignments}
+%
+% This socket is used at the end of alignment cells and adds the content to
+% the current row.
+%
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/finalizecol_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mtable/finalizecol}{1}
+ }
+%    \end{macrocode}
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mtable/finalizecol}{luamml}
+ {
+   \use:c{__luamml_amsmath_add_#1_to_row:}
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/finalizecol}{luamml}
+
+%</luatex>
+%    \end{macrocode}
+%
+% These sockets save an inner table
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/innertable/save_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mtable/innertable/save}{0}
+   \NewSocket{tagsupport/math/luamml/mtable/smallmatrix/save}{0}
+   \NewSocket{tagsupport/math/luamml/mtable/innertable/finalize}{0}
+ }
+%    \end{macrocode}
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mtable/innertable/save}{luamml}
+ {
+   \__luamml_amsmath_save_inner_table:n \@currenvir
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/innertable/save}{luamml}
+\NewSocketPlug{tagsupport/math/luamml/mtable/smallmatrix/save}{luamml}
+ {
+   \__luamml_amsmath_save_smallmatrix:
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/smallmatrix/save}{luamml}
+\NewSocketPlug{tagsupport/math/luamml/mtable/innertable/finalize}{luamml}
+ {
+   \__luamml_amsmath_finalize_inner_table:
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/innertable/finalize}{luamml}
+%</luatex>
+%    \end{macrocode}
+%
+%
+% This socket finalize the \texttt{mtable} in alignments like align or gather.
+% It takes an argument, the environment.
+% It should be used normally with \cs{UseExpandableTaggingSocket}.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/finalize_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mtable/finalize}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/mtable/finalize}{noop}
+ }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mtable/finalize}{luamml}
+ {
+   \__luamml_amsmath_finalize_table:n {#1}
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/finalize}{luamml}
+%</luatex>
+%    \end{macrocode}
+%
+% This socket adds attributes for the alignment in \texttt{multline}.
+% It takes an argument, the alignment.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/aligncol_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mtable/aligncol}{1}
+   \AssignSocketPlug{tagsupport/math/luamml/mtable/aligncol}{noop}
+ }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mtable/aligncol}{luamml}
+ {
+   \__luamml_amsmath_set_row_columnalign:n {#1}
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/aligncol}{luamml}
+%</luatex>
+%    \end{macrocode}
+
+%
+% \subsubsection{Tags and labels}
+% These sockets save and set tags and labels in alignments.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/mtable/tag/save_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/mtable/tag/save}{0}
+   \NewSocket{tagsupport/math/luamml/mtable/tag/set}{0}
+ }
+%    \end{macrocode}
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/mtable/tag/save}{luamml}
+ {
+   \__luamml_amsmath_save_tag:
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/tag/save}{luamml}
+\NewSocketPlug{tagsupport/math/luamml/mtable/tag/set}{luamml}
+ {
+   \__luamml_amsmath_set_tag:
+ }
+\AssignSocketPlug{tagsupport/math/luamml/mtable/tag/set}{luamml}
+
+%</luatex>
+%    \end{macrocode}
+%
+% If math structure elements are created the Lbl-structure of a tag
+% must be moved inside the math structure, typically as an additional column in an
+% \texttt{mtable} with an intent \texttt{:equationlabel}.
+% 
+% The luamml-code handles this by stashing the Lbl-structure, storing the
+% structure number in an array and reusing it once it creates the math structure elements.
+% 
+% This should only be done for specific environments, we define
+% a constant to test: 
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/display/tag/begin_plug_str }
+ {
+   \NewSocket{tagsupport/math/display/tag/begin}{0}
+   \NewSocket{tagsupport/math/display/tag/end}{0}
+ }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\clist_map_inline:nn 
+  {
+    align,
+    align*,
+    alignat,
+    alignat*,
+    xalignat,
+    xalignat*,
+%    \end{macrocode}
+%  there is never a tag/label in xxalignat, so does it make sense to add a label column? 
+%  Left out for now.
+%    \begin{macrocode}
+    %xxalignat, 
+    flalign,
+    flalign*,
+    gather,
+    gather*,
+%    \end{macrocode}
+% equation and multline have at most one tag, so we do not use a label column
+% but rely on the external Lbl for now.
+%    \begin{macrocode}
+    %multline, % NO
+    %multline*, % NO
+    %equation, % NO
+    %equation*, % NO
+%    \end{macrocode}
+%   split has never a numbering so is ignored
+%    \begin{macrocode}
+    %split, % NO
+  }
+  {\tl_const:cn { c__luamml_label_#1_tl}{}}
+%    \end{macrocode}
+% 
+% 
+%    \begin{macrocode}
+\NewSocketPlug{tagsupport/math/display/tag/begin}{luamml}
+ { 
+   \tag_mc_end: 
+   \bool_lazy_and:nnTF
+    { \tl_if_exist_p:c { c__luamml_label_ \@currenvir _tl } }
+    { \int_if_odd_p:n { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } } }
+    {   
+      %\typeout{Stash~and~move~\@currenvir\c_space_tl Lbl}   
+      \tag_struct_begin:n {tag=Lbl,stash}
+      \directlua{table.insert(ltx.__tag.struct.luamml.labels,\tag_get:n{struct_num})}
+    }
+    {     
+      \tag_struct_begin:n {tag=Lbl}
+    } 
+   \tag_mc_begin:n {}
+ }
+\AssignSocketPlug{tagsupport/math/display/tag/begin}{luamml} 
+%</luatex>
+%    \end{macrocode}
+%
+%
+% \subsubsection{Horizontal boxes}
+% This socket annotates an \cs{hbox} inside box commands used in math.
+% We test for the socket until the release 2025-06-01.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/hbox_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/hbox}{2}
+   \NewSocketPlug{tagsupport/math/luamml/hbox}{default}{#2}
+   \AssignSocketPlug{tagsupport/math/luamml/hbox}{default}
+ }
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/hbox}{luamml}
+ {
+   \bool_lazy_and:nnTF
+    { \mode_if_math_p: }
+    { \int_if_odd_p:n { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } } }
+    {
+      \tag_struct_begin:n
+       {
+         tag=mtext,
+         stash,
+       }
+      \tag_mc_begin:n {}
+      \luamml_annotate:en
+       {
+         nucleus = true,
+         structnum=\tag_get:n{struct_num}
+       }
+       { #2 }
+      \tag_mc_end:
+      \tag_struct_end:
+    }
+    { #2 }
+  }
+\AssignSocketPlug{tagsupport/math/luamml/hbox}{luamml}
+%</luatex>
+%    \end{macrocode}
+%
+% \subsubsection{Artifact characters}
+% Unicode characters like a root sign should be marked as artifacts
+% to avoid duplication e.g. in derivation if mathml
+% structure elements are used that imply the meaning.
+% We test for the socket until the release 2025-06-01.
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/artifact_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/artifact}{0}
+ }
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/artifact}{luamml}
+ {
+   \int_if_odd:nT { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } }
+    {
+      \tag_mc_begin:n{artifact}
+    }
+ }
+\AssignSocketPlug{tagsupport/math/luamml/artifact}{luamml}
+%</luatex>
+%    \end{macrocode}
+%
+% \subsubsection{Math phantom socket}
+% This socket is used around \cs{finph@nt}.
+% It should provided until 2025-06-01
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/finph@nt_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/finph@nt}{2}
+   \NewSocketPlug{tagsupport/math/luamml/finph@nt}{default}{#2}
+   \AssignSocketPlug{tagsupport/math/luamml/finph@nt}{default}
+ }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/finph@nt}{luamml}
+ {
+   \luamml_annotate:nen {1}
+    {
+     nucleus = true,
+     core =
+       {
+        [0] = 'mpadded',
+        \ifh@\else
+         width = 0,
+        \fi
+        \ifv@\else
+         height = 0, depth = 0,
+        \fi
+        consume_label'mathphant',
+      }
+    }
+    { #2 }
+ }
+\AssignSocketPlug{tagsupport/math/luamml/finph@nt}{luamml}
+%</luatex>
+%    \end{macrocode}
+
+% \subsubsection{Math smash socket}
+% This socket is used around \cs{finsm@sh}.
+% It should provided until 2025-06-01
+%    \begin{macrocode}
+\str_if_exist:cF { l__socket_tagsupport/math/luamml/finsm@sh_plug_str }
+ {
+   \NewSocket{tagsupport/math/luamml/finsm@sh}{2}
+   \NewSocketPlug{tagsupport/math/luamml/finsm@sh}{default}{#2}
+   \AssignSocketPlug{tagsupport/math/luamml/finsm@sh}{default}
+ }
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*luatex>
+\NewSocketPlug{tagsupport/math/luamml/finsm@sh}{luamml}
+ {
+   \luamml_annotate:nen {2}
+    {
+     nucleus = true,
+     core =
+       consume_label('mathsmash',
+           function(padded)
+             padded.height, padded.depth = 0, 0~
+           end),
+    }
+    { #2 }
+ }
+\AssignSocketPlug{tagsupport/math/luamml/finsm@sh}{luamml}
+%</luatex>
+%    \end{macrocode}
 % \subsection{Patching}
 % For some packages, we ship with patches to make them more compatible and to
 % demonstrate how other code can be patched to work with \texttt{luamml}.
-% 
+%
 % These are either loaded directly if the packages are loaded or delayed using
 % \LaTeX's hook system otherwise.
 % \begin{macro}{\__luamml_patch_package:nn, \__luamml_patch_package:n}
@@ -549,7 +988,7 @@
 %    \end{macrocode}
 % \end{macro}
 %
-% We currently provide minimal patching for the kernel, \pkg{amsmath} and \pkg{array}.
+% We currently provide minimal patching for the kernel, \pkg{amsmath}.
 % Currently only the kernel code supports pdf\TeX, but it's planned to extend this.
 %    \begin{macrocode}
 \RequirePackage { luamml-patches-kernel }
@@ -557,7 +996,6 @@
 \__luamml_patch_package:n {amstext}
 \__luamml_patch_package:n {amsmath}
 \__luamml_patch_package:n {mathtools}
-\__luamml_patch_package:n {array}
 %</luatex>
 %    \end{macrocode}
 

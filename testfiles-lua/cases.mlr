@@ -106,9 +106,6 @@
   </mfrac>
   <mo lspace="0" rspace="0">.</mo>
 </math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑏</mi>
-</math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
   <munder>
     <mo lspace="0" movablelimits="true" rspace="0.167em">∑</mo>
@@ -120,7 +117,7 @@
   </munder>
   <mover>
     <mi>𝑏</mi>
-    <mo stretchy="false">_</mo>
+    <mo stretchy="true">.</mo>
   </mover>
   <msup>
     <mi>𝑐</mi>

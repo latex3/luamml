@@ -17,10 +17,10 @@ endobj
 << /Type /Filespec /AFRelationship /Source /Desc (TeX source) /F (tag-AFfile1.tex) /UF <FEFF007400610067002D0041004600660069006C00650031002E007400650078> /EF<</F 29 0 R/UF 29 0 R>> >>
 endobj
 36 0 obj
-<< /O/NSO/NS130R/lspace(0.278em)/rspace(0.278em) >>
+<< /O/NSO/NS 13 0 R/lspace(0.278em)/rspace(0.278em) >>
 endobj
 39 0 obj
-<< /O/NSO/NS130R/width(9.963pt) >>
+<< /O/NSO/NS 13 0 R/width(9.963pt) >>
 endobj
 40 0 obj
 << /Type /Metadata /Subtype /XML /Length 16669 >>      
@@ -421,16 +421,16 @@ endobj
 [ 23 0 R ]
 endobj
 50 0 obj
-<< /Subtype /text#2Fplain/Type /EmbeddedFile /Params<</ModDate (D:20160520) >> /Length 33 >>         
+<< /Subtype /text#2Fplain/Type /EmbeddedFile /Params<</ModDate (D:20160520) >> /Length 115 >>        
 stream
-PDF standard A-4F requires a file
+The document was declared to be of type PDF/A-4f but hasn't any attachments. LaTeX therefore added this dummy file.
 endstream
 endobj
 51 0 obj
-<< /Type /Filespec /AFRelationship /Unspecified /Desc (note about PDF/A-4F) /F (readme.txt) /UF <FEFF0072006500610064006D0065002E007400780074> /EF<</F 50 0 R/UF 50 0 R>> >>
+<< /Type /Filespec /AFRelationship /Unspecified /Desc (note about PDF/A-4F) /F (pdf-A4f.txt) /UF <FEFF007000640066002D004100340066002E007400780074> /EF<</F 50 0 R/UF 50 0 R>> >>
 endobj
 52 0 obj
-<< /Names[(readme) 51 0 R] >>
+<< /Names[(pdf-A4f) 51 0 R] >>
 endobj
 6 0 obj
 << /Nums [0 [ 34 0 R 35 0 R 37 0 R 31 0 R 32 0 R] 
@@ -463,13 +463,13 @@ endobj
 << /title [/Title 11 0 R] /part [/Title 11 0 R] /section [/H1 11 0 R] /subsection [/H2 11 0 R] /subsubsection [/H3 11 0 R] /paragraph [/H4 11 0 R] /subparagraph [/H5 11 0 R] /list [/L 11 0 R] /itemize [/L 11 0 R] /enumerate [/L 11 0 R] /description [/L 11 0 R] /quote [/BlockQuote 9 0 R] /quotation [/BlockQuote 9 0 R] /verbatim [/P 11 0 R] /item [/LI 11 0 R] /itemlabel [/Lbl 11 0 R] /itembody [/LBody 11 0 R] /footnote [/FENote 11 0 R] /footnotemark [/Lbl 11 0 R] /footnotelabel [/Lbl 11 0 R] /text-unit [/Part 11 0 R] /text [/P 11 0 R] /theorem-like [/Sect 11 0 R] /codeline [/Sub 11 0 R] /float [/Aside 11 0 R] /figures [/Sect 11 0 R] /tables [/Sect 11 0 R]  >>
 endobj
 15 0 obj
-<< /Type /Namespace /NS (https://www.latex-project.org/ns/dflt/2022) /RoleMapNS 16 0 R  >>
+<< /Type /Namespace /NS (https://www.latex-project.org/ns/dflt) /RoleMapNS 16 0 R  >>
 endobj
 18 0 obj
 << /chapter [/H1 11 0 R] /section [/H2 11 0 R] /subsection [/H3 11 0 R] /subsubsection [/H4 11 0 R] /paragraph [/H5 11 0 R] /subparagraph [/H6 11 0 R]  >>
 endobj
 17 0 obj
-<< /Type /Namespace /NS (https://www.latex-project.org/ns/book/2022) /RoleMapNS 18 0 R  >>
+<< /Type /Namespace /NS (https://www.latex-project.org/ns/book) /RoleMapNS 18 0 R  >>
 endobj
 19 0 obj
 << /Type /Namespace /NS (data:,C9B55C18-275C-494E-C10F-E4B83CD03F23)  >>
@@ -704,80 +704,80 @@ endobj
 xref
 0 73
 0000000002 65535 f 
-0000021934 00000 n 
+0000021940 00000 n 
 0000000003 00000 f 
 0000000004 00000 f 
 0000000010 00000 f 
-0000026429 00000 n 
-0000022448 00000 n 
-0000022823 00000 n 
-0000024880 00000 n 
-0000023505 00000 n 
+0000026513 00000 n 
+0000022542 00000 n 
+0000022917 00000 n 
+0000024964 00000 n 
+0000023599 00000 n 
 0000000012 00000 f 
-0000023573 00000 n 
+0000023667 00000 n 
 0000000014 00000 f 
-0000023643 00000 n 
+0000023737 00000 n 
 0000000020 00000 f 
-0000024406 00000 n 
-0000023724 00000 n 
-0000024684 00000 n 
-0000024513 00000 n 
-0000024791 00000 n 
+0000024500 00000 n 
+0000023818 00000 n 
+0000024773 00000 n 
+0000024602 00000 n 
+0000024875 00000 n 
 0000000000 00000 f 
-0000024941 00000 n 
+0000025025 00000 n 
 0000000020 00000 n 
 0000003353 00000 n 
-0000025039 00000 n 
-0000025127 00000 n 
-0000025215 00000 n 
-0000025315 00000 n 
-0000025426 00000 n 
+0000025123 00000 n 
+0000025211 00000 n 
+0000025299 00000 n 
+0000025399 00000 n 
+0000025510 00000 n 
 0000003586 00000 n 
 0000003921 00000 n 
-0000025577 00000 n 
-0000025711 00000 n 
-0000025832 00000 n 
-0000025957 00000 n 
-0000026078 00000 n 
+0000025661 00000 n 
+0000025795 00000 n 
+0000025916 00000 n 
+0000026041 00000 n 
+0000026162 00000 n 
 0000004121 00000 n 
-0000026210 00000 n 
-0000026331 00000 n 
-0000004189 00000 n 
-0000004240 00000 n 
-0000021847 00000 n 
-0000021712 00000 n 
-0000020999 00000 n 
-0000035068 00000 n 
-0000032552 00000 n 
-0000029052 00000 n 
-0000035434 00000 n 
-0000021981 00000 n 
-0000022017 00000 n 
-0000022044 00000 n 
-0000022213 00000 n 
-0000022402 00000 n 
-0000022519 00000 n 
-0000022786 00000 n 
-0000023402 00000 n 
-0000026566 00000 n 
-0000028012 00000 n 
-0000026654 00000 n 
-0000028235 00000 n 
-0000029205 00000 n 
-0000029404 00000 n 
-0000031438 00000 n 
-0000029542 00000 n 
-0000031659 00000 n 
-0000032706 00000 n 
-0000032906 00000 n 
-0000034022 00000 n 
-0000032954 00000 n 
-0000034250 00000 n 
-0000035228 00000 n 
-0000035496 00000 n 
-0000035540 00000 n 
+0000026294 00000 n 
+0000026415 00000 n 
+0000004192 00000 n 
+0000004246 00000 n 
+0000021853 00000 n 
+0000021718 00000 n 
+0000021005 00000 n 
+0000035152 00000 n 
+0000032636 00000 n 
+0000029136 00000 n 
+0000035518 00000 n 
+0000021987 00000 n 
+0000022023 00000 n 
+0000022050 00000 n 
+0000022301 00000 n 
+0000022495 00000 n 
+0000022613 00000 n 
+0000022880 00000 n 
+0000023496 00000 n 
+0000026650 00000 n 
+0000028096 00000 n 
+0000026738 00000 n 
+0000028319 00000 n 
+0000029289 00000 n 
+0000029488 00000 n 
+0000031522 00000 n 
+0000029626 00000 n 
+0000031743 00000 n 
+0000032790 00000 n 
+0000032990 00000 n 
+0000034106 00000 n 
+0000033038 00000 n 
+0000034334 00000 n 
+0000035312 00000 n 
+0000035580 00000 n 
+0000035624 00000 n 
 trailer
 << /Size 73 /Root 72 0 R /ID [ <2350CAD05F8A7AF0AA4058486855344F> <2350CAD05F8A7AF0AA4058486855344F> ] >>
 startxref
-35690
+35774
 %%EOF

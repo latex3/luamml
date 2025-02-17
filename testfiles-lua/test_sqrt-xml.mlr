@@ -1,0 +1,33 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msqrt>
+    <mi>𝑥</mi>
+  </msqrt>
+</math>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msqrt>
+    <msqrt>
+      <mi>𝑥</mi>
+    </msqrt>
+  </msqrt>
+  <mo lspace="0.222em" rspace="0.222em">+</mo>
+  <mn>2</mn>
+</math>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>𝑥</mi>
+  <mo lspace="0.278em" rspace="0.278em">=</mo>
+  <msqrt>
+    <mroot>
+      <msup>
+        <mi>𝑦</mi>
+        <mn>2</mn>
+      </msup>
+      <mn>3</mn>
+    </mroot>
+  </msqrt>
+</math>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mroot>
+    <mi>𝑦</mi>
+    <mn>3</mn>
+  </mroot>
+</math>
