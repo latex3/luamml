@@ -24,7 +24,7 @@ runs:
         author: 'Marcel Krüger, LaTeX Project Team'
         uploader: ${{ inputs.uploader }}
         email: ${{ inputs.email }}
-        license: lppl1.3
+        license: lppl1.3c
         summary: "Automatically generate MathML from LuaLaTeX math mode material"
         ctan-path: /macros/luatex/latex/luamml
         support: https://github.com/latex3/luamml/issues
