@@ -4,11 +4,25 @@ All notable changes to the `luamml` package since the
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 this project uses date-based 'snapshot' version identifiers.
+
 ## [Unreleased]
+
+## 2025-02-21
+
+- Ulrike Fischer, 2025-02-21
+  * change intent :equationlabel to :equation-label and 
+  :noequationlabel to :no-equation-label
+  
 
 ## 2025-02-17
 
 ### Changed
+- Ulrike Fischer, 2025-02-17
+  * moved all patches into latex-lab
+  * added sockets to luamml.dtx
+  * changed handling of tags/labels: empty tags produces a row too and have an intent
+  * corrected small bugs 
+
 - Ulrike Fischer, 2024-11-29
   luamml-structelemwriter.lua: moved the actualtext for e.g. stretched braces from the structure element to the mc-chunk.
 
