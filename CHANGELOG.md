@@ -7,6 +7,8 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
 
+## 2025-02-21
+
 - Ulrike Fischer, 2025-02-21
   * change intent :equationlabel to :equation-label and 
   :noequationlabel to :no-equation-label
