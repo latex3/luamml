@@ -54,6 +54,7 @@ do
     local mml_table = get_table()
     if not mml_table then return end
     mml_table.displaystyle = true
+    mml_table.class=kind
     local columns = node.count(node.id'align_record', tex.lists.align_head)//2
     mml_table.columnalign = kind == 'gathered' and 'center' or string.rep('right left', columns, ' ')
     local spacing = {}
@@ -70,6 +71,7 @@ do
     -- TODO: Error handling etc
     local mml_table = get_table()
     mml_table.align = 'axis'
+    mml_table.class='smallmatrix'
     mml_table.columnalign = 'center'
     mml_table.columnspacing = '0.278em'
     mml_table.rowspacing = string.format('%.3fpt', tex.lineskip.width/65781.76)
@@ -100,8 +102,9 @@ lua.get_functions_table()[funcid] = function()
   local mml_table = get_table()
   if not mml_table then return end
   mml_table.displaystyle = true
+  mml_table.class=kind
   local columns = node.count(node.id'align_record', tex.lists.align_head)//2
-  mml_table.columnalign = kind == 'align' and string.rep('right left', columns, ' ') or nil
+  mml_table.columnalign = kind == 'align' and 'left '..string.rep('right left', columns, ' ') or nil
   mml_table.width = kind == 'multline' and '100%' or nil
   -- mml_table.side = kind == 'multline' and 'rightoverlap' or nil
   local spacing = {}
