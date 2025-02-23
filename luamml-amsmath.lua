@@ -44,6 +44,22 @@ lua.get_functions_table()[funcid] = function()
   set_row_attribute('columnalign', token.scan_argument())
 end
 
+-- This fucntion is used to add a intent :continued-row to
+-- rows of a split environment.
+-- we assume that the table is a mtable with mrow with mtd. 
+-- we check row 2..n. If the first cell has only one element and
+-- for this element 'tex:ignore' has been set, we assume a continued row and
+-- set the intent on the mrow.
+local function add_intent_continued_row (table)
+  for index,rowtable in ipairs(table) do
+   if table[index][1] and table[index][1][1] then -- just for safety ...
+     if index > 1 and #table[index][1]==1 and table[index][1][1]['tex:ignore'] then
+      table[index]['intent']=':continued-row'
+     end
+   end
+  end
+end
+
 do
   local saved
   funcid = luatexbase.new_luafunction'__luamml_amsmath_save_inner_table:n'
@@ -55,6 +71,9 @@ do
     if not mml_table then return end
     mml_table.displaystyle = true
     mml_table.class=kind
+    if kind=="split" then
+     add_intent_continued_row (mml_table)
+    end
     local columns = node.count(node.id'align_record', tex.lists.align_head)//2
     mml_table.columnalign = kind == 'gathered' and 'center' or string.rep('right left', columns, ' ')
     local spacing = {}
