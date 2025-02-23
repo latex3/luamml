@@ -126,7 +126,7 @@ lua.get_functions_table()[funcid] = function()
   mml_table.class=kind
   -- this should perhaps be configurable and extendable
   if kind == 'align' or 'alignat' or 'flalign' or  'xalignat' or 'xxalignat' then
-   mml_table.intent=":system-of-equation"
+   mml_table.intent=":system-of-equations"
   end
   local columns = node.count(node.id'align_record', tex.lists.align_head)//2
   mml_table.columnalign = kind == 'align' and 'left '..string.rep('right left', columns, ' ') or nil
