@@ -70,7 +70,7 @@ do
     local mml_table = get_table()
     if not mml_table then return end
     mml_table.displaystyle = true
-    mml_table.class=kind
+    mml_table.class=kind:gsub("*","")
     if kind=="split" then
      add_intent_continued_row (mml_table)
     end
@@ -121,7 +121,7 @@ lua.get_functions_table()[funcid] = function()
   local mml_table = get_table()
   if not mml_table then return end
   mml_table.displaystyle = true
-  mml_table.class=kind
+  mml_table.class=kind:gsub("*","")
   local columns = node.count(node.id'align_record', tex.lists.align_head)//2
   mml_table.columnalign = kind == 'align' and 'left '..string.rep('right left', columns, ' ') or nil
   mml_table.width = kind == 'multline' and '100%' or nil
