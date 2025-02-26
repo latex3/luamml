@@ -44,7 +44,7 @@ lua.get_functions_table()[funcid] = function()
   set_row_attribute('columnalign', token.scan_argument())
 end
 
--- This fucntion is used to add a intent :continued-row to
+-- This function is used to add a intent :continued-row to
 -- rows of a split environment.
 -- we assume that the table is a mtable with mrow with mtd. 
 -- we check row 2..n. If the first cell has only one element and
@@ -58,6 +58,17 @@ local function add_intent_continued_row (table)
      end
    end
   end
+end
+
+-- debug function for tables
+-- activate with \directlua{debugmtable=2} or \directlua{debugmtable='split'}
+local function debug_mtable (mtable,kind)
+ if debugmtable and (debugmtable==2) or (debugmtable==kind) then
+   texio.write_nl('==============')
+   texio.write_nl(kind)
+   texio.write_nl(table.serialize(mtable))
+   texio.write_nl('==============')
+ end
 end
 
 do
@@ -82,6 +93,7 @@ do
       spacing[#spacing+1] = n.width == 0 and '0' or string.format('%.3fpt', n.width/65781.76)
     end
     mml_table.columnspacing = #spacing > 3 and table.concat(spacing, ' ', 2, #spacing-2) or nil
+    debug_mtable(mml_table,kind)
     saved = mml_table
   end
 
@@ -96,6 +108,7 @@ do
     mml_table.columnspacing = '0.278em'
     mml_table.rowspacing = string.format('%.3fpt', tex.lineskip.width/65781.76)
     saved = {[0] = 'mpadded', width = '+0.333em', lspace = '0.167em', mml_table}
+    debug_mtable(mml_table,kind)
     saved = mml_table
   end
 
@@ -137,6 +150,7 @@ lua.get_functions_table()[funcid] = function()
     spacing[#spacing+1] = n.width == 0 and '0' or '.8em'
   end
   mml_table.columnspacing = #spacing > 3 and table.concat(spacing, ' ', 2, #spacing-2) or nil
+  debug_mtable(mml_table,kind)
   save_result(mml_table, true)
 end
 
