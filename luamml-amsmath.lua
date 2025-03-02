@@ -149,7 +149,7 @@ lua.get_functions_table()[funcid] = function()
   for n in node.traverse_id(node.id'glue', tex.lists.align_head) do
     spacing[#spacing+1] = n.width == 0 and '0' or '.8em'
   end
-  mml_table.columnspacing = #spacing > 3 and table.concat(spacing, ' ', 2, #spacing-2) or nil
+  mml_table.columnspacing = #spacing > 3 and "0 "..table.concat(spacing, ' ', 2, #spacing-2) or nil
   debug_mtable(mml_table,kind)
   save_result(mml_table, true)
 end
