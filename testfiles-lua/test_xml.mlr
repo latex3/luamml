@@ -125,14 +125,14 @@
   </msup>
 </math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mtable columnalign="right left right left" columnspacing="0 .8em 0" displaystyle="true">
+  <mtable class="align" columnalign="left right left right left" columnspacing="0 0 .8em 0" displaystyle="true" intent=":system-of-equations">
     <mtr>
       <mtd>
         <mi>𝑎</mi>
         <mi>𝑏</mi>
         <mi>𝑐</mi>
       </mtd>
-      <mtd>
+      <mtd intent=":pause-medium">
         <mo lspace="0.278em" rspace="0.278em">=</mo>
         <mi>𝑑</mi>
         <mi>𝑒</mi>
@@ -147,7 +147,7 @@
           </mrow>
         </msup>
       </mtd>
-      <mtd>
+      <mtd intent=":pause-medium">
         <mo lspace="0.278em" rspace="0">=</mo>
         <mo lspace="0.278em" rspace="0">−</mo>
         <mn>1</mn>
@@ -160,21 +160,21 @@
         <mo lspace="0.222em" rspace="0.222em">+</mo>
         <mn>2</mn>
       </mtd>
-      <mtd>
+      <mtd intent=":pause-medium">
         <mo lspace="0.278em" rspace="0.278em">=</mo>
         <mn>3</mn>
         <mo fence="true" lspace="0" maxsize="17.861pt" minsize="17.861pt" rspace="0" symmetric="true">)</mo>
       </mtd>
       <mtd></mtd>
-      <mtd></mtd>
+      <mtd intent=":pause-medium"></mtd>
     </mtr>
     <mtr>
       <mtd>
         <mn>5</mn>
       </mtd>
+      <mtd intent=":pause-medium"></mtd>
       <mtd></mtd>
-      <mtd></mtd>
-      <mtd></mtd>
+      <mtd intent=":pause-medium"></mtd>
     </mtr>
   </mtable>
 </math>
