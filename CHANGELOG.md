@@ -7,6 +7,16 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
 
+ - Ulrike Fischer, 2025-03-06
+ * add class attribute to math environments
+ * correct columnalign (take label column into account)
+ * add intent :continued-row in split enviroment
+ * add intent :system-of-equations to environments
+ * temporary patch to \common@align@ending to store the environment name
+ * start some debugging functions (variable debugmtable)
+ * correct columnspacing
+ * add intent :pause-medium between columns
+  
 ## 2025-02-21
 
 - Ulrike Fischer, 2025-02-21
