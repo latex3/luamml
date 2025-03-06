@@ -7,6 +7,25 @@
 % But they are almost identical to the original and only
 % add luamml commands in appropriate places, so they would
 % mostly disappear if there were enough hooks in amsmath.
+\IfPackageAtLeastTF{latex-lab-testphase-math}{2025-02-24}
+ {}
+ {
+  \def\common@align@ending {
+  \math@cr \black@\totwidth@
+  \UseExpandableTaggingSocket {math/luamml/mtable/finalize} {\@currenvir}
+  \egroup
+  \ifingather@
+    \restorealignstate@
+    \egroup
+    \nonumber
+    \ifnum0=`{\fi\iffalse}\fi
+  \else
+    $$%
+  \fi
+  \ignorespacesafterend
+  }
+ }
+
 \IfPackageAtLeastTF{latex-lab-testphase-math}{2025-01-24}
  {}
  {
