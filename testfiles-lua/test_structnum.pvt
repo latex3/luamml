@@ -19,7 +19,7 @@
 
 % suppress mathml-AF reading
 \tagpdfsetup{math/mathml/sources=} %
-\tagpdfsetup{math/mathml/AF=false}
+\tagpdfsetup{math/mathml/AF=false,attach-css=false}
 \begin{document}
 \ExplSyntaxOn
 
