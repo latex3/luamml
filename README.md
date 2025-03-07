@@ -9,6 +9,10 @@ Run `l3build install` to install `luamml` into your local `texmf` tree.
 Add `\usepackage[tracing]{luamml-demo}` to print MathML to the terminal or `\usepackage[files]{luamml-demo}` to generate separate files with MathML output.
 Alternatively it can be used with latex-lab to automatically integrate with tagging infrastucture.
 
+## License
+LuaMML may be modified and distributed under the terms of the [LaTeX Project Public License](https://www.latex-project.org/lppl/), version 1.3c or greater.
+It is written by Marcel Krüger and the LaTeX Project Team.
+
 <!-- Also see a [`tagpdf` experiment using this to tag PDF formulas](https://github.com/u-fischer/tagpdf/blob/develop/experiments/exp-mathml-lua.tex). -->
 
 <!-- If you are very brave you can also try running `pdflatex test_pdf` and afterwards run `./pdfmml.lua test_pdf.lua` to get pdflatex formulas converted. -->
