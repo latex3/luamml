@@ -8,6 +8,17 @@
 
 *for pdflatex, currently mostly ignores, requirements of use unclear
 
+# lua-files
+
+## luamml-tex.lua
+
+* required by luamml.sty. 
+* defines the main TeX commands
+* requires:
+    * `local mlist_to_mml = require'luamml-convert'`: the functions to convert an mlist to mathml. 
+    * `local mappings = require'luamml-legacy-mappings'`: ??????  
+    * `local write_xml = require'luamml-xmlwriter'`: function to write the xml-file????
+    * `local write_struct = require'luamml-structelemwriter'`: function to write structure elements (requires tagpdf)  
 
 # other styles
 

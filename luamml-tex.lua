@@ -14,6 +14,8 @@ local right_brace = token.new(string.byte'}', 2)
 
 local output_hook_token
 local global_text_families = {}
+
+-- ????
 local text_families_meta = {__index = function(t, fam)
   if fam == nil then return nil end
   local assignment = global_text_families[fam]
@@ -31,6 +33,8 @@ local text_families_meta = {__index = function(t, fam)
 end}
 
 local properties = node.get_properties_table()
+
+-- retrieve the mode numbers for math, horizontal and vertical mode.
 local mmode, hmode, vmode do
   local result, input = {}, tex.getmodevalues()
   for k,v in next, tex.getmodevalues() do
@@ -42,6 +46,12 @@ local mmode, hmode, vmode do
   end
   assert(mmode and hmode and vmode)
 end
+
+-- Defines \RegisterFamilyMapping{<family>}{<encoding>}
+-- Example usage: \RegisterFamilyMapping\symsymbols{oms}
+-- The mappings are defined in luamml-legacy-mappings.lua.
+-- Currently only oml, oms, omx known. 
+-- The remapping function register_family is in luamml-convert (=register_remap)
 
 local funcid = luatexbase.new_luafunction'RegisterFamilyMapping'
 token.set_lua('RegisterFamilyMapping', funcid, 'protected')
@@ -58,13 +68,19 @@ lua.get_functions_table()[funcid] = function()
   end
 end
 
-local funcid = luatexbase.new_luafunction'RegisterFamilyMapping'
+--- Defines `\RegisterTextFamily{<family>}{<????>}`
+--- There is no example (and it wasn't defined properly)
+
+local funcid = luatexbase.new_luafunction'RegisterTextFamily'
 token.set_lua('RegisterTextFamily', funcid, 'protected')
 lua.get_functions_table()[funcid] = function()
   local fam = token.scan_int()
   local _kind = token.scan_string()
   global_text_families[fam] = true
 end
+
+
+--- A helper function to copy a table. 
 
 local function shallow_copy(t)
   local tt = {}
@@ -74,6 +90,7 @@ local function shallow_copy(t)
   return tt
 end
 
+-- ?? possible flag values of which variable?
 -- Possible flag values:
 --   0: Skip
 --   1: Generate MathML, but only save it for later usage in startmath node
@@ -97,6 +114,16 @@ local call_cmd = token.command_id'call'
 
 local labelled_mathml = {}
 
+-- main function, exported as save_result. 
+-- Used in luamml-amsmath.lua, luamml-array.lua, luamml-table.lua
+-- xml is the table, display a number. structelem is not used??
+-- make_root is defined in luamml-convert.lua (to_math). It either converts the
+-- top level mrow to math or adds a math element. If display<2 it is a display math.
+-- out_file is set by \luamml_begin_single_file:
+-- write_xml is from luamml_xmlwriter. It takes a "mathml-tree" as first argument
+-- and writes it out as xml. The second argument is a boolean and decides if the xml uses
+-- pretty indentation.
+--  
 local function save_result(xml, display, structelem)
   mlist_result = make_root(xml, display and 0 or 2)
   if out_file then
