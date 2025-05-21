@@ -1,5 +1,29 @@
+--[[
+   This file is loaded by luamml-patches-amsmath.sty
+   
+   It defines the luafunctions
+   * \__luamml_amsmath_add_last_to_row:
+   * \__luamml_amsmath_add_box_to_row:
+   * \__luamml_amsmath_set_row_columnalign:n
+   * \__luamml_amsmath_save_inner_table:n
+   * \__luamml_amsmath_save_smallmatrix:
+   * \__luamml_amsmath_finalize_inner_table:
+   * \__luamml_amsmath_save_inner_table:n
+   * \__luamml_amsmath_save_smallmatrix:
+   * \__luamml_amsmath_finalize_inner_table:
+   * \__luamml_amsmath_save_tag:
+   * \__luamml_amsmath_set_tag:
+   
+   These are all rather special commands used in amsmath environments to 
+   get the correct math tagging.
+   
+   TODO: error handling and more documentation
+--]]
+
+-- TODO these two are unused?
 local write_xml = require'luamml-xmlwriter'
 local make_root = require'luamml-convert'.make_root
+
 local save_result = require'luamml-tex'.save_result
 local store_column = require'luamml-table'.store_column
 local store_tag = require'luamml-table'.store_tag
@@ -44,12 +68,16 @@ lua.get_functions_table()[funcid] = function()
   set_row_attribute('columnalign', token.scan_argument())
 end
 
--- This function is used to add a intent :continued-row to
--- rows of a split environment.
--- we assume that the table is a mtable with mrow with mtd. 
--- we check row 2..n. If the first cell has only one element and
--- for this element 'tex:ignore' has been set, we assume a continued row and
--- set the intent on the mrow.
+--[[
+  This function is used to add a intent :continued-row to
+  rows of a split environment.
+  we assume that the table is a mtable with mrow with mtd. 
+  we check row 2..n. If the first cell has only one element and
+  for this element 'tex:ignore' has been set, we assume a continued row and
+  set the intent on the mrow.
+  
+  The function is used below in \__luamml_amsmath_save_inner_table:n
+--]]
 local function add_intent_continued_row (table)
   for index,rowtable in ipairs(table) do
    if table[index][1] and table[index][1][1] then -- just for safety ...
@@ -60,10 +88,13 @@ local function add_intent_continued_row (table)
   end
 end
 
--- This function add an intent =":pause-medium" on every second mtd in a table
--- currently it is also on the first (after the label) but this could be changed
--- used in __luamml_amsmath_finalize_table:n for 
--- 'align' or 'alignat' or 'flalign' or  'xalignat' or 'xxalignat'
+--[[
+ This function adds an intent =":pause-medium" on every second mtd in a table
+ currently it is also on the first (after the label) but this could be changed
+ used in \__luamml_amsmath_finalize_table:n for 
+ 'align' or 'alignat' or 'flalign' or  'xalignat' or 'xxalignat'
+--]]
+
 local function add_intent_pause (mmltable)
   for mtrindex,mtrtable in ipairs(mmltable) do
     for mtdindex,mtdtable in ipairs(mtrtable) do
@@ -75,9 +106,12 @@ local function add_intent_pause (mmltable)
 end
 
 
--- debug function for tables
--- activate with \directlua{debugmtable=2} or \directlua{debugmtable='split'}
--- 2025-05-26: fixed logic if kind doesn't exist. 
+--[[
+ debug function for tables
+ activate with \directlua{debugmtable=2} or \directlua{debugmtable='split'}
+ change 2025-05-26: fixed logic if kind doesn't exist. 
+--]]
+
 local function debug_mtable (mtable,kind)
  if debugmtable and (debugmtable==2 or debugmtable==kind) then
    texio.write_nl('==============')
