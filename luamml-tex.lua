@@ -90,14 +90,13 @@ local function shallow_copy(t)
   return tt
 end
 
--- ?? possible flag values of which variable?
--- Possible flag values:
+-- Possible flag values of \l__luamml_flag_int:
 --   0: Skip
 --   1: Generate MathML, but only save it for later usage in startmath node
---   3: Normal (This is the only supported one in display mode)
+--   3: Normal (This is the only supported one in display mode) ?? what is display mode? display math?
 --  11: Generate MathML structure elements
 --
---  More generally, flags is a bitfield with the defined bits:
+--  More generally, \l__luamml_flag_int: is a bitfield with the defined bits:
 --    Bit 5-7: See Bit 4
 --    Bit 4: Overwrite mathstyle with bit 9-11
 --    Bit 3: Generate MathML structure elements
@@ -115,15 +114,27 @@ local call_cmd = token.command_id'call'
 local labelled_mathml = {}
 
 -- main function, exported as save_result. 
+--
 -- Used in luamml-amsmath.lua, luamml-array.lua, luamml-table.lua
--- xml is the table, display a number. structelem is not used??
+--
+-- xml is the table, display a number. If display<2 it is a display math.
+-- ?? structelem is not used ??
+--
 -- make_root is defined in luamml-convert.lua (to_math). It either converts the
--- top level mrow to math or adds a math element. If display<2 it is a display math.
+-- top level mrow to math or adds a math element. 
+--
 -- out_file is set by \luamml_begin_single_file:
+--
 -- write_xml is from luamml_xmlwriter. It takes a "mathml-tree" as first argument
 -- and writes it out as xml. The second argument is a boolean and decides if the xml uses
--- pretty indentation.
---  
+-- pretty indentation. It is calculated here from \l__luamml_pretty_int with a bitwise AND.
+--
+-- output_hook_token is set by \__luamml_register_output_hook:N, typically this should save
+-- the result into a command or write it into a file, see latex-lab-math.dtx for an example.
+-- 
+-- write_struct is defined in luamml-stuctelemwriter.lua (called write_elem there). It writes
+-- out the tree together with structure element commands. 
+
 local function save_result(xml, display, structelem)
   mlist_result = make_root(xml, display and 0 or 2)
   if out_file then
