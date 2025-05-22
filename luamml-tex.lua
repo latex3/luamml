@@ -315,7 +315,7 @@ lua.get_functions_table()[funcid] = function()
   output_hook_token = nil
 end
 
-% ??
+-- ??
 local annotate_context = require'luamml-tex-annotate'
 annotate_context.data.mathml = labelled_mathml
 
