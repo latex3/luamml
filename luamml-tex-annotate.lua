@@ -1,3 +1,19 @@
+--[[
+   This file defines the luafunctions
+   * \__luamml_annotate_begin: 
+   * \__luamml_annotate_end:we
+   * \__luamml_annotate_end:e
+   
+   It defines the global function
+   * consume_label 
+   
+   It returns
+   * mark_environment (content ??)
+   
+   Core function is 
+   * annotate (used in the luafunctions)
+   
+--]]
 local nest = tex.nest
 
 local properties = node.get_properties_table()
@@ -101,6 +117,10 @@ local function annotate()
   end
   return count
 end
+
+--[[
+
+--]]
 
 local funcid = luatexbase.new_luafunction'__luamml_annotate_begin:'
 token.set_lua('__luamml_annotate_begin:', funcid, 'protected')

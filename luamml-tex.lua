@@ -1,5 +1,5 @@
 --[[
-   This files defines the luafunctions
+   This file defines the luafunctions
    * \RegisterFamilyMapping
    * \RegisterTextFamily
    * \luamml_get_last_mathml_stream:e
@@ -12,7 +12,7 @@
    * save_result = save_result, (function)
    * labelled = labelled_mathml (a table containing labelled mathml pieces)
    
-   It add a function to the callback
+   It adds a function to the callback
    * pre_mlist_to_hlist_filter
 --]]
 
