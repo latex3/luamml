@@ -1,3 +1,12 @@
+--[[ This file returns the function 
+     * to_unicode which returns characters inside an mtext
+
+     The file is loaded by 
+     * luamml-convert.lua (as to_text)
+     * luamml-amsmath.lua (as to_text)
+     * luamml-array.lua (as to_text)
+--]]
+
 local properties = node.get_properties_table()
 
 local function to_unicode(head, tail)
