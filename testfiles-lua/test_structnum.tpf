@@ -23,7 +23,7 @@ endobj
 << /O/NSO/NS 13 0 R/width(9.963pt) >>
 endobj
 40 0 obj
-<< /Type /Metadata /Subtype /XML /Length 16669 >>      
+<< /Type /Metadata /Subtype /XML /Length 15935 >>      
 stream
 <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/">
@@ -39,7 +39,6 @@ stream
     xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/"
     xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/"
     xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/"
-    xmlns:pdfxid="http://www.npes.org/pdfx/ns/id/"
     xmlns:prism="http://prismstandard.org/namespaces/basic/3.0/"
     xmlns:stFnt="http://ns.adobe.com/xap/1.0/sType/Font#"
     xmlns:Iptc4xmpCore="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/"
@@ -104,21 +103,6 @@ stream
          <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
          <pdfaProperty:category>internal</pdfaProperty:category>
          <pdfaProperty:description>Revision of ISO 14289 standard</pdfaProperty:description>
-        </rdf:li>
-       </rdf:Seq>
-      </pdfaSchema:property>
-     </rdf:li>
-     <rdf:li rdf:parseType="Resource">
-      <pdfaSchema:schema>PDF/X ID Schema</pdfaSchema:schema>
-      <pdfaSchema:prefix>pdfxid</pdfaSchema:prefix>
-      <pdfaSchema:namespaceURI>http://www.npes.org/pdfx/ns/id/</pdfaSchema:namespaceURI>
-      <pdfaSchema:property>
-       <rdf:Seq>
-        <rdf:li rdf:parseType="Resource">
-         <pdfaProperty:name>GTS_PDFXVersion</pdfaProperty:name>
-         <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-         <pdfaProperty:category>internal</pdfaProperty:category>
-         <pdfaProperty:description>ID of PDF/X standard</pdfaProperty:description>
         </rdf:li>
        </rdf:Seq>
       </pdfaSchema:property>
@@ -530,7 +514,7 @@ endobj
 << /Type /FontDescriptor /FontName /ADNFRA+LMRoman10-Italic /Flags 4 /FontBBox [ -458 -290 1386 1125 ] /Ascent 1125 /CapHeight 683 /Descent -290 /ItalicAngle -15 /StemV 102 /XHeight 431 /FontFile3 58 0 R >>
 endobj
 59 0 obj
-<< /Length 757 >>        
+<< /Length 731 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
 %%DocumentNeededResources: ProcSet (CIDInit)
@@ -552,8 +536,6 @@ begincmap
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-0 beginbfrange
-endbfrange
 6 beginbfchar
 <002B> <0063>
 <0032> <0065>
@@ -587,7 +569,7 @@ endobj
 << /Type /FontDescriptor /FontName /GZYIXU+LMRoman10-Regular /Flags 4 /FontBBox [ -430 -290 1417 1127 ] /Ascent 1127 /CapHeight 683 /Descent -290 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 63 0 R >>
 endobj
 64 0 obj
-<< /Length 833 >>        
+<< /Length 807 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
 %%DocumentNeededResources: ProcSet (CIDInit)
@@ -609,8 +591,6 @@ begincmap
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-0 beginbfrange
-endbfrange
 11 beginbfchar
 <0032> <0065>
 <003F> <0068>
@@ -649,7 +629,7 @@ endobj
 << /Type /FontDescriptor /FontName /NFEDYW+LatinModernMath-Regular /Flags 4 /FontBBox [ -1042 -3060 4082 3560 ] /Ascent 806 /CapHeight 683 /Descent -194 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 68 0 R >>
 endobj
 69 0 obj
-<< /Length 758 >>        
+<< /Length 732 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
 %%DocumentNeededResources: ProcSet (CIDInit)
@@ -671,8 +651,6 @@ begincmap
 1 begincodespacerange
 <0000> <FFFF>
 endcodespacerange
-0 beginbfrange
-endbfrange
 3 beginbfchar
 <001E> <003D>
 <0510> <D835DC4E>
@@ -704,80 +682,80 @@ endobj
 xref
 0 73
 0000000002 65535 f 
-0000021940 00000 n 
+0000021206 00000 n 
 0000000003 00000 f 
 0000000004 00000 f 
 0000000010 00000 f 
-0000026513 00000 n 
-0000022542 00000 n 
-0000022917 00000 n 
-0000024964 00000 n 
-0000023599 00000 n 
+0000025779 00000 n 
+0000021808 00000 n 
+0000022183 00000 n 
+0000024230 00000 n 
+0000022865 00000 n 
 0000000012 00000 f 
-0000023667 00000 n 
+0000022933 00000 n 
 0000000014 00000 f 
-0000023737 00000 n 
+0000023003 00000 n 
 0000000020 00000 f 
-0000024500 00000 n 
-0000023818 00000 n 
-0000024773 00000 n 
-0000024602 00000 n 
-0000024875 00000 n 
+0000023766 00000 n 
+0000023084 00000 n 
+0000024039 00000 n 
+0000023868 00000 n 
+0000024141 00000 n 
 0000000000 00000 f 
-0000025025 00000 n 
+0000024291 00000 n 
 0000000020 00000 n 
 0000003353 00000 n 
-0000025123 00000 n 
-0000025211 00000 n 
-0000025299 00000 n 
-0000025399 00000 n 
-0000025510 00000 n 
+0000024389 00000 n 
+0000024477 00000 n 
+0000024565 00000 n 
+0000024665 00000 n 
+0000024776 00000 n 
 0000003586 00000 n 
 0000003921 00000 n 
-0000025661 00000 n 
-0000025795 00000 n 
-0000025916 00000 n 
-0000026041 00000 n 
-0000026162 00000 n 
+0000024927 00000 n 
+0000025061 00000 n 
+0000025182 00000 n 
+0000025307 00000 n 
+0000025428 00000 n 
 0000004121 00000 n 
-0000026294 00000 n 
-0000026415 00000 n 
+0000025560 00000 n 
+0000025681 00000 n 
 0000004192 00000 n 
 0000004246 00000 n 
-0000021853 00000 n 
-0000021718 00000 n 
-0000021005 00000 n 
-0000035152 00000 n 
-0000032636 00000 n 
-0000029136 00000 n 
-0000035518 00000 n 
-0000021987 00000 n 
-0000022023 00000 n 
-0000022050 00000 n 
-0000022301 00000 n 
-0000022495 00000 n 
-0000022613 00000 n 
-0000022880 00000 n 
-0000023496 00000 n 
-0000026650 00000 n 
-0000028096 00000 n 
-0000026738 00000 n 
-0000028319 00000 n 
-0000029289 00000 n 
-0000029488 00000 n 
-0000031522 00000 n 
-0000029626 00000 n 
-0000031743 00000 n 
-0000032790 00000 n 
-0000032990 00000 n 
-0000034106 00000 n 
-0000033038 00000 n 
-0000034334 00000 n 
-0000035312 00000 n 
-0000035580 00000 n 
-0000035624 00000 n 
+0000021119 00000 n 
+0000020984 00000 n 
+0000020271 00000 n 
+0000034340 00000 n 
+0000031850 00000 n 
+0000028376 00000 n 
+0000034706 00000 n 
+0000021253 00000 n 
+0000021289 00000 n 
+0000021316 00000 n 
+0000021567 00000 n 
+0000021761 00000 n 
+0000021879 00000 n 
+0000022146 00000 n 
+0000022762 00000 n 
+0000025916 00000 n 
+0000027362 00000 n 
+0000026004 00000 n 
+0000027585 00000 n 
+0000028529 00000 n 
+0000028728 00000 n 
+0000030762 00000 n 
+0000028866 00000 n 
+0000030983 00000 n 
+0000032004 00000 n 
+0000032204 00000 n 
+0000033320 00000 n 
+0000032252 00000 n 
+0000033548 00000 n 
+0000034500 00000 n 
+0000034768 00000 n 
+0000034812 00000 n 
 trailer
 << /Size 73 /Root 72 0 R /ID [ <2350CAD05F8A7AF0AA4058486855344F> <2350CAD05F8A7AF0AA4058486855344F> ] >>
 startxref
-35774
+34962
 %%EOF
