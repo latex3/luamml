@@ -11,14 +11,27 @@
 # lua-files
 
 ## luamml-tex.lua
-
+* Docu: 80%
 * required by luamml.sty. 
 * defines the main TeX commands
+* installs the callback
 * requires:
     * `local mlist_to_mml = require'luamml-convert'`: the functions to convert an mlist to mathml. 
-    * `local mappings = require'luamml-legacy-mappings'`: ??????  
+    * `local mappings = require'luamml-legacy-mappings'`: mappings for oms, omx, oml 
     * `local write_xml = require'luamml-xmlwriter'`: function to write the xml-file????
     * `local write_struct = require'luamml-structelemwriter'`: function to write structure elements (requires tagpdf)  
+    * local annotate_context = require'luamml-tex-annotate' ?????????????
+
+## luamml-convert.lua
+
+## luamml-legacy-mappings
+* Docu: ok, not more needed
+* returns mapping tables for oms, omx, oml. 
+* TODO: check "something fishy" comment
+
+## luamml-xmlwriter
+
+## luamml-structelemwriter
 
 # other styles
 
@@ -44,4 +57,3 @@ This file demonstrates some core functionality. Some commands require the pdfman
 
 This is the counterpart for pdflatex, but it demonstrates nothing and only defines the
 simple wrappers `\LuaMMLSetFilename`, `\AnnotateFormula`, `\WriteoutFormula.
-    
