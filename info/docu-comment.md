@@ -24,18 +24,36 @@
 
 ## luamml-convert.lua
 
-## luamml-legacy-mappings
+## luamml-legacy-mappings.lua
 * Docu: ok, not more needed
 * returns mapping tables for oms, omx, oml. 
 * TODO: check "something fishy" comment
 
-## luamml-xmlwriter
+## luamml-xmlwriter.lua
 
-## luamml-structelemwriter
+## luamml-structelemwriter.lua
 
-## luamml-tex-annotate
+## luamml-tex-annotate.lua
 * Docu: ok
 * provides the annotate functions.
+
+
+## luamml-data-combining.lua 
+* Docu: ok. 
+* returns table that maps combining chars to other unicode chars, 
+* used by luamml-convert.lua as remap_comb
+
+
+## luamml-data-stretchy.lua  
+* Docu: ok
+* a table containing unicode points for stretchy chars. 
+* used by luamml-convert as stretchy.
+* TODO: check content/use against issue https://github.com/latex3/tagging-project/issues/855
+   
+## luamml-table.lua
+## luamml-amsmath.lua  
+## luamml-array.lua    
+## luamml-lr.lua               
 
 # other styles
 

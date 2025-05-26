@@ -1,3 +1,8 @@
+--[[
+   This returns a table setting for some unicode code points stretchy.
+   TODO: see issue https://github.com/latex3/tagging-project/issues/855
+--]]
+
 return {
   -- The following is
   -- xq -r '.unicode.charlist.character[] | select(.["operator-dictionary"] | if type == "array" then .[] else . end | .["@stretchy"]) | .["@id"] | sub("U"; "") | "[\"\\u{\(.)}\"] = true," ' < unicode.xml
