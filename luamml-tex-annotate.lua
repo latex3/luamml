@@ -8,7 +8,7 @@
    * consume_label 
    
    It returns
-   * mark_environment (content ??)
+   * mark_environment: a table with annotation data used as _ENV
    
    Core function is 
    * annotate (used in the luafunctions)
@@ -43,6 +43,10 @@ local function annotate()
   annotation = annotation()
   local nesting = nest.top
   local props = properties[nesting.head]
+  -- `luamml__annotate_context` is initialized below in `__luamml_annotate_begin:`
+  -- `head` contains a pointer to the tail of current list. 
+  -- optional `prev` contains data of outer annotate commands, which
+  -- means it keeps track of nested annotate calls. 
   local current = props and props.luamml__annotate_context
   if current then
     current, props.luamml__annotate_context = current.head, current.prev
