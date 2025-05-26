@@ -20,7 +20,7 @@
     * `local mappings = require'luamml-legacy-mappings'`: mappings for oms, omx, oml 
     * `local write_xml = require'luamml-xmlwriter'`: function to write the xml-file????
     * `local write_struct = require'luamml-structelemwriter'`: function to write structure elements (requires tagpdf)  
-    * local annotate_context = require'luamml-tex-annotate' ?????????????
+    * local annotate_context = require'luamml-tex-annotate' 
 
 ## luamml-convert.lua
 
@@ -32,6 +32,10 @@
 ## luamml-xmlwriter
 
 ## luamml-structelemwriter
+
+## luamml-tex-annotate
+* Docu: ok
+* provides the annotate functions.
 
 # other styles
 

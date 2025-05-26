@@ -13,7 +13,9 @@
    Core function is 
    * annotate (used in the luafunctions)
    
+   TODO: should annotate() error if there are no noads in the argument?     
 --]]
+
 local nest = tex.nest
 
 local properties = node.get_properties_table()
@@ -32,6 +34,24 @@ do
   end
 end
 
+--[[
+     The function annotate receives a "key-val"-list as arguments.
+     It stores a table (annotation) in the properties of a node.
+     And knows the following "keys"      
+      * nucleus, boolean: decides if the annotation is stored 
+        in a noad or the nucleus of a noad. TODO: what is the difference?
+      * offset, 0< int < noad count: decides on which noad the annotation is stored.  
+      * core, table or false: contains the mathml representation, either directly, or through
+        one (or more?) consume_label.
+        See luamml-algorithm.tex for examples how the core table should look like.
+        Stored as `mathml_core` in the annotation. 
+      * struct, string: a label referencing a stashed, labeled structure.
+        Stored as a function mathml_filter, that adds the field :struct to the mathml. 
+      * structnum, number: a structure number referencing a stashed structure.
+        Stored as a function mathml_filter, that adds the field :structnum to the mathml.
+      See luamml-convert.lua for the processing.
+--]]
+
 local function annotate()
   local annotation, err = load( 'return {'
       .. token.scan_argument()
@@ -44,9 +64,9 @@ local function annotate()
   local nesting = nest.top
   local props = properties[nesting.head]
   -- `luamml__annotate_context` is initialized below in `__luamml_annotate_begin:`
+  -- and has two (optional) fields:
   -- `head` contains a pointer to the tail of current list. 
-  -- optional `prev` contains data of outer annotate commands, which
-  -- means it keeps track of nested annotate calls. 
+  -- `prev` contains data of previous annotate commands in the same list.
   local current = props and props.luamml__annotate_context
   if current then
     current, props.luamml__annotate_context = current.head, current.prev
@@ -58,6 +78,7 @@ local function annotate()
   local after = nesting.tail
   local count, offset = 0, annotation.offset
   local marked
+  -- TODO should this error or silently return? 
   if current == after then
     tex.error'Empty LuaMML annotation'
   else
@@ -122,8 +143,11 @@ local function annotate()
   return count
 end
 
---[[
-
+--[[ Documentation for luafunction \__luamml_annotate_begin:
+    % This function initialize an annotation.
+    % It stores in the properties of head of the current list
+    % the current tail node and previous annotate context of previous
+    % annotations in the same list.
 --]]
 
 local funcid = luatexbase.new_luafunction'__luamml_annotate_begin:'
@@ -142,6 +166,13 @@ lua.get_functions_table()[funcid] = function()
   }
 end
 
+--[[ Documentation for luafunction \__luamml_annotate_end:we
+    % This function calls annotate(). Additionally it compares
+    % its first argument (a number) with the count of noads done by
+    % annotate(). With luatex this is not really needed and only a source
+    % of errors, so the next function should be preferred.
+--]]
+
 funcid = luatexbase.new_luafunction'__luamml_annotate_end:we'
 token.set_lua('__luamml_annotate_end:we', funcid, 'protected')
 lua.get_functions_table()[funcid] = function()
@@ -157,8 +188,13 @@ lua.get_functions_table()[funcid] = function()
   end
 end
 
+--[[ Documentation for luafunction \__luamml_annotate_end:e
+    % This function calls annotate(). 
+--]]
+
 funcid = luatexbase.new_luafunction'__luamml_annotate_end:e'
 token.set_lua('__luamml_annotate_end:e', funcid, 'protected')
 lua.get_functions_table()[funcid] = annotate
+
 
 return mark_environment
