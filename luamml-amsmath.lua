@@ -77,10 +77,11 @@ end
 
 -- debug function for tables
 -- activate with \directlua{debugmtable=2} or \directlua{debugmtable='split'}
+-- 2025-05-26: fixed logic if kind doesn't exist. 
 local function debug_mtable (mtable,kind)
- if debugmtable and (debugmtable==2) or (debugmtable==kind) then
+ if debugmtable and (debugmtable==2 or debugmtable==kind) then
    texio.write_nl('==============')
-   texio.write_nl(kind)
+   texio.write_nl(kind or '?kind?')
    texio.write_nl(table.serialize(mtable))
    texio.write_nl('==============')
  end

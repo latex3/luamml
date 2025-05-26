@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
+ ### Fixed
+  * luamml-amsmath.lua: logic in debug_mtable
+  
+ ### Changed
+  * improved documentation 
+
+## [2025-03-06]
 
  - Ulrike Fischer, 2025-03-06
  * add class attribute to math environments
