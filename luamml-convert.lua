@@ -1,3 +1,8 @@
+--[[
+
+ TODO: see issue https://github.com/latex3/tagging-project/issues/855
+--]]
+
 local remap_comb = require'luamml-data-combining'
 local stretchy = require'luamml-data-stretchy'
 local to_text = require'luamml-lr'
