@@ -14,6 +14,7 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [2025-03-06]
 
+ * Fix inverted stretch flag for horizontal accents (GH tagging-project#855)
  - Ulrike Fischer, 2025-03-06
  * add class attribute to math environments
  * correct columnalign (take label column into account)
