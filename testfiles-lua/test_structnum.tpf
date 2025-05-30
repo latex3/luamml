@@ -16,13 +16,13 @@ endobj
 30 0 obj
 << /Type /Filespec /AFRelationship /Source /Desc (TeX source) /F (tag-AFfile1.tex) /UF <FEFF007400610067002D0041004600660069006C00650031002E007400650078> /EF<</F 29 0 R/UF 29 0 R>> >>
 endobj
-36 0 obj
+37 0 obj
 << /O/NSO/NS 13 0 R/lspace(0.278em)/rspace(0.278em) >>
 endobj
-39 0 obj
+40 0 obj
 << /O/NSO/NS 13 0 R/width(9.963pt) >>
 endobj
-40 0 obj
+41 0 obj
 << /Type /Metadata /Subtype /XML /Length 15935 >>      
 stream
 <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -341,7 +341,7 @@ stream
 <?xpacket end="w"?>
 endstream
 endobj
-43 0 obj
+44 0 obj
 << /Length 653 >>        
 stream
 /opacity1 gs
@@ -389,47 +389,47 @@ EMC
 EMC
 endstream
 endobj
-42 0 obj
-<< /Type /Page /Contents 43 0 R /Resources 41 0 R /MediaBox [ 0 0 612 792 ] /StructParents 0/Tabs /S /Parent 47 0 R >>
+43 0 obj
+<< /Type /Page /Contents 44 0 R /Resources 42 0 R /MediaBox [ 0 0 612 792 ] /StructParents 0/Tabs /S /Parent 48 0 R >>
 endobj
-41 0 obj
-<< /ExtGState 1 0 R /Font << /F20 44 0 R /F15 45 0 R /F32 46 0 R >> >>
+42 0 obj
+<< /ExtGState 1 0 R /Font << /F20 45 0 R /F15 46 0 R /F32 47 0 R >> >>
 endobj
 1 0 obj
 << /opacity1 <</ca 1/CA 1>>  >>
 endobj
-48 0 obj
+49 0 obj
 << /Marked true  >>
 endobj
-49 0 obj
+50 0 obj
 [ 23 0 R ]
 endobj
-50 0 obj
+51 0 obj
 << /Subtype /text#2Fplain/Type /EmbeddedFile /Params<</ModDate (D:20160520) >> /Length 115 >>        
 stream
 The document was declared to be of type PDF/A-4f but hasn't any attachments. LaTeX therefore added this dummy file.
 endstream
 endobj
-51 0 obj
-<< /Type /Filespec /AFRelationship /Unspecified /Desc (note about PDF/A-4F) /F (pdf-A4f.txt) /UF <FEFF007000640066002D004100340066002E007400780074> /EF<</F 50 0 R/UF 50 0 R>> >>
-endobj
 52 0 obj
-<< /Names[(pdf-A4f) 51 0 R] >>
-endobj
-6 0 obj
-<< /Nums [0 [ 34 0 R 35 0 R 37 0 R 31 0 R 32 0 R] 
-] >>
+<< /Type /Filespec /AFRelationship /Unspecified /Desc (note about PDF/A-4F) /F (pdf-A4f.txt) /UF <FEFF007000640066002D004100340066002E007400780074> /EF<</F 51 0 R/UF 51 0 R>> >>
 endobj
 53 0 obj
-<< /Limits [(ID.002) (ID.014)]/Names [(ID.002) 21 0 R (ID.003) 24 0 R (ID.004) 25 0 R (ID.005) 26 0 R (ID.006) 27 0 R (ID.007) 28 0 R (ID.008) 31 0 R (ID.009) 32 0 R (ID.010) 33 0 R (ID.011) 34 0 R (ID.012) 35 0 R (ID.013) 37 0 R (ID.014) 38 0 R ] >>
+<< /Names[(pdf-A4f) 52 0 R] >>
+endobj
+6 0 obj
+<< /Nums [0 [ 35 0 R 36 0 R 38 0 R 31 0 R 32 0 R] 
+] >>
 endobj
 54 0 obj
-<< /Kids [53 0 R] >>
+<< /Limits [(ID.002) (ID.015)]/Names [(ID.002) 21 0 R (ID.003) 24 0 R (ID.004) 25 0 R (ID.005) 26 0 R (ID.006) 27 0 R (ID.007) 28 0 R (ID.008) 31 0 R (ID.009) 32 0 R (ID.010) 33 0 R (ID.011) 34 0 R (ID.012) 35 0 R (ID.013) 36 0 R (ID.014) 38 0 R (ID.015) 39 0 R ] >>
+endobj
+55 0 obj
+<< /Kids [54 0 R] >>
 endobj
 7 0 obj
 << /Artifact /NonStruct /DocumentFragment /Art /Aside /Note /H7 /H6 /H8 /H6 /H9 /H6 /H10 /H6 /Title /P /FENote /Note /Sub /Span /Em /Span /Strong /Span /title /P /part /P /section /H1 /subsection /H2 /subsubsection /H3 /paragraph /H4 /subparagraph /H5 /list /L /itemize /L /enumerate /L /description /L /quote /BlockQuote /quotation /BlockQuote /verbatim /P /item /LI /itemlabel /Lbl /itembody /LBody /footnote /Note /footnotemark /Lbl /footnotelabel /Lbl /text-unit /Part /text /P /theorem-like /Sect /codeline /Span /float /Note /figures /Sect /tables /Sect  >>
 endobj
-55 0 obj
+56 0 obj
 << /justify <</O/Layout/TextAlign/Justify>>
 /inline <</O/Layout/Placement/Inline>>
  >>
@@ -480,40 +480,43 @@ endobj
 <<  /Type /StructElem /C /inline /AF [30 0 R] /T <FEFF006D006100740068> /S /Formula /NS 11 0 R  /P 27 0 R /K [ 33 0 R] /ID (ID.007) >>
 endobj
 31 0 obj
-<<  /Type /StructElem /S /mtext /NS 13 0 R  /P 33 0 R /K [<</Type /MCR /Pg 42 0 R /MCID 3>>  32 0 R ] /ID (ID.008) >>
+<<  /Type /StructElem /S /mtext /NS 13 0 R  /P 34 0 R /K [<</Type /MCR /Lang (fr) /Pg 43 0 R /MCID 3>>  32 0 R ] /ID (ID.008) >>
 endobj
 32 0 obj
-<<  /Type /StructElem /S /Em /NS 11 0 R  /P 31 0 R /K <</Type /MCR /Pg 42 0 R /MCID 4>>  /ID (ID.009) >>
+<<  /Type /StructElem /S /Em /NS 11 0 R  /P 31 0 R /K <</Type /MCR /Lang (fr) /Pg 43 0 R /MCID 4>>  /ID (ID.009) >>
 endobj
 33 0 obj
-<<  /Type /StructElem /S /math /NS 13 0 R  /P 28 0 R /K [34 0 R 35 0 R 37 0 R 38 0 R 31 0 R] /ID (ID.010) >>
+<<  /Type /StructElem /S /math /NS 13 0 R  /P 28 0 R /K 34 0 R /ID (ID.010) >>
 endobj
 34 0 obj
-<<  /Type /StructElem /S /mi /NS 13 0 R  /P 33 0 R /K <</Type /MCR /Pg 42 0 R /MCID 0>>  /ID (ID.011) >>
+<<  /Type /StructElem /S /mrow /NS 13 0 R  /P 33 0 R /K [35 0 R 36 0 R 38 0 R 39 0 R 31 0 R] /ID (ID.011) >>
 endobj
 35 0 obj
-<<  /Type /StructElem /A  36 0 R /S /mo /NS 13 0 R  /P 33 0 R /K <</Type /MCR /Pg 42 0 R /MCID 1>>  /ID (ID.012) >>
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 34 0 R /K <</Type /MCR /Lang (fr) /Pg 43 0 R /MCID 0>>  /ID (ID.012) >>
 endobj
-37 0 obj
-<<  /Type /StructElem /S /mi /NS 13 0 R  /P 33 0 R /K <</Type /MCR /Pg 42 0 R /MCID 2>>  /ID (ID.013) >>
+36 0 obj
+<<  /Type /StructElem /A  37 0 R /S /mo /NS 13 0 R  /P 34 0 R /K <</Type /MCR /Lang (fr) /Pg 43 0 R /MCID 1>>  /ID (ID.013) >>
 endobj
 38 0 obj
-<<  /Type /StructElem /A  39 0 R /S /mspace /NS 13 0 R  /P 33 0 R /ID (ID.014) >>
+<<  /Type /StructElem /S /mi /NS 13 0 R  /P 34 0 R /K <</Type /MCR /Lang (fr) /Pg 43 0 R /MCID 2>>  /ID (ID.014) >>
+endobj
+39 0 obj
+<<  /Type /StructElem /A  40 0 R /S /mspace /NS 13 0 R  /P 34 0 R /ID (ID.015) >>
 endobj
 5 0 obj
-<<  /Type /StructTreeRoot /Namespaces 8 0 R /IDTree 54 0 R /ClassMap 55 0 R /ParentTree 6 0 R /RoleMap 7 0 R /K 21 0 R >>
+<<  /Type /StructTreeRoot /Namespaces 8 0 R /IDTree 55 0 R /ClassMap 56 0 R /ParentTree 6 0 R /RoleMap 7 0 R /K 21 0 R >>
 endobj
-56 0 obj
+57 0 obj
 [ 43 [ 460 ] 50 [ 460 ] 96 [ 422 ] 98 [ 409 ] 105 [ 332 ] 109 [ 537 ] ]
 endobj
-58 0 obj
+59 0 obj
 << /Subtype /CIDFontType0C /Length 1274 >>       
 [BINARY STREAM]
 endobj
-57 0 obj
-<< /Type /FontDescriptor /FontName /ADNFRA+LMRoman10-Italic /Flags 4 /FontBBox [ -458 -290 1386 1125 ] /Ascent 1125 /CapHeight 683 /Descent -290 /ItalicAngle -15 /StemV 102 /XHeight 431 /FontFile3 58 0 R >>
+58 0 obj
+<< /Type /FontDescriptor /FontName /ADNFRA+LMRoman10-Italic /Flags 4 /FontBBox [ -458 -290 1386 1125 ] /Ascent 1125 /CapHeight 683 /Descent -290 /ItalicAngle -15 /StemV 102 /XHeight 431 /FontFile3 59 0 R >>
 endobj
-59 0 obj
+60 0 obj
 << /Length 731 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
@@ -552,23 +555,23 @@ end
 %%EOF
 endstream
 endobj
-46 0 obj
-<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /ADNFRA+LMRoman10-Italic /DescendantFonts [ 60 0 R ] /ToUnicode 59 0 R >>
-endobj
-60 0 obj
-<< /Type /Font /Subtype /CIDFontType0 /BaseFont /ADNFRA+LMRoman10-Italic /FontDescriptor 57 0 R /W 56 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+47 0 obj
+<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /ADNFRA+LMRoman10-Italic /DescendantFonts [ 61 0 R ] /ToUnicode 60 0 R >>
 endobj
 61 0 obj
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /ADNFRA+LMRoman10-Italic /FontDescriptor 58 0 R /W 57 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+endobj
+62 0 obj
 [ 50 [ 444 ] 63 [ 556 ] 66 [ 278 ] 75 [ 833 ] 81 [ 500 500 ] 98 [ 394 ] 103 [ 333 ] 105 [ 389 ] 114 [ 722 ] 116 [ 528 ] ]
 endobj
-63 0 obj
+64 0 obj
 << /Subtype /CIDFontType0C /Length 1812 >>       
 [BINARY STREAM]
 endobj
-62 0 obj
-<< /Type /FontDescriptor /FontName /GZYIXU+LMRoman10-Regular /Flags 4 /FontBBox [ -430 -290 1417 1127 ] /Ascent 1127 /CapHeight 683 /Descent -290 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 63 0 R >>
+63 0 obj
+<< /Type /FontDescriptor /FontName /GZYIXU+LMRoman10-Regular /Flags 4 /FontBBox [ -430 -290 1417 1127 ] /Ascent 1127 /CapHeight 683 /Descent -290 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 64 0 R >>
 endobj
-64 0 obj
+65 0 obj
 << /Length 807 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
@@ -612,23 +615,23 @@ end
 %%EOF
 endstream
 endobj
-45 0 obj
-<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /GZYIXU+LMRoman10-Regular /DescendantFonts [ 65 0 R ] /ToUnicode 64 0 R >>
-endobj
-65 0 obj
-<< /Type /Font /Subtype /CIDFontType0 /BaseFont /GZYIXU+LMRoman10-Regular /FontDescriptor 62 0 R /W 61 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+46 0 obj
+<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /GZYIXU+LMRoman10-Regular /DescendantFonts [ 66 0 R ] /ToUnicode 65 0 R >>
 endobj
 66 0 obj
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /GZYIXU+LMRoman10-Regular /FontDescriptor 63 0 R /W 62 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+endobj
+67 0 obj
 [ 30 [ 778 ] 1296 [ 529 429 ] ]
 endobj
-68 0 obj
+69 0 obj
 << /Subtype /CIDFontType0C /Length 984 >>        
 [BINARY STREAM]
 endobj
-67 0 obj
-<< /Type /FontDescriptor /FontName /NFEDYW+LatinModernMath-Regular /Flags 4 /FontBBox [ -1042 -3060 4082 3560 ] /Ascent 806 /CapHeight 683 /Descent -194 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 68 0 R >>
+68 0 obj
+<< /Type /FontDescriptor /FontName /NFEDYW+LatinModernMath-Regular /Flags 4 /FontBBox [ -1042 -3060 4082 3560 ] /Ascent 806 /CapHeight 683 /Descent -194 /ItalicAngle 0 /StemV 93 /XHeight 431 /FontFile3 69 0 R >>
 endobj
-69 0 obj
+70 0 obj
 << /Length 732 >>        
 stream
 %!PS-Adobe-3.0 Resource-CMap
@@ -664,98 +667,99 @@ end
 %%EOF
 endstream
 endobj
-44 0 obj
-<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /NFEDYW+LatinModernMath-Regular /DescendantFonts [ 70 0 R ] /ToUnicode 69 0 R >>
-endobj
-70 0 obj
-<< /Type /Font /Subtype /CIDFontType0 /BaseFont /NFEDYW+LatinModernMath-Regular /FontDescriptor 67 0 R /W 66 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
-endobj
-47 0 obj
-<< /Type /Pages  /Count 1 /Kids [ 42 0 R ] >>
+45 0 obj
+<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /NFEDYW+LatinModernMath-Regular /DescendantFonts [ 71 0 R ] /ToUnicode 70 0 R >>
 endobj
 71 0 obj
-<< /EmbeddedFiles 52 0 R >>
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /NFEDYW+LatinModernMath-Regular /FontDescriptor 68 0 R /W 67 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
+endobj
+48 0 obj
+<< /Type /Pages  /Count 1 /Kids [ 43 0 R ] >>
 endobj
 72 0 obj
-<< /Type /Catalog /Pages 47 0 R /Names 71 0 R /MarkInfo 48 0 R/OutputIntents 49 0 R/Lang (en)/Metadata 40 0 R/StructTreeRoot 5 0 R >>
+<< /EmbeddedFiles 53 0 R >>
+endobj
+73 0 obj
+<< /Type /Catalog /Pages 48 0 R /Names 72 0 R /MarkInfo 49 0 R/OutputIntents 50 0 R/Lang (en)/Metadata 41 0 R/StructTreeRoot 5 0 R >>
 endobj
 xref
-0 73
+0 74
 0000000002 65535 f 
 0000021206 00000 n 
 0000000003 00000 f 
 0000000004 00000 f 
 0000000010 00000 f 
-0000025779 00000 n 
+0000025945 00000 n 
 0000021808 00000 n 
-0000022183 00000 n 
-0000024230 00000 n 
-0000022865 00000 n 
+0000022199 00000 n 
+0000024246 00000 n 
+0000022881 00000 n 
 0000000012 00000 f 
-0000022933 00000 n 
+0000022949 00000 n 
 0000000014 00000 f 
-0000023003 00000 n 
+0000023019 00000 n 
 0000000020 00000 f 
-0000023766 00000 n 
-0000023084 00000 n 
-0000024039 00000 n 
-0000023868 00000 n 
-0000024141 00000 n 
+0000023782 00000 n 
+0000023100 00000 n 
+0000024055 00000 n 
+0000023884 00000 n 
+0000024157 00000 n 
 0000000000 00000 f 
-0000024291 00000 n 
+0000024307 00000 n 
 0000000020 00000 n 
 0000003353 00000 n 
-0000024389 00000 n 
-0000024477 00000 n 
-0000024565 00000 n 
-0000024665 00000 n 
-0000024776 00000 n 
+0000024405 00000 n 
+0000024493 00000 n 
+0000024581 00000 n 
+0000024681 00000 n 
+0000024792 00000 n 
 0000003586 00000 n 
 0000003921 00000 n 
-0000024927 00000 n 
-0000025061 00000 n 
-0000025182 00000 n 
-0000025307 00000 n 
-0000025428 00000 n 
+0000024943 00000 n 
+0000025088 00000 n 
+0000025220 00000 n 
+0000025315 00000 n 
+0000025440 00000 n 
+0000025572 00000 n 
 0000004121 00000 n 
-0000025560 00000 n 
-0000025681 00000 n 
+0000025715 00000 n 
+0000025847 00000 n 
 0000004192 00000 n 
 0000004246 00000 n 
 0000021119 00000 n 
 0000020984 00000 n 
 0000020271 00000 n 
-0000034340 00000 n 
-0000031850 00000 n 
-0000028376 00000 n 
-0000034706 00000 n 
+0000034506 00000 n 
+0000032016 00000 n 
+0000028542 00000 n 
+0000034872 00000 n 
 0000021253 00000 n 
 0000021289 00000 n 
 0000021316 00000 n 
 0000021567 00000 n 
 0000021761 00000 n 
 0000021879 00000 n 
-0000022146 00000 n 
-0000022762 00000 n 
-0000025916 00000 n 
-0000027362 00000 n 
-0000026004 00000 n 
-0000027585 00000 n 
-0000028529 00000 n 
-0000028728 00000 n 
-0000030762 00000 n 
-0000028866 00000 n 
-0000030983 00000 n 
-0000032004 00000 n 
-0000032204 00000 n 
-0000033320 00000 n 
-0000032252 00000 n 
-0000033548 00000 n 
-0000034500 00000 n 
-0000034768 00000 n 
-0000034812 00000 n 
+0000022162 00000 n 
+0000022778 00000 n 
+0000026082 00000 n 
+0000027528 00000 n 
+0000026170 00000 n 
+0000027751 00000 n 
+0000028695 00000 n 
+0000028894 00000 n 
+0000030928 00000 n 
+0000029032 00000 n 
+0000031149 00000 n 
+0000032170 00000 n 
+0000032370 00000 n 
+0000033486 00000 n 
+0000032418 00000 n 
+0000033714 00000 n 
+0000034666 00000 n 
+0000034934 00000 n 
+0000034978 00000 n 
 trailer
-<< /Size 73 /Root 72 0 R /ID [ <2350CAD05F8A7AF0AA4058486855344F> <2350CAD05F8A7AF0AA4058486855344F> ] >>
+<< /Size 74 /Root 73 0 R /ID [ <2350CAD05F8A7AF0AA4058486855344F> <2350CAD05F8A7AF0AA4058486855344F> ] >>
 startxref
-34962
+35128
 %%EOF

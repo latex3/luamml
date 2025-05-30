@@ -4,26 +4,30 @@
   </msqrt>
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msqrt>
+  <mrow>
     <msqrt>
-      <mi>𝑥</mi>
+      <msqrt>
+        <mi>𝑥</mi>
+      </msqrt>
     </msqrt>
-  </msqrt>
-  <mo lspace="0.222em" rspace="0.222em">+</mo>
-  <mn>2</mn>
+    <mo lspace="0.222em" rspace="0.222em">+</mo>
+    <mn>2</mn>
+  </mrow>
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑥</mi>
-  <mo lspace="0.278em" rspace="0.278em">=</mo>
-  <msqrt>
-    <mroot>
-      <msup>
-        <mi>𝑦</mi>
-        <mn>2</mn>
-      </msup>
-      <mn>3</mn>
-    </mroot>
-  </msqrt>
+  <mrow>
+    <mi>𝑥</mi>
+    <mo lspace="0.278em" rspace="0.278em">=</mo>
+    <msqrt>
+      <mroot>
+        <msup>
+          <mi>𝑦</mi>
+          <mn>2</mn>
+        </msup>
+        <mn>3</mn>
+      </mroot>
+    </msqrt>
+  </mrow>
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mroot>

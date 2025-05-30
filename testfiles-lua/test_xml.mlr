@@ -1,128 +1,138 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mo lspace="0.278em" rspace="0.278em">=</mo>
-  <mi>𝑏</mi>
-</math>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
-    <mo fence="true" lspace="0" rspace="0" symmetric="true">(</mo>
-    <mspace width="-4.981pt" />
-    <mpadded lspace="+4.981pt" width="+9.963pt">
-      <mtable>
-        <mtr>
-          <mtd>
-            <mn>1</mn>
-          </mtd>
-          <mtd>
-            <mn>0</mn>
-          </mtd>
-          <mtd>
-            <mn>0</mn>
-          </mtd>
-        </mtr>
-        <mtr>
-          <mtd>
-            <mn>0</mn>
-          </mtd>
-          <mtd>
-            <mn>1</mn>
-          </mtd>
-          <mtd>
-            <mn>0</mn>
-          </mtd>
-        </mtr>
-        <mtr>
-          <mtd>
-            <mn>0</mn>
-          </mtd>
-          <mtd>
-            <mn>0</mn>
-          </mtd>
-          <mtd>
-            <mn>1</mn>
-          </mtd>
-        </mtr>
-      </mtable>
-    </mpadded>
-    <mspace width="-4.981pt" />
-    <mo fence="true" lspace="0" rspace="0" symmetric="true">)</mo>
-  </mrow>
-  <mo lspace="0.278em" rspace="0.278em">=</mo>
-  <mrow>
-    <mo fence="true" lspace="0" rspace="0" symmetric="true">{</mo>
-    <mpadded lspace="+4.981pt" width="+9.963pt">
-      <mtable>
-        <mtr>
-          <mtd columnalign="left">
-            <mn>1</mn>
-          </mtd>
-          <mtd columnalign="left">
-            <mtext>if&#160; 
-            <math xmlns="http://www.w3.org/1998/Math/MathML">
-              <mi>𝑎</mi>
-              <mo lspace="0.278em" rspace="0.278em">=</mo>
-              <mi>𝑏</mi>
-            </math></mtext>
-          </mtd>
-        </mtr>
-        <mtr>
-          <mtd columnalign="left">
-            <mn>2</mn>
-          </mtd>
-          <mtd columnalign="left">
-            <mtext>else</mtext>
-          </mtd>
-        </mtr>
-      </mtable>
-    </mpadded>
-    <mspace width="1.196pt" />
-  </mrow>
-</math>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑥</mi>
-  <mo lspace="0.278em" rspace="0.278em">=</mo>
-  <mfrac>
-    <mrow>
-      <mo lspace="0" rspace="0.222em">−</mo>
-      <mi>𝑏</mi>
-      <mo lspace="0.222em" rspace="0.222em">±</mo>
-      <msqrt>
-        <mrow>
-          <msup>
-            <mi>𝑏</mi>
-            <mn>2</mn>
-          </msup>
-          <mo lspace="0.222em" rspace="0.222em">−</mo>
-          <mn>4</mn>
-          <mi>𝑎</mi>
-          <mi>𝑐</mi>
-        </mrow>
-      </msqrt>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-      <mi>𝑎</mi>
-    </mrow>
-  </mfrac>
-  <mo lspace="0" rspace="0">.</mo>
-</math>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <munder>
-    <mo lspace="0" movablelimits="true" rspace="0.167em">∑</mo>
     <mi>𝑎</mi>
-  </munder>
-  <munder>
-    <mi>𝑐</mi>
-    <mo>_</mo>
-  </munder>
-  <mover>
+    <mo lspace="0.278em" rspace="0.278em">=</mo>
     <mi>𝑏</mi>
-    <mo stretchy="true">.</mo>
-  </mover>
-  <msup>
-    <mi>𝑐</mi>
-    <mi mathvariant="normal">′</mi>
-  </msup>
+  </mrow>
+</math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mrow>
+      <mo fence="true" lspace="0" rspace="0" symmetric="true">(</mo>
+      <mspace width="-4.981pt" />
+      <mpadded lspace="+4.981pt" width="+9.963pt">
+        <mtable>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mn>0</mn>
+            </mtd>
+            <mtd>
+              <mn>0</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>0</mn>
+            </mtd>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mn>0</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>0</mn>
+            </mtd>
+            <mtd>
+              <mn>0</mn>
+            </mtd>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+          </mtr>
+        </mtable>
+      </mpadded>
+      <mspace width="-4.981pt" />
+      <mo fence="true" lspace="0" rspace="0" symmetric="true">)</mo>
+    </mrow>
+    <mo lspace="0.278em" rspace="0.278em">=</mo>
+    <mrow>
+      <mo fence="true" lspace="0" rspace="0" symmetric="true">{</mo>
+      <mpadded lspace="+4.981pt" width="+9.963pt">
+        <mtable>
+          <mtr>
+            <mtd columnalign="left">
+              <mn>1</mn>
+            </mtd>
+            <mtd columnalign="left">
+              <mtext>if&#160; 
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                  <mi>𝑎</mi>
+                  <mo lspace="0.278em" rspace="0.278em">=</mo>
+                  <mi>𝑏</mi>
+                </mrow>
+              </math></mtext>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd columnalign="left">
+              <mn>2</mn>
+            </mtd>
+            <mtd columnalign="left">
+              <mtext>else</mtext>
+            </mtd>
+          </mtr>
+        </mtable>
+      </mpadded>
+      <mspace width="1.196pt" />
+    </mrow>
+  </mrow>
+</math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>𝑥</mi>
+    <mo lspace="0.278em" rspace="0.278em">=</mo>
+    <mfrac>
+      <mrow>
+        <mo lspace="0" rspace="0.222em">−</mo>
+        <mi>𝑏</mi>
+        <mo lspace="0.222em" rspace="0.222em">±</mo>
+        <msqrt>
+          <mrow>
+            <msup>
+              <mi>𝑏</mi>
+              <mn>2</mn>
+            </msup>
+            <mo lspace="0.222em" rspace="0.222em">−</mo>
+            <mn>4</mn>
+            <mi>𝑎</mi>
+            <mi>𝑐</mi>
+          </mrow>
+        </msqrt>
+      </mrow>
+      <mrow>
+        <mn>2</mn>
+        <mi>𝑎</mi>
+      </mrow>
+    </mfrac>
+    <mo lspace="0" rspace="0">.</mo>
+  </mrow>
+</math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <munder>
+      <mo lspace="0" movablelimits="true" rspace="0.167em">∑</mo>
+      <mi>𝑎</mi>
+    </munder>
+    <munder>
+      <mi>𝑐</mi>
+      <mo>_</mo>
+    </munder>
+    <mover>
+      <mi>𝑏</mi>
+      <mo>.</mo>
+    </mover>
+    <msup>
+      <mi>𝑐</mi>
+      <mi mathvariant="normal">′</mi>
+    </msup>
+  </mrow>
 </math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
   <mtable class="align" columnalign="left right left right left" columnspacing="0 0 .8em 0" displaystyle="true" intent=":system-of-equations">
@@ -179,18 +189,20 @@
   </mtable>
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi mathvariant="normal">sin</mi>
-  <mo lspace="0" rspace="0" stretchy="false">(</mo>
-  <mi>𝑥</mi>
-  <mo lspace="0" rspace="0" stretchy="false">)</mo>
-  <mo lspace="0.222em" rspace="0.222em">−</mo>
-  <mi mathvariant="normal">sin</mi>
-  <mo lspace="0" rspace="0" stretchy="false">(</mo>
-  <mi>𝑥</mi>
-  <mo lspace="0.222em" rspace="0.222em">+</mo>
-  <mn>2</mn>
-  <mi>𝜋</mi>
-  <mo lspace="0" rspace="0" stretchy="false">)</mo>
-  <mo lspace="0.278em" rspace="0.278em">=</mo>
-  <mn>0</mn>
+  <mrow>
+    <mi mathvariant="normal">sin</mi>
+    <mo lspace="0" rspace="0" stretchy="false">(</mo>
+    <mi>𝑥</mi>
+    <mo lspace="0" rspace="0" stretchy="false">)</mo>
+    <mo lspace="0.222em" rspace="0.222em">−</mo>
+    <mi mathvariant="normal">sin</mi>
+    <mo lspace="0" rspace="0" stretchy="false">(</mo>
+    <mi>𝑥</mi>
+    <mo lspace="0.222em" rspace="0.222em">+</mo>
+    <mn>2</mn>
+    <mi>𝜋</mi>
+    <mo lspace="0" rspace="0" stretchy="false">)</mo>
+    <mo lspace="0.278em" rspace="0.278em">=</mo>
+    <mn>0</mn>
+  </mrow>
 </math>
