@@ -647,12 +647,15 @@ local function register_remap(family, mapping)
   end
 end
 
+-- 2025-05-30: do not replace outer mrow by math as firefox doesn't properly support 
+-- math at container, tagging-project#856. 
+
 local function to_math(root, style)
-  if root[0] == 'mrow' then
-    root[0] = 'math'
-  else
+ -- if root[0] == 'mrow' then
+ --   root[0] = 'math'
+ -- else
     root = {[0] = 'math', root}
-  end
+ -- end
   root.xmlns = 'http://www.w3.org/1998/Math/MathML'
   root['xmlns:tex'] = 'http://typesetting.eu/2021/LuaMathML'
   if style < 2 then

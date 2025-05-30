@@ -10,7 +10,9 @@ this project uses date-based 'snapshot' version identifiers.
   * luamml-amsmath.lua: logic in debug_mtable
   
  ### Changed
-  * improved documentation 
+  * improved documentation
+  * luamml-convert, to_math: do not replace outer mrow by math as firefox doesn't handle that correctly. 
+    (tagging-project#856) 
 
 ## [2025-03-06]
 
