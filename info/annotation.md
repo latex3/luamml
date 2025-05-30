@@ -4,6 +4,9 @@ luamml creates a mathml represention of TeX formula by adding a callback to the 
 
 It is possible to *annotate* parts of a formula to change the output. The following gives some details about how it works.
 
+Note: node/noad are not used consistently or correctly everywhere. And examples using
+ducks are not serious math.
+
 ## Two output modes
 
 luamml has two output modes: 
@@ -13,8 +16,13 @@ luamml has two output modes:
 ## General syntax
 
 ~~~~
-\luamml_annote:en {<options>}{content}
+\luamml_annote:en {<options>}{<content>}
 ~~~~
+
+<options> is a key-val argument. <content> some (nearly) arbitrary part of a formula.
+As annotions are stored in the properties of a node/noad <content> can not be empty.
+
+TODO: decide if empty <content> should error or warn or quit silently.
 
 ## Storing of annotations
 
@@ -24,7 +32,8 @@ of more than one noad the last one store the annotation (this can be changed wit
 
 ## Annotations with the xml-writer
 
-### Test 1
+### Test 1: no core 
+
 ~~~~
 $\luamml_annotate:en{}{a^3b^2}$
 $\luamml_annotate:en{nucleus=true}{a^3b^2}$
@@ -39,7 +48,7 @@ Result for both:
  </msup>
 ~~~~
 
-### Test 2
+### Test 2: core=false
 ~~~~
 $\luamml_annotate:en{core=false}{a^3b^2}$
 $\luamml_annotate:en{nucleus=true,core=false}{a^3b^2}$
@@ -51,7 +60,7 @@ Result for both: empty math
 <math xmlns="http://www.w3.org/1998/Math/MathML"/>
 ~~~ 
 
-### Test 3
+### Test 3: core 
 
 If a core is given is should always contain a `[0]` entry, 
 beside this, it can contain a list of attribute.
