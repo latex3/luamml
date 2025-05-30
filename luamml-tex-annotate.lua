@@ -49,6 +49,7 @@ end
         Stored as a function mathml_filter, that adds the field :struct to the mathml. 
       * structnum, number: a structure number referencing a stashed structure.
         Stored as a function mathml_filter, that adds the field :structnum to the mathml.
+        TODO: are they (and mathml_filter) actually used somewhere? 
       See luamml-convert.lua for the processing.
 --]]
 
