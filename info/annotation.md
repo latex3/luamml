@@ -321,13 +321,65 @@ latex-lab-mathintent defines an \invisibletimes command that basically does this
     {\latelua{}}
 ~~~~
 
-In the xml-output this gives ` <mo intent="times">⁢</mo>`  with an U+2062 in the middle.
+In the xml-output this gives `<mo intent="times">⁢</mo>`  with an U+2062 in the middle.
 
 In the PDF structure this gives an empty /mo structure element with an attribute `/intent(times)`. If that is enough for mathcat, it is fine, but if an actual content item is needed, it gets complicated.
     
 
+### Simple content
 
+When a core is set like in this example
+~~~~
+$x=\luamml_annotate:en{core={[0]='duck',intent='quack'}}{abc}$
+~~~~
+then the correct `duck` structure including the attribute is created,
+but a luamml doesn't add tagging commands for the content, `abc` has the MC-attribute from the Formula structure and so gets inserted as a container at the begin of this structure.
 
+It is currently not possible to correct this, but theoretically
+it is manageable: one can surround the content with `\tagmcbegin{stash,label=xxx}` and then insert this later into the intended structure. 
+
+Another option is to surround everything with a stashed structure and to use that with the `structnum` (or `struct` key). This requires that `nucleus` is set, and `core` can not be used. 
+  
+~~~~
+$x=
+   \tag_struct_begin:n
+       {
+         tag=duck,
+         % attribute if wanted
+         stash,
+       }
+     \edef\mystructurenum{\tag_get:n{struct_num}} 
+     \tag_struct_begin:n{tag=pato}
+      \tag_mc_begin:n {}
+      \luamml_annotate:en
+       {
+         nucleus = true,
+         structnum=\mystructurenum
+       }
+       { abc^2 }
+      \tag_mc_end:
+      \tagstructend
+      \tag_struct_end:
+   + y   
+$
+~~~~
+
+This will surround `abc` with the two structures.
+
+If it is possible to save the math first, then one can use as above 
+`consume_label`:
+
+~~~~
+\setbox0=\hbox{$abc^2\luamml_save:n{label}$}
+$x= \luamml_annotate:en
+       {
+         core={[0]='duck',intent='quack',
+          consume_label('label')}
+       }
+       { \box0 }
+   + y   
+$
+~~~~
 
 
    
