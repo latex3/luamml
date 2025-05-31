@@ -306,9 +306,25 @@ But this means on the TeX level that the user content is probably processed twic
 **TODO**
 
 
-## Structelem writer
+## Structelem-writer
 
+The structelem-writer adds tagging commands to create structure elements.
 
+The annotation options here are much more restricted as annotated content is no longer automatically tagged. As with the xml-writer the <content> is not longer in the xml tree. The content is typeset but does not exist for luamml anymore. 
+
+### No content
+
+latex-lab-mathintent defines an \invisibletimes command that basically does this
+
+~~~~
+\luamml_annotate:en {core={[0]='mo',intent="times",'^^^^2062'}}
+    {\latelua{}}
+~~~~
+
+In the xml-output this gives ` <mo intent="times">⁢</mo>`  with an U+2062 in the middle.
+
+In the PDF structure this gives an empty /mo structure element with an attribute `/intent(times)`. If that is enough for mathcat, it is fine, but if an actual content item is needed, it gets complicated.
+    
 
 
 
