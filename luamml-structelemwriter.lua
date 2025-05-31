@@ -1,3 +1,14 @@
+--[[
+   This file defines and returns the main function
+   * write_elem(element,stash) 
+   which adds structure elements/tagging commands to the mathml
+   
+   Two arguments: tree (xml-tree), stash (boolean). 
+   The function is loaded by luamml-tex as `write_struct` and used there in 
+   save_result as `write_struct(mlist_result)` and as `write_struct(xml, true)` in the
+   callback.
+--]]
+
 local struct_begin = token.create'tag_struct_begin:n'
 local struct_use = token.create'tag_struct_use:n'
 local struct_use_num = token.create'tag_struct_use_num:n'

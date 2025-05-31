@@ -235,17 +235,28 @@ gives
 
 ### Only top level noads are support.
 
-These annotations do nothing at all:
+According to the documentation, only „top level noads“ are annotated.
+But it is not quite clear what this means.
+
+This annotation does nothing:
 
 ~~~~
-$a^3b^{\luamml_annotate:en{core={[0]='duck'}}{2}}}$
+$a^3b^{\luamml_annotate:en{core={[0]='duck'}}{2}}$
+~~~~
 
+The mathml simply says `<msup><mi>𝑏</mi><mn>2</mn></msup>`.
+
+But these annotations work:
+
+~~~~
+$a^3b^{\luamml_annotate:en{core={[0]='duck','quack'}}{\latelua{}}}$
+$a^3b^{+\luamml_annotate:en{core={[0]='duck','quack'}}{2}}$
 $\frac
    {\luamml_annotate:en{nucleus=true,core={[0]='duck}}{2}}}
-   {5}
+   {5}$
 ~~~~
 
-**TODO** How can intents work reliably then???
+**TODO** It must be clear, when annotations are ignored and what to do to ensure that this doesn't happens.
 
 
 ### Challenge: the `\genfrac` command. 
@@ -284,18 +295,19 @@ user content
 ~~~~
 then the surrounding `mrow` is missing.
 
-And option is to store all three components in a box with a suitable `\luamml_save:n` and then to do 
+An option is to store all three components in a box with a suitable `\luamml_save:n` and then to do 
 
 ~~~~
 core={[0]='mrow', consume_label('left'),consume_label('content'),consume_label('right')}
 ~~~~
 
-But this means on the TeX level that the user content is probably process twice (unless one can reuse the box), something that is not done currently. 
+But this means on the TeX level that the user content is probably processed twice (unless one can reuse the box), something that is not done currently. 
 
 **TODO**
 
 
 ## Structelem writer
+
 
 
 

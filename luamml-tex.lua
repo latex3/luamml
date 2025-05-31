@@ -142,8 +142,12 @@ local labelled_mathml = {}
 --[[ Documentation for function save_result
    % Core function, exported as save_result. 
    %
-   % Used in luamml-amsmath.lua, luamml-array.lua, luamml-table.lua
+   % Used in the callback when math is saved in the startmath node.
+   % 
+   % loaded in luamml-amsmath.lua, luamml-array.lua, luamml-table.lua but 
+   % used only in luamml-amsmath.lua in \__luamml_amsmath_finalize_table:n
    %
+   % Three arguments: xml, display, structelem
    % Argument xml is the table, display a number. If display<2 it is a display math.
    % ?? Argument structelem is not used ??
    %
@@ -242,7 +246,7 @@ luatexbase.add_to_callback('pre_mlist_to_hlist_filter', function(mlist, style)
     end
     -- bit 1 + 3 set.
     if flag & 10 == 8 then
-      write_struct(xml, true) -- This modifies xml in-place to reference the struture element
+      write_struct(xml, true) -- This modifies xml in-place to reference the structure element
     end
   end
   return true

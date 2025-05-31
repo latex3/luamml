@@ -201,6 +201,7 @@ local function kernel_to_table(kernel, cur_style, text_families)
       [':nodes'] = {kernel},
     }
     if mathml_filter then
+    -- here :struct and :structnum are added 
       return mathml_filter(result, result)
     else
       return result, result
