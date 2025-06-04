@@ -1,7 +1,7 @@
 local properties = node.get_properties_table()
 
 local function to_unicode(head, tail)
-  local result, subresult, i = {[0] = 'mtext'}, {}, 0
+  local result, i = {[0] = 'mtext'}, 0
   local characters, last_fid
   local iter, state, n = node.traverse(head)
   while true do
@@ -62,6 +62,10 @@ local function to_unicode(head, tail)
           i = i+1
           result[i] = '\u{FFFD}'
         end
+      elseif node.id'disc' == id then
+        local subresult = to_unicode(n.replace)
+        table.move(subresult, 1, #subresult, i + 1, result)
+        i = i+#subresult
       end -- CHECK: Everything else can probably be ignored, otherwise shout at me
     end
   end

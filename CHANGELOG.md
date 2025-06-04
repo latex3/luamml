@@ -7,6 +7,7 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
 
+ * Fix missing characters when hyphenation appears (GH #11)
  * Fix inverted stretch flag for horizontal accents (GH tagging-project#855)
  - Ulrike Fischer, 2025-03-06
  * add class attribute to math environments
