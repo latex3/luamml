@@ -152,6 +152,15 @@
 % them later.
 %    \begin{macrocode}
 \int_new:N \l__luamml_flag_int
+%    \end{macrocode}
+% This integer decides if the xml uses pretty indentation if output to a file
+% or to the terminal. It is used in luamml-tex.lua with a bitwise operation. 
+% Indentation in files is activated if bit 0 is set.
+% Indentation in the log is activated if bit 1 is set.
+% Bit 2 sets indentation for code added with the \cs{luamml_register_output_hook:N}.
+% Bit 3 sets indentation for MathML written as stream to the PDF with 
+% \cs{luamml_get_last_mathml_stream:e}.
+%    \begin{macrocode}
 \int_new:N \l__luamml_pretty_int
 %<luatex>\tl_new:N \l__luamml_filename_tl
 \tl_new:N \l__luamml_root_tl
@@ -173,6 +182,8 @@
 % \subsection{Hook}
 % We also call a hook with arguments at the end of every MathML conversion with the result.
 % Currently only implemented in Lua\TeX{} since it immediately provides the output.
+% TODO: the latex-lab-math code registers its own function and so effectly kills the
+% hook here. This should be sorted \ldots.
 %    \begin{macrocode}
 %<*luatex>
 \hook_new_with_args:nn { luamml / converted } { 1 }
@@ -627,7 +638,7 @@
 %
 %
 % \begin{plugdecl}{tagsupport/math/luamml/array/finalizecol}
-%  The socket of this plug is used used in \cs{@classz}.
+%  The socket of this plug is used in \cs{@classz}.
 %    \begin{macrocode}
 \NewSocketPlug{tagsupport/math/luamml/array/finalizecol}{luamml}
  {

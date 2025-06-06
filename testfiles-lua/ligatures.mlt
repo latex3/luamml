@@ -1,0 +1,29 @@
+\DocumentMetadata{
+  uncompress,
+  tagging=on
+}
+\input{regression-test}
+\documentclass{article}
+\usepackage{unicode-math}
+
+\begin{document}
+\ExplSyntaxOn
+\luamml_set_filename:n {
+    \jobname .mml
+  }
+\luamml_process:  
+\luamml_begin_single_file:
+\ExplSyntaxOff
+
+$\textrm{dillusion}$ %ok
+
+$\textrm{diff}$ %ok
+
+$\textrm{diffusion}$ %wrong
+
+$\textrm{office}$ %wrong
+
+\ExplSyntaxOn
+\luamml_end_single_file:
+\ExplSyntaxOff
+\end{document}

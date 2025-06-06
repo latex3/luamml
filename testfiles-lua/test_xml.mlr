@@ -56,6 +56,9 @@
           <mtd columnalign="left">
             <mn>1</mn>
           </mtd>
+          <mtd>
+            <mspace width="9.963pt" />
+          </mtd>
           <mtd columnalign="left">
             <mtext>if&#160; 
             <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -68,6 +71,9 @@
         <mtr>
           <mtd columnalign="left">
             <mn>2</mn>
+          </mtd>
+          <mtd>
+            <mspace width="9.963pt" />
           </mtd>
           <mtd columnalign="left">
             <mtext>else</mtext>
@@ -117,7 +123,7 @@
   </munder>
   <mover>
     <mi>𝑏</mi>
-    <mo stretchy="true">.</mo>
+    <mo>.</mo>
   </mover>
   <msup>
     <mi>𝑐</mi>
@@ -127,18 +133,21 @@
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
   <mtable class="align" columnalign="left right left right left" columnspacing="0 0 .8em 0" displaystyle="true" intent=":system-of-equations">
     <mtr>
-      <mtd>
+      <mtd intent=":equation-label">
+        <mtext>(1)</mtext>
+      </mtd>
+      <mtd intent=":pause-medium">
         <mi>𝑎</mi>
         <mi>𝑏</mi>
         <mi>𝑐</mi>
       </mtd>
-      <mtd intent=":pause-medium">
+      <mtd>
         <mo lspace="0.278em" rspace="0.278em">=</mo>
         <mi>𝑑</mi>
         <mi>𝑒</mi>
         <mi>𝑓</mi>
       </mtd>
-      <mtd>
+      <mtd intent=":pause-medium">
         <msup>
           <mi>𝑒</mi>
           <mrow>
@@ -147,34 +156,40 @@
           </mrow>
         </msup>
       </mtd>
-      <mtd intent=":pause-medium">
+      <mtd>
         <mo lspace="0.278em" rspace="0">=</mo>
         <mo lspace="0.278em" rspace="0">−</mo>
         <mn>1</mn>
       </mtd>
     </mtr>
     <mtr>
-      <mtd>
+      <mtd intent=":equation-label">
+        <mtext>(2)</mtext>
+      </mtd>
+      <mtd intent=":pause-medium">
         <mo fence="true" lspace="0" maxsize="17.861pt" minsize="17.861pt" rspace="0" symmetric="true">(</mo>
         <mn>1</mn>
         <mo lspace="0.222em" rspace="0.222em">+</mo>
         <mn>2</mn>
       </mtd>
-      <mtd intent=":pause-medium">
+      <mtd>
         <mo lspace="0.278em" rspace="0.278em">=</mo>
         <mn>3</mn>
         <mo fence="true" lspace="0" maxsize="17.861pt" minsize="17.861pt" rspace="0" symmetric="true">)</mo>
       </mtd>
-      <mtd></mtd>
       <mtd intent=":pause-medium"></mtd>
+      <mtd></mtd>
     </mtr>
     <mtr>
-      <mtd>
+      <mtd intent=":equation-label">
+        <mtext>(3)</mtext>
+      </mtd>
+      <mtd intent=":pause-medium">
         <mn>5</mn>
       </mtd>
-      <mtd intent=":pause-medium"></mtd>
       <mtd></mtd>
       <mtd intent=":pause-medium"></mtd>
+      <mtd></mtd>
     </mtr>
   </mtable>
 </math>

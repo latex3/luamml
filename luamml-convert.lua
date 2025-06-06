@@ -1,3 +1,17 @@
+--[[
+ This file returns
+  * nodes_to_table (as process) 
+  * register_remap (as register_family)
+  * to_math (as make_root)
+  
+  nodes_to_table takes the argument (head, cur_style, text_families) and
+  converts nodes/noads to the mathml representation. It calls various subfunctions
+  like kernel_to_table, delim_to_table etc. 
+  
+  to_math surrounds the result with the <math> element.
+    
+--]]
+
 local remap_comb = require'luamml-data-combining'
 local stretchy = require'luamml-data-stretchy'
 local to_text = require'luamml-lr'
@@ -151,7 +165,8 @@ local function delim_to_table(delim)
   end
 end
 
--- Like kernel_to_table but always a math_char_t. Also creating a mo and potentially remapping to handle combining chars.
+-- Like kernel_to_table but always a math_char_t. Also creating a mo and potentially remapping 
+-- to handle combining chars.
 -- No lspace or space is set here since these never appear as core operators in an mrow.
 local function acc_to_table(acc, cur_style, stretch)
   if not acc then return end
@@ -196,6 +211,8 @@ local function kernel_to_table(kernel, cur_style, text_families)
       [':nodes'] = {kernel},
     }
     if mathml_filter then
+    -- this applies changes from annotations, for example adding structure node references
+    -- from the options :struct and :structnum     
       return mathml_filter(result, result)
     else
       return result, result
@@ -641,6 +658,9 @@ local function register_remap(family, mapping)
     remap_lookup[family | from] = utf8.char(to)
   end
 end
+
+-- 2025-05-30: Check if the outer outer mrow should be replaced by math 
+-- as firefox doesn't properly support tagging-project#856. 
 
 local function to_math(root, style)
   if root[0] == 'mrow' then

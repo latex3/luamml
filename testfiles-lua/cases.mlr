@@ -56,6 +56,9 @@
           <mtd columnalign="left">
             <mn>1</mn>
           </mtd>
+          <mtd>
+            <mspace width="9.963pt" />
+          </mtd>
           <mtd columnalign="left">
             <mtext>if&#160; 
             <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -68,6 +71,9 @@
         <mtr>
           <mtd columnalign="left">
             <mn>2</mn>
+          </mtd>
+          <mtd>
+            <mspace width="9.963pt" />
           </mtd>
           <mtd columnalign="left">
             <mtext>else</mtext>
@@ -117,7 +123,7 @@
   </munder>
   <mover>
     <mi>𝑏</mi>
-    <mo stretchy="true">.</mo>
+    <mo>.</mo>
   </mover>
   <msup>
     <mi>𝑐</mi>
