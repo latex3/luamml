@@ -119,7 +119,7 @@ Notes: unwanted math gone, wanted mo too, unwanted mtext still there. Content 12
 
 ~~~~
 $ x = \luamml_annotate:en
-     {nucleus,core=consume_label('box')}
+     {nucleus=true,core=consume_label('box')}
      {\hbox{$123\luamml_save:n{box}$}} $
 ~~~~
 
@@ -158,7 +158,7 @@ Looks ok too.
 ~~~~
 $ x = {
         \luamml_annotate:en
-        {nucleus,core=consume_label('box')}
+        {nucleus=true,core=consume_label('box')}
         {\hbox{$123\luamml_save:n{box}$}}
       } $
 ~~~~     
@@ -186,32 +186,36 @@ Same happens with the structure element.
 
 ### Nesting
 
-Nesting does not work:
+Nesting requires that nucleus=true is set
 
 ~~~~
 \newcommand\somesymbol[1]{\luamml_annotate:en
-        {nucleus,core=consume_label('box')}
+        {nucleus=true,core=consume_label('box')}
         {\hbox{$#1\luamml_save:n{box}$}}}
 $ x = \somesymbol{a}^{\somesymbol{b}} $
 ~~~~
 
-looses the superscript
+still surrounds the inner symbol with a mtext.
 
 ~~~~
 <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mi>𝑥</mi>
- <mo lspace="0.278em" rspace="0">=</mo>
+ <mo lspace="0.278em" rspace="0.278em">=</mo>
+ <msup>
  <mi>𝑎</mi>
+ <mtext>
+ <mi>𝑏</mi>
+ </mtext>
+ </msup>
 </math>
 ~~~~
 
-and the structure complains about an orphaned structure: `Structure 9 has 1 kids but no parent.`
 
 Using unique labels does not help. 
 
 ~~~~
 \newcommand\somesymbol[1]{\luamml_annotate:en
-        {nucleus,core=consume_label('box#1')}
+        {nucleus=true,core=consume_label('box#1')}
         {\hbox{$#1\luamml_save:n{box#1}$}}}
 $ x = \somesymbol{a}^{\somesymbol{b}} $
 ~~~~ 
