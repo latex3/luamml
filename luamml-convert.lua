@@ -358,11 +358,12 @@ local function accent_to_table(accent, sub, cur_style, text_families)
   local nucleus, core = kernel_to_table(accent.nucleus, cur_style//2*2+1, text_families)
   local top_acc = acc_to_table(accent.accent, cur_style, sub & 1 == 0)
   local bot_acc = acc_to_table(accent.bot_accent, cur_style, sub & 2 == 0)
-  return {[0] = top_acc and (bot_acc and 'munderover' or 'mover') or 'munder',
+  local with_accents = {[0] = top_acc and (bot_acc and 'munderover' or 'mover') or 'munder',
     nucleus,
     bot_acc or top_acc,
     bot_acc and top_acc,
-  }, core
+  }
+  return do_sub_sup(with_accents, core, accent, cur_style, text_families)
 end
 
 local style_table = {

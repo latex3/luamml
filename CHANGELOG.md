@@ -8,6 +8,7 @@ this project uses date-based 'snapshot' version identifiers.
 ## [Unreleased]
  ### Fixed
   * luamml-amsmath.lua: logic in debug_mtable
+  * Add support for subscripts and superscripts on accent nodes
   
  ### Changed
   * improved documentation
