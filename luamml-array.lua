@@ -109,13 +109,44 @@ end
 funcid = luatexbase.new_luafunction'__luamml_array_finalize_array:'
 token.set_lua('__luamml_array_finalize_array:', funcid)
 lua.get_functions_table()[funcid] = function()
-  -- TODO: Error handling etc.
   local nucl = tex.nest.top.tail.nucleus
-  local props = properties[nucl]
+  local array = saved_array
+  saved_array = nil
+  if not array then
+    tex.error(
+      "Socket tagsupport/math/luamml/array/finalize without an array to be finalized. \z
+      This is a bug",
+      {
+        "Please report this to the maintainer of the package defining\n\z
+        the table command you just used.\n\z
+        The socket tagsupport/math/luamml/array/finalize can only be used\n\z
+        after saving a table with tagsupport/math/luamml/array/save, but\n\z
+        no saved table could be found."
+      }
+    )
+    return
+  end
+  if not nucl then
+    tex.error(
+      "Socket tagsupport/math/luamml/array/finalize executed in \z
+      unexpected location. This is a bug",
+      {
+        string.format(
+          "Please report this to the maintainer of the package defining\n\z
+          the table command you just used.\n\z
+          The socket tagsupport/math/luamml/array/finalize should always\n\z
+          come directly after the math noad which contains the finalized\n\z
+          array, but it appeared after a %s instead.",
+          node.type(tex.nest.top.tail)
+        )
+      }
+    )
+    return
+  end
+  local props = nucl and properties[nucl]
   if not props then
     props = {}
     properties[nucl] = props
   end
-  props.mathml_table = saved_array
-  saved_array = nil
+  props.mathml_table = array
 end
