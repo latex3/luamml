@@ -157,7 +157,11 @@ do
     mml_table.columnalign = 'center'
     mml_table.columnspacing = '0.278em'
     mml_table.rowspacing = string.format('%.3fpt', tex.lineskip.width/65781.76)
-    saved = {[0] = 'mpadded', width = '+0.333em', lspace = '0.167em', mml_table}
+    saved = {[0] = 'mrow',
+      {[0] = 'mspace', width = '0.167em'},
+      mml_table,
+      {[0] = 'mspace', width = '0.167em'},
+    }
     debug_mtable(mml_table,kind)
     saved = mml_table
   end

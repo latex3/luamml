@@ -7,7 +7,8 @@
   <mrow>
     <mo fence="true" lspace="0" rspace="0" symmetric="true">(</mo>
     <mspace width="-4.981pt" />
-    <mpadded lspace="+4.981pt" width="+9.963pt">
+    <mrow>
+      <mspace width="4.981pt" />
       <mtable>
         <mtr>
           <mtd>
@@ -43,14 +44,16 @@
           </mtd>
         </mtr>
       </mtable>
-    </mpadded>
+      <mspace width="4.981pt" />
+    </mrow>
     <mspace width="-4.981pt" />
     <mo fence="true" lspace="0" rspace="0" symmetric="true">)</mo>
   </mrow>
   <mo lspace="0.278em" rspace="0.278em">=</mo>
   <mrow>
     <mo fence="true" lspace="0" rspace="0" symmetric="true">{</mo>
-    <mpadded lspace="+4.981pt" width="+9.963pt">
+    <mrow>
+      <mspace width="4.981pt" />
       <mtable>
         <mtr>
           <mtd columnalign="left">
@@ -80,7 +83,8 @@
           </mtd>
         </mtr>
       </mtable>
-    </mpadded>
+      <mspace width="4.981pt" />
+    </mrow>
     <mspace width="1.196pt" />
   </mrow>
 </math>

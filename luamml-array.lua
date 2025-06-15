@@ -92,10 +92,10 @@ lua.get_functions_table()[funcid] = function()
   local colsep = tex.dimen['col@sep']
   saved_array = get_table()
   if colsep ~= 0 then
-    saved_array = {[0] = 'mpadded',
-      width = string.format('%+.3fpt', 2*colsep/65781.76),
-      lspace = string.format('%+.3fpt', colsep/65781.76),
-      saved_array
+    saved_array = {[0] = 'mrow',
+      {[0] = 'mspace', width = string.format('%.3fpt', colsep/65781.76)},
+      saved_array,
+      {[0] = 'mspace', width = string.format('%.3fpt', colsep/65781.76)},
     }
   end
 end
