@@ -11,6 +11,7 @@ this project uses date-based 'snapshot' version identifiers.
   * Add support for subscripts and superscripts on accent nodes
   
  ### Changed
+  * Disable LuaTeX's math flattening by default
   * improved documentation
 
 ## [2025-03-06]

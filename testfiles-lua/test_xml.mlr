@@ -127,7 +127,7 @@
   </mover>
   <msup>
     <mi>𝑐</mi>
-    <mi mathvariant="normal">′</mi>
+    <mo lspace="0" rspace="0">′</mo>
   </msup>
 </math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">

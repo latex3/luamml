@@ -172,6 +172,13 @@
 \int_set:Nn \l__luamml_pretty_int { 1 }
 %    \end{macrocode}
 %
+% Currently we disable flattening in Lua\TeX{} to avoid annotations getting lost.
+% We will consider later if flattening needs to be reenabled depending, but then
+% with a different implementation.
+%    \begin{macrocode}
+%<luatex>\tex_mathflattenmode:D = 0 \scan_stop:
+%    \end{macrocode}
+%
 % Now we can load the Lua module which defines the callback.
 % Of course until pdf\TeX starts implementing \cs{directlua} this is only
 % done in Lua\TeX.
