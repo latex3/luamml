@@ -1,0 +1,11 @@
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>𝐴</mi>
+  <mo lspace="0.278em" rspace="0.278em">=</mo>
+  <mrow intent="point($x, $y)">
+    <mo lspace="0" rspace="0" stretchy="false">(</mo>
+    <mn arg="x">0</mn>
+    <mo lspace="0" rspace="0.167em">,</mo>
+    <mn arg="y">0</mn>
+    <mo lspace="0" rspace="0" stretchy="false">)</mo>
+  </mrow>
+</math>

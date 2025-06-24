@@ -394,6 +394,23 @@
 %    \end{macrocode}
 % \end{macro}
 %
+% \begin{macro}{\luamml_attribute:nnn, \luamml_attribute_core:nnn}
+% Set a MathML attribute on a MathML node.
+%    \begin{macrocode}
+\cs_new_protected:Npn \luamml_attribute:een #1#2#3 {
+  \__luamml_annotate_begin:
+    #3
+    \__luamml_annotate_attribute_end:wee {#1} {#2}
+}
+
+\cs_new_protected:Npn \luamml_attribute_core:een #1#2#3 {
+  \__luamml_annotate_begin:
+    #3
+    \__luamml_annotate_attribute_end:wee core {#1} {#2}
+}
+%    \end{macrocode}
+% \end{macro}
+%
 %    \begin{macrocode}
 %</luatex>
 %    \end{macrocode}

@@ -1,0 +1,31 @@
+\DocumentMetadata{
+  uncompress,
+  pdfversion = 2.0,
+  testphase = {phase-III,table,math},
+}
+\input{regression-test}
+\documentclass{article}
+\usepackage{unicode-math}
+
+\begin{document}
+\ExplSyntaxOn
+\luamml_set_filename:n {
+    \jobname .mml
+  }
+\luamml_process:  
+\luamml_begin_single_file:
+\NewDocumentCommand \MMLintent {} {
+  \luamml_attribute:een { intent }
+}
+\NewDocumentCommand \MMLarg {} {
+  \luamml_attribute:een { arg }
+}
+\ExplSyntaxOff
+
+\[
+  A = \MMLintent{point(\csstring\$x, \csstring\$y)} {{(\MMLarg{x}{0}, \MMLarg{y}{0})}}
+\]
+\ExplSyntaxOn
+\luamml_end_single_file:
+\ExplSyntaxOff
+\end{document}

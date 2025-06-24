@@ -15,6 +15,9 @@ this project uses date-based 'snapshot' version identifiers.
  ### Changed
   * Disable LuaTeX's math flattening by default
   * improved documentation
+  
+ ### Added
+  * Added \luamml_attribute:nnn to associate MathML attributes with math items.
 
 ## [2025-03-06]
 
