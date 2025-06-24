@@ -20,13 +20,6 @@ local mc_end = token.create'tag_mc_end:'
 
 local catlatex       = luatexbase.registernumber("catcodetable@latex")
 
--- TODO: this should probably better be retrieved with the get_ltx below
-ltx = ltx or {}
-ltx.__tag = ltx.__tag or {}
-ltx.__tag.struct = ltx.__tag.struct or {}
-ltx.__tag.struct.luamml = ltx.__tag.struct.luamml or {}
-ltx.__tag.struct.luamml.labels = ltx.__tag.struct.luamml.labels or {}
-
 local function escape_name(name)
   return name
 end
@@ -139,14 +132,7 @@ local function write_elem(tree, stash)
     end)
   end
   for _, elem in ipairs(tree) do
-    if type(elem) ~= 'string'  and not elem['tex:ignore']  then
-      if elem['intent']==':equation-label' and ltx.__tag.struct.luamml.labels then
-        if #ltx.__tag.struct.luamml.labels > 0 then         
-         -- print("CHECK LABEL STRUCTURE: ",table.serialize(elem), table.serialize(ltx.__tag.struct.luamml.labels))
-        local num= table.remove(ltx.__tag.struct.luamml.labels,1) 
-        elem[1][#elem+1]={[':structnum']= num}
-        end
-      end 
+    if type(elem) ~= 'string' and not elem['tex:ignore']  then
       write_elem(elem)
     end
   end

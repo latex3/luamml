@@ -9,6 +9,8 @@ this project uses date-based 'snapshot' version identifiers.
  ### Fixed
   * luamml-amsmath.lua: logic in debug_mtable
   * Add support for subscripts and superscripts on accent nodes
+  * Refactor structure element number assignment for labels in tables,
+    avoiding double free in nested math.
   
  ### Changed
   * Disable LuaTeX's math flattening by default

@@ -11,6 +11,7 @@
    * \__luamml_amsmath_save_inner_table:n
    * \__luamml_amsmath_save_smallmatrix:
    * \__luamml_amsmath_finalize_inner_table:
+   * \__luamml_amsmath_save_tag_with_struct_elem:N
    * \__luamml_amsmath_save_tag:
    * \__luamml_amsmath_set_tag:
    
@@ -217,6 +218,16 @@ lua.get_functions_table()[funcid] = function()
   local nest = tex.nest.top
   local chars = {}
   last_tag = to_text(nest.head)
+end
+
+funcid = luatexbase.new_luafunction'__luamml_amsmath_save_tag_with_struct_elem:N'
+token.set_lua('__luamml_amsmath_save_tag_with_struct_elem:N', funcid, 'protected')
+lua.get_functions_table()[funcid] = function()
+  local struct_num = token.scan_int()
+  local nest = tex.nest.top
+  local chars = {}
+  last_tag = to_text(nest.head)
+  last_tag[':structnum'] = struct_num
 end
 
 funcid = luatexbase.new_luafunction'__luamml_amsmath_set_tag:'
