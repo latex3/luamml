@@ -961,8 +961,8 @@
    \luamml_annotate:nen {1}
     {
      nucleus = true,
-     core =
-       {
+     mathml =
+      {
         [0] = 'mpadded',
         \ifh@\else
          width = 0,
@@ -971,7 +971,7 @@
          height = 0, depth = 0,
         \fi
         consume_label'mathphant',
-      }
+      },
     }
     { #2 }
  }
@@ -998,10 +998,10 @@
    \luamml_annotate:nen {2}
     {
      nucleus = true,
-     core =
-       consume_label('mathsmash',
-           function(padded)
+     mathml = consume_label('mathsmash',
+           function(padded, core)
              padded.height, padded.depth = 0, 0~
+             return padded, core
            end),
     }
     { #2 }

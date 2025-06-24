@@ -138,6 +138,7 @@ local undefined_cmd = token.command_id'undefined_cs'
 local call_cmd = token.command_id'call'
 
 local labelled_mathml = {}
+local labelled_mathml_core = {}
 
 --[[ Documentation for function save_result
     Core function, exported as save_result. 
@@ -241,7 +242,7 @@ luatexbase.add_to_callback('pre_mlist_to_hlist_filter', function(mlist, style)
              formula. If you do not want to label this formula with a unique \z
              label, set a empty label instead.'})
       else
-        labelled_mathml[label] = xml
+        labelled_mathml[label], labelled_mathml_core[label] = xml, core
       end
     end
     -- bit 3 set and bit 1 unset.
@@ -322,8 +323,10 @@ end
 -- ??
 local annotate_context = require'luamml-tex-annotate'
 annotate_context.data.mathml = labelled_mathml
+annotate_context.data.mathml_core = labelled_mathml_core
 
 return {
   save_result = save_result,
   labelled = labelled_mathml,
+  labelled_core = labelled_mathml_core,
 }

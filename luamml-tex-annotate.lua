@@ -28,11 +28,24 @@ local mark_environment = {
 do
   local _ENV = mark_environment
   function consume_label(label, fn)
-    local mathml = data.mathml[label]
-    data.mathml[label] = nil
-    if fn then fn(mathml) end
+    local mathml, core = data.mathml[label], data.mathml_core[label]
+    data.mathml[label], data.mathml_core[label] = nil, nil
+    if fn then
+      mathml, core = fn(mathml, core)
+    end
     return mathml
   end
+end
+
+-- If mathml_table and/or mathml_core is set while we also have filters
+-- apply the filter directly.
+local function flatten_mathml_properties(props)
+  local mathml, core = props.mathml_table, props.mathml_core
+  if mathml == nil and core == nil then return end
+  local filter = props.mathml_filter
+  if filter == nil then return end
+  props.mathml_table, props.mathml_core = filter(mathml or core, core)
+  props.mathml_filter = nil
 end
 
 --[[
@@ -50,8 +63,12 @@ end
         annotations should usually affect the whole noad and not just
         the nucleus (which would be e.g. 2 in \sqrt{2}.
       * offset, 0< int <= noad count: decides on which noad the annotation is stored.
-      * core, table or false: contains the mathml representation, either directly, or through
-        one (or more?) consume_label.
+      * mathml, table: contains the mathml representation.
+        See luamml-algorithm.tex for examples how the table should look like.
+        Stored as `mathml_table` in the annotation.
+      * core, table or false: contains the core operator of the mathml representation.
+        When core is set it also gets set for `mathml` by default. If both mathml and core are
+        set you want core to be set to `false` or `space_like`.
         See luamml-algorithm.tex for examples how the core table should look like.
         Stored as `mathml_core` in the annotation.
       * struct, string: a label referencing a stashed, labeled structure.
@@ -119,8 +136,8 @@ local function annotate()
         props = {}
         properties[marked] = props
       end
-      if annotation.core ~= nil then
-        props.mathml_core = annotation.core
+      if annotation.mathml ~= nil or annotation.core ~= nil then
+        props.mathml_table, props.mathml_core, props.mathml_filter = annotation.mathml, annotation.core, nil
       end
       if annotation.struct ~= nil then
         local saved = props.mathml_filter
@@ -146,6 +163,7 @@ local function annotate()
           end
         end
       end
+      flatten_mathml_properties(props)
     else
       tex.error'Unable to annotate nucleus of node without nucleus'
     end
@@ -197,6 +215,7 @@ local function annotate_attribute(key, value, change_core)
       return mml, core
     end
   end
+  flatten_mathml_properties(props)
 end
 
 --[[ Documentation for luafunction \__luamml_annotate_begin:
