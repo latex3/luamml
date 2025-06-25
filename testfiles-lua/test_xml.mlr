@@ -181,8 +181,8 @@
         <mn>3</mn>
         <mo fence="true" lspace="0" maxsize="17.861pt" minsize="17.861pt" rspace="0" symmetric="true">)</mo>
       </mtd>
-      <mtd intent=":pause-medium"></mtd>
-      <mtd></mtd>
+      <mtd intent=":pause-medium" />
+      <mtd />
     </mtr>
     <mtr>
       <mtd intent=":equation-label">
@@ -191,9 +191,9 @@
       <mtd intent=":pause-medium">
         <mn>5</mn>
       </mtd>
-      <mtd></mtd>
-      <mtd intent=":pause-medium"></mtd>
-      <mtd></mtd>
+      <mtd />
+      <mtd intent=":pause-medium" />
+      <mtd />
     </mtr>
   </mtable>
 </math>
