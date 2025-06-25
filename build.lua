@@ -8,6 +8,7 @@ typesetsourcefiles = { "*.tex" }
 stdengine    = "luatex"
 unpackfiles  = { "*.dtx" }
 typesetexe   = "lualatex"
+excludefiles = { "build.lua", "config-*.lua", "*-demo.sty"}
 
 checkconfigs = {
   'config-lua',

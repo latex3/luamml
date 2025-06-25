@@ -6,8 +6,20 @@ It works best with `unicode-math`, but it can also be used with traditional math
 Run `l3build install` to install `luamml` into your local `texmf` tree.
 
 ## Usage
-Add `\usepackage[tracing]{luamml-demo}` to print MathML to the terminal or `\usepackage[files]{luamml-demo}` to generate separate files with MathML output.
-Alternatively it can be used with latex-lab to automatically integrate with tagging infrastucture.
+To generate MathML of your LuaLaTeX formulas you should use latex-lab-math which will internally call LuaMML. A typical example would be
+
+```
+\DocumentMetadata{lang=en, tagging=on, tagging-setup={math/setup=mathml-SE}}
+\documentclass{article}
+\usepackage{unicode-math}
+\begin{document}
+\[ E=mc^2 \]
+\end{document}
+```
+
+This will automatically generate MathML nd embed it into the tagging structure
+of the output.
+See the latex-lab-math documentation for details.
 
 ## License
 LuaMML may be modified and distributed under the terms of the [LaTeX Project Public License](https://www.latex-project.org/lppl/), version 1.3c or greater.

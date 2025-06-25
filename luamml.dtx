@@ -67,21 +67,10 @@
 %
 % \section{Usage}
 % The \pkg{luamml} package is designed to be used in automated ways by other packages and usually should not be invoked directly by the end user.
-% For experiments, \texttt{luamml-demo} is included which provides easier to use interfaces.
 %
-% Add in your preamble
-% \begin{verbatim}
-% \usepackage[files]{luamml-demo}
-% \end{verbatim}
-% This will trigger the output of individual files for each block of math output containing corresponding MathML.
+% Typically you will use it through \pkg{latex-lab-math}. See the \pkg{latex-lab-math} documentation for user instructions.
 %
-% Alternatively
-% \begin{verbatim}
-% \usepackage[l3build]{luamml-demo}
-% \end{verbatim}
-% will generate a single file with a concatenation of all MathML blocks.
-%
-% For automated use, the \pkg{luamml} package can be included directly, followed by enclosing blocks which should generate files with \cmd{luamml_begin_single_file:} and \cmd{luamml_end_single_file:}.
+% If you want to use \pkg{luamml} in another context, the \pkg{luamml} package can be included directly, followed by enclosing blocks which should generate files with \cmd{luamml_begin_single_file:} and \cmd{luamml_end_single_file:}.
 % The filename can be set with \cmd{luamml_set_filename:n}.
 %
 % \section{Improving MathML conversion}
