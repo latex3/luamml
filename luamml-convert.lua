@@ -631,15 +631,12 @@ function nodes_to_table(head, cur_style, text_families)
       elseif new_node[0] ~= 'mspace' or new_node.mathbackground then
         last_core = nil
       end
-      t[#t+1] = new_node
+      -- Omit completely empty mrows.
+      if new_node[0] ~= 'mrow' or #new_node > 0 or next(new_node) ~= 0 or next(new_node, 0) ~= nil then
+        t[#t+1] = new_node
+      end
     end
     joining = new_joining
-  end
-  -- In TeX, groups are never space like, so we insert an artificial node instead.
-  -- This node should be ignored for most purposes
-  if core == space_like then
-    core = {[0] = 'mi', ['tex:ignore'] = 'true'}
-    result[#result+1] = core
   end
   if t[0] == 'mrow' and #t == 1 then
     assert(t == result)

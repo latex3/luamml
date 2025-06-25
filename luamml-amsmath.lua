@@ -73,19 +73,16 @@ end
   This function is used to add a intent :continued-row to
   rows of a split environment.
   we assume that the table is a mtable with mrow with mtd. 
-  we check row 2..n. If the first cell has only one element and
-  for this element 'tex:ignore' has been set, we assume a continued row and
+  we check row 2..n. If the first cell is empty, we assume a continued row and
   set the intent on the mrow.
   
   The function is used below in \__luamml_amsmath_save_inner_table:n
 --]]
 local function add_intent_continued_row (table)
-  for index,rowtable in ipairs(table) do
-   if table[index][1] and table[index][1][1] then -- just for safety ...
-     if index > 1 and #table[index][1]==1 and table[index][1][1]['tex:ignore'] then
-      table[index]['intent']=':continued-row'
-     end
-   end
+  for index, row in ipairs(table) do
+    if index > 1 and row[1] and #row[1] == 0 then
+      row.intent = ':continued-row'
+    end
   end
 end
 
@@ -97,10 +94,10 @@ end
 --]]
 
 local function add_intent_pause (mmltable)
-  for mtrindex,mtrtable in ipairs(mmltable) do
-    for mtdindex,mtdtable in ipairs(mtrtable) do
-      if (mtdindex % 2 == 0) then
-       mtdtable['intent']=':pause-medium'
+  for _, row in ipairs(mmltable) do
+    for colindex, col in ipairs(row) do
+      if colindex % 2 == 0 then
+        col.intent = ':pause-medium'
       end 
     end
   end
@@ -113,8 +110,8 @@ end
  change 2025-05-26: fixed logic if kind doesn't exist. 
 --]]
 
-local function debug_mtable (mtable,kind)
- if debugmtable and (debugmtable==2 or debugmtable==kind) then
+local function debug_mtable (mtable, kind)
+ if debugmtable == 2 or debugmtable == kind then
    texio.write_nl('==============')
    texio.write_nl(kind or '?kind?')
    texio.write_nl(table.serialize(mtable))
