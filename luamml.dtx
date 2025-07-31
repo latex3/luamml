@@ -667,6 +667,18 @@
 %</luatex>
 %    \end{macrocode}
 % \subsubsection{amsmath alignments}
+% Some alignments add a pause intent. We set this up here for now, but it should probably
+% be moved into the latex-lab code.
+%
+%    \begin{macrocode}
+\cs_if_exist:NT\tagpdfsetup
+ {
+   \tagpdfsetup{role/new-attribute=
+     {intent-pause-medium}
+     {/O/NSO/NS~\pdf_object_ref:n{tag/NS/mathml}  /intent(:pause-medium)}}
+   \prop_gput:Nnn\g__tag_attr_class_used_prop {/intent-pause-medium}{}  
+ } 
+%    \end{macrocode}
 %
 % This socket is used at the end of alignment cells and adds the content to
 % the current row.

@@ -37,6 +37,9 @@ local properties = node.get_properties_table()
 
 local math_t = node.id'math'
 
+-- this is used in the intent code to add a pause
+local struct_prop_gput = token.create'__tag_struct_prop_gput:nnn'
+
 local funcid = luatexbase.new_luafunction'__luamml_amsmath_add_last_to_row:'
 token.set_lua('__luamml_amsmath_add_last_to_row:', funcid, 'protected')
 lua.get_functions_table()[funcid] = function()
@@ -90,14 +93,27 @@ end
  This function adds an intent =":pause-medium" on every second mtd in a table
  currently it is also on the first (after the label) but this could be changed
  used in \__luamml_amsmath_finalize_table:n for 
- 'align' or 'alignat' or 'flalign' or  'xalignat' or 'xxalignat'
+ 'align' or 'alignat' or 'flalign' or  'xalignat' or 'xxalignat'.
+ The attribute-class 'intent-pause-medium' is currently setup in luamml.dtx. 
 --]]
 
-local function add_intent_pause(mmltable)
+
+local function add_intent_pause(mmltable)  
   for _, row in ipairs(mmltable) do
     for colindex, col in ipairs(row) do
       if colindex % 2 == 0 then
         col.intent = ':pause-medium'
+        -- if there is a :structnum entry then the structure has already be stored, and
+        -- we have to add the intent explicitly. We also test if there is already a C entry
+        -- and attach if needed. The attribute class 
+        if col[':structnum'] then
+          local Cvalue= ltx.__tag.tables['g__tag_struct_'..col[':structnum']..'_prop']['C']
+          if Cvalue then          
+           tex.sprint(struct_prop_gput,'{'..col[':structnum']..'}{C}{['..Cvalue..'/intent-pause-medium]}')
+          else
+           tex.sprint(struct_prop_gput,'{'..col[':structnum']..'}{C}{/intent-pause-medium}')
+          end 
+        end  
       end
     end
   end
