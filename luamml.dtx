@@ -837,10 +837,14 @@
     gather,
     gather*,
 %    \end{macrocode}
-% equation and multline have at most one tag, so we do not use a label column
+% with the changes in the math/luamml/mtable/tag/save socket, we must add multline to
+% the list too, so that there is a structure the socket code can use. 
+%    \begin{macrocode}
+    multline, 
+%    \end{macrocode}
+% equation has at most one tag, so we do not use a label column
 % but rely on the external Lbl for now.
 %    \begin{macrocode}
-    %multline, % NO
     %multline*, % NO
     %equation, % NO
     %equation*, % NO
