@@ -11,6 +11,10 @@ this project uses date-based 'snapshot' version identifiers.
   * luamml.dtx: predeclare the intent-pause-medium attribute.
   * luamml-structelemwriter.lua: change key newattribute to role/new-attribute.
 
+## Unreleased
+ ### Changed
+  * Use mtable for equation numbers inserted with \eqno based placement
+
 ## [2025-06-25]
  ### Fixed
   * luamml-amsmath.lua: logic in debug_mtable

@@ -252,3 +252,24 @@ lua.get_functions_table()[funcid] = function()
     last_tag = nil
   end
 end
+
+require'luamml-tex'.set_extract_eqno(function()
+  if not last_tag then return end
+  local tag = last_tag
+  last_tag = nil
+  return function(mml, _core)
+    if mml and mml[0] == 'mrow' then
+      mml[0], mml.intent = 'mtd', mml.intent or ':pause-medium'
+    else
+      mml = { [0] = 'mtd', intent = ':pause-medium', mml }
+    end
+    mml = { [0] = 'mtable',
+      displaystyle = 'true',
+      { [0] = 'mtr',
+        { [0] = 'mtd', intent = ':equation-label', tag },
+        mml,
+      },
+    }
+    return mml
+  end
+end)

@@ -196,11 +196,19 @@ local function save_result(xml, display, structelem)
   return mlist_result
 end
 
+-- Can be overridden by the exported set_extract_eqno. Should either return nil (like the default implementation)
+-- or a function accepting and returning a pair of (mathml node, core node) which will be applied as a result filter.
+local function extract_eqno() end
 
+local saved_eqno_processor
 luatexbase.add_to_callback('pre_mlist_to_hlist_filter', function(mlist, style)
   if tex.nest.top.mode == mmode then -- This is a equation label generated with \eqno
+    saved_eqno_processor = extract_eqno(mlist, style)
     return true
   end
+  local restored_eqno_processor = saved_eqno_processor
+  saved_eqno_processor = nil
+
   local flag = tex.count.l__luamml_flag_int
   if flag & 3 == 0 then
     return true
@@ -210,6 +218,9 @@ luatexbase.add_to_callback('pre_mlist_to_hlist_filter', function(mlist, style)
   style = flag & 16 == 16 and flag>>5 & 0x7 or display and 0 or 2
   -- process_mlist==mlist_to_mml.process from luamml_convert.
   local xml, core = process_mlist(mlist, style, setmetatable({}, text_families_meta))
+  if restored_eqno_processor then
+    xml, core = restored_eqno_processor(xml, core)
+  end
   -- bit 1 set
   if flag & 2 == 2 then
     xml = save_result(shallow_copy(xml), display)
@@ -329,4 +340,5 @@ return {
   save_result = save_result,
   labelled = labelled_mathml,
   labelled_core = labelled_mathml_core,
+  set_extract_eqno = function(handler) extract_eqno = handler end,
 }
