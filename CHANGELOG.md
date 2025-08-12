@@ -5,6 +5,10 @@ All notable changes to the `luamml` package since the
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 this project uses date-based 'snapshot' version identifiers.
 
+## Unreleased
+ ### Changed
+  * Use mtable for equation numbers inserted with \eqno based placement
+
 ## [2025-06-25]
  ### Fixed
   * luamml-amsmath.lua: logic in debug_mtable
