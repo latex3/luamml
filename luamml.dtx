@@ -852,14 +852,12 @@
       \tag_struct_begin:n {tag=mtext,stash}
       \int_set:Nn \l__luamml_amsmath_tag_struct_num_int { \tag_get:n {struct_num} }
     }
-   \tag_struct_begin:n {tag=Lbl}
    \tag_mc_begin:n {}
  }
 \AssignSocketPlug{tagsupport/math/display/tag/begin}{luamml} 
 \NewSocketPlug{tagsupport/math/display/tag/end}{luamml}
  {
    \tag_mc_end:
-   \tag_struct_end:
    \bool_lazy_and:nnT
     { \tl_if_exist_p:c { c__luamml_label_ \@currenvir _tl } }
     { \int_if_odd_p:n { \int_div_truncate:nn { \l__luamml_flag_int } { 8 } } }
