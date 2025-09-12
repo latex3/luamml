@@ -14,6 +14,7 @@ local struct_begin = token.create'tag_struct_begin:n'
 local struct_use = token.create'tag_struct_use:n'
 local struct_use_num = token.create'tag_struct_use_num:n'
 local struct_end = token.create'tag_struct_end:'
+local struct_prop_gput = token.create'__tag_struct_prop_gput:nnn'
 
 local mc_begin = token.create'tag_mc_begin:n'
 local mc_end = token.create'tag_mc_end:'
@@ -35,7 +36,7 @@ local function get_ltx()
   ltx = _ENV.ltx
   if not ltx then
     tex.error("LaTeX PDF support not loaded", {"Maybe try adding \\DocumentMetadata."})
-    ltx = {pdf = {object_id = function() return 0 end}}
+    ltx = {pdf = {object_id = function() return 0 end}, __tag = {tables = {}}}
   end
   function get_ltx()
     return ltx
@@ -57,6 +58,15 @@ local function get_mathml_ns_obj()
   return get_mathml_ns_obj()
 end
 
+local tag_tables
+local function get_tag_tables()
+  tag_tables = assert(get_ltx().__tag.tables)
+  function get_tag_tables()
+    return tag_tables
+  end
+  return get_tag_tables()
+end
+
 local function get_struct_num_next()
   get_struct_num_next = get_ltx().tag.get_struct_num_next
   return get_struct_num_next()
@@ -69,51 +79,75 @@ local attributes = setmetatable({}, {__index = function(t, k)
   local attr_name = string.format('luamml_attr_%i', attribute_counter)
   t[k] = attr_name
   tex.runtoks(function()
-    tex.sprint(-2, tagpdfsetup, lbrace, 'newattribute=', lbrace, attr_name, rbrace, lbrace, '/O/NSO/NS ', mathml_ns_obj or get_mathml_ns_obj(), ' 0 R')
+    tex.sprint(-2, tagpdfsetup, lbrace, 'newattribute=', lbrace, attr_name, rbrace, lbrace, '/O/NSO/NS ', get_mathml_ns_obj(), ' 0 R')
     tex.cprint(12, k, rbrace, rbrace)
   end)
   return attr_name
+end})
+
+local attribute_object_refs = setmetatable({}, {__index = function(t, k)
+  local objref = pdf.immediateobj(string.format('<< /O/NSO/NS %i 0 R%s >>', get_mathml_ns_obj(), k)) .. ' 0 R'
+  t[k] = objref
+  return objref
 end})
 
 -- the mc-(luatex)-attributes of tagpdf
 local mc_type = luatexbase.attributes.g__tag_mc_type_attr
 local mc_cnt = luatexbase.attributes.g__tag_mc_cnt_attr
 
+local attrs = {}
+local function build_attributes(tree_node)
+  local i = 0
+  for attr, val in next, tree_node do
+    if type(attr) == 'string' and not string.find(attr, ':') and attr ~= 'xmlns' then
+     i = i + 1
+     attrs[i] = string.format('/%s(%s)', escape_name(attr), escape_string(val))
+    end
+  end
+  if i == 0 then return end
+  table.sort(attrs)
+
+  local attr_list = table.concat(attrs)
+  for j = 1, i do attrs[j] = nil end
+
+  return attr_list
+end
 
 local stash_cnt = 0
-local attrs = {}
 local function write_elem(tree, stash)
   if tree[':struct'] then
     return tex.runtoks(function()
       return tex.sprint(-2, struct_use, lbrace, tree[':struct'], rbrace)
     end)
   end
+
+  local attrs = build_attributes(tree)
+
   if tree[':structnum'] then
     return tex.runtoks(function()
+      local structnum = tree[':structnum']
+      if attrs then
+        local current_attrs = get_tag_tables()[string.format('g__tag_struct_%i_prop', structnum)].A
+        local stripped_attrs = current_attrs and current_attrs:match'^%s*%[(.*)%]%s$' or current_attrs
+        attrs = attribute_object_refs[attrs]
+        local new_attrs = stripped_attrs and string.format('[%s %s]', stripped_attrs, attrs) or attrs
+        tex.sprint(-2, struct_prop_gput, lbrace, structnum, rbrace, lbrace, 'A', rbrace, lbrace, new_attrs, rbrace)
+      end
       return tex.sprint(-2, struct_use_num, lbrace, tree[':structnum'], rbrace)
     end)
   end
   if not tree[0] then print('ERR', require'inspect'(tree)) end
-  local i = 0
-  for attr, val in next, tree do
-    if type(attr) == 'string' and not string.find(attr, ':') and attr ~= 'xmlns' then
-     i = i + 1
-     attrs[i] = string.format('/%s(%s)', escape_name(attr), escape_string(val))
-    end
-  end
-  table.sort(attrs)
 
   if stash then
     tree[':structnum'] = get_struct_num_next()
     stash = ', stash'
   end
 
-  local attr_flag = i ~= 0 and ', attribute=' .. attributes[table.concat(attrs)]
+  attrs = attrs and attributes[attrs]
   tex.sprint(-2, struct_begin, lbrace, 'tag=', tree[0], '/mathml') -- 'tag=mo/mathml' is supported syntax
   if stash then tex.sprint(-2, stash) end
-  if attr_flag then tex.sprint(-2, attr_flag) end
+  if attrs then tex.sprint(-2, ', attribute=' .. attrs) end
   tex.sprint(rbrace)
-  for j = 1, i do attrs[j] = nil end
 
   if tree[':nodes'] then
     local n = tree[':nodes']
