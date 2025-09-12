@@ -79,7 +79,7 @@ local attributes = setmetatable({}, {__index = function(t, k)
   local attr_name = string.format('luamml_attr_%i', attribute_counter)
   t[k] = attr_name
   tex.runtoks(function()
-    tex.sprint(-2, tagpdfsetup, lbrace, 'newattribute=', lbrace, attr_name, rbrace, lbrace, '/O/NSO/NS ', get_mathml_ns_obj(), ' 0 R')
+    tex.sprint(-2, tagpdfsetup, lbrace, 'role/new-attribute=', lbrace, attr_name, rbrace, lbrace, '/O/NSO/NS ', get_mathml_ns_obj(), ' 0 R')
     tex.cprint(12, k, rbrace, rbrace)
   end)
   return attr_name
