@@ -18,7 +18,9 @@ local struct_end = token.create'tag_struct_end:'
 local mc_begin = token.create'tag_mc_begin:n'
 local mc_end = token.create'tag_mc_end:'
 
-local catlatex       = luatexbase.registernumber("catcodetable@latex")
+local tagpdfsetup = token.create'tagpdfsetup'
+
+local lbrace, rbrace = token.new(string.byte'{', 1), token.new(string.byte'}', 2)
 
 local function escape_name(name)
   return name
@@ -30,27 +32,34 @@ end
 
 local ltx
 local function get_ltx()
+  ltx = _ENV.ltx
   if not ltx then
-    ltx = _ENV.ltx
-    if not ltx then
-      tex.error("LaTeX PDF support not loaded", {"Maybe try adding \\DocumentMetadata."})
-      ltx = {pdf = {object_id = function() return 0 end}}
-    end
+    tex.error("LaTeX PDF support not loaded", {"Maybe try adding \\DocumentMetadata."})
+    ltx = {pdf = {object_id = function() return 0 end}}
   end
-  return ltx
+  function get_ltx()
+    return ltx
+  end
+  return get_ltx()
 end
 
 -- a function to retrieve the object number of the mathml NS.
 local mathml_ns_obj
 local function get_mathml_ns_obj()
+  mathml_ns_obj = get_ltx().pdf.object_id'tag/NS/mathml'
   if not mathml_ns_obj then
-    mathml_ns_obj = get_ltx().pdf.object_id'tag/NS/mathml'
-    if not mathml_ns_obj then
-      tex.error("Failed to find MathML namespace", {"The PDF support does not know the mathml namespace"})
-      mathml_ns_obj = 0
-    end
+    tex.error("Failed to find MathML namespace", {"The PDF support does not know the mathml namespace"})
+    mathml_ns_obj = 0
   end
-  return mathml_ns_obj
+  function get_mathml_ns_obj()
+    return mathml_ns_obj
+  end
+  return get_mathml_ns_obj()
+end
+
+local function get_struct_num_next()
+  get_struct_num_next = get_ltx().tag.get_struct_num_next
+  return get_struct_num_next()
 end
 
 -- a function to create and manage PDF MathML attributes. This is PDF 2.0 specific
@@ -60,10 +69,8 @@ local attributes = setmetatable({}, {__index = function(t, k)
   local attr_name = string.format('luamml_attr_%i', attribute_counter)
   t[k] = attr_name
   tex.runtoks(function()
-    tex.sprint(catlatex,string.format('\\tagpdfsetup{newattribute={%s}{/O/NSO/NS %i 0 R',
-        attr_name, mathml_ns_obj or get_mathml_ns_obj()))
-    tex.cprint(12, k)
-    tex.sprint'}}'
+    tex.sprint(-2, tagpdfsetup, lbrace, 'newattribute=', lbrace, attr_name, rbrace, lbrace, '/O/NSO/NS ', mathml_ns_obj or get_mathml_ns_obj(), ' 0 R')
+    tex.cprint(12, k, rbrace, rbrace)
   end)
   return attr_name
 end})
@@ -78,12 +85,12 @@ local attrs = {}
 local function write_elem(tree, stash)
   if tree[':struct'] then
     return tex.runtoks(function()
-      return tex.sprint(struct_use, '{', tree[':struct'], '}')
+      return tex.sprint(-2, struct_use, lbrace, tree[':struct'], rbrace)
     end)
   end
   if tree[':structnum'] then
     return tex.runtoks(function()
-      return tex.sprint(struct_use_num, '{', tree[':structnum'], '}')
+      return tex.sprint(-2, struct_use_num, lbrace, tree[':structnum'], rbrace)
     end)
   end
   if not tree[0] then print('ERR', require'inspect'(tree)) end
@@ -97,15 +104,15 @@ local function write_elem(tree, stash)
   table.sort(attrs)
 
   if stash then
-    tree[':structnum'] = get_ltx().tag.get_struct_num_next()
-    stash = ', stash, '
+    tree[':structnum'] = get_struct_num_next()
+    stash = ', stash'
   end
 
   local attr_flag = i ~= 0 and ', attribute=' .. attributes[table.concat(attrs)]
-  tex.sprint(struct_begin, '{tag=' .. tree[0] .. '/mathml') -- 'tag=mo/mathml' is supported syntax
-  if stash then tex.sprint(stash) end
-  if attr_flag then tex.sprint(attr_flag) end
-  tex.sprint'}'
+  tex.sprint(-2, struct_begin, lbrace, 'tag=', tree[0], '/mathml') -- 'tag=mo/mathml' is supported syntax
+  if stash then tex.sprint(-2, stash) end
+  if attr_flag then tex.sprint(-2, attr_flag) end
+  tex.sprint(rbrace)
   for j = 1, i do attrs[j] = nil end
 
   if tree[':nodes'] then
@@ -113,11 +120,10 @@ local function write_elem(tree, stash)
     tex.runtoks(function()
     -- luamml-convert sets :actual on some nodes in delim_to_table and acc_to_table.
       if tree[':actual'] then
-       tex.sprint(mc_begin,'{tag=Span,actualtext=')
-       tex.cprint(12,tree[':actual'])
-       tex.sprint('}')
+        tex.sprint(-2, mc_begin, lbrace, 'tag=Span,actualtext=')
+        tex.cprint(12, tree[':actual'], rbrace)
       else
-       tex.sprint{mc_begin, string.format('{tag=%s}', tree[0])}
+        tex.sprint(-2, mc_begin, lbrace, 'tag=', tree[0], rbrace)
       end
       -- NOTE: This will also flush all previous sprint's... That's often annoying, but in this
       -- case actually intentional.
