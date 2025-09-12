@@ -1,6 +1,6 @@
 --[[
    This file is loaded by luamml-patches-amsmath.sty
-   
+
    It defines the luafunctions
    * \__luamml_amsmath_add_last_to_row:
    * \__luamml_amsmath_add_box_to_row:
@@ -14,10 +14,10 @@
    * \__luamml_amsmath_save_tag_with_struct_elem:N
    * \__luamml_amsmath_save_tag:
    * \__luamml_amsmath_set_tag:
-   
-   These are all rather special commands used in amsmath environments to 
+
+   These are all rather special commands used in amsmath environments to
    get the correct math tagging.
-   
+
    TODO: error handling and more documentation
 --]]
 
@@ -72,10 +72,10 @@ end
 --[[
   This function is used to add a intent :continued-row to
   rows of a split environment.
-  we assume that the table is a mtable with mrow with mtd. 
+  we assume that the table is a mtable with mrow with mtd.
   we check row 2..n. If the first cell is empty, we assume a continued row and
   set the intent on the mrow.
-  
+
   The function is used below in \__luamml_amsmath_save_inner_table:n
 --]]
 local function add_intent_continued_row(table)
@@ -89,7 +89,7 @@ end
 --[[
  This function adds an intent =":pause-medium" on every second mtd in a table
  currently it is also on the first (after the label) but this could be changed
- used in \__luamml_amsmath_finalize_table:n for 
+ used in \__luamml_amsmath_finalize_table:n for
  'align' or 'alignat' or 'flalign' or  'xalignat' or 'xxalignat'
 --]]
 
@@ -106,7 +106,7 @@ end
 --[[
  debug function for tables
  activate with \directlua{debugmtable=2} or \directlua{debugmtable='split'}
- change 2025-05-26: fixed logic if kind doesn't exist. 
+ change 2025-05-26: fixed logic if kind doesn't exist.
 --]]
 
 local function debug_mtable(mtable, kind)

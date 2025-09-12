@@ -1,10 +1,10 @@
 --[[
    This file defines and returns the main function
-   * write_elem(element,stash) 
+   * write_elem(element,stash)
    which adds structure elements/tagging commands to the mathml
-   
-   The function has two arguments: tree (xml-tree), stash (boolean). 
-   The function is loaded by luamml-tex as `write_struct` and used there in 
+
+   The function has two arguments: tree (xml-tree), stash (boolean).
+   The function is loaded by luamml-tex as `write_struct` and used there in
    save_result as `write_struct(mlist_result)` (so with stash=false/nil)
    and as `write_struct(xml, true)` in the callback.
 --]]
@@ -40,7 +40,7 @@ local function get_ltx()
   return ltx
 end
 
--- a function to retrieve the object number of the mathml NS. 
+-- a function to retrieve the object number of the mathml NS.
 local mathml_ns_obj
 local function get_mathml_ns_obj()
   if not mathml_ns_obj then
@@ -88,11 +88,11 @@ local function write_elem(tree, stash)
   end
   if not tree[0] then print('ERR', require'inspect'(tree)) end
   local i = 0
-  for attr, val in next, tree do 
-    if type(attr) == 'string' and not string.find(attr, ':') and attr ~= 'xmlns' then    
+  for attr, val in next, tree do
+    if type(attr) == 'string' and not string.find(attr, ':') and attr ~= 'xmlns' then
      i = i + 1
      attrs[i] = string.format('/%s(%s)', escape_name(attr), escape_string(val))
-    end 
+    end
   end
   table.sort(attrs)
 
@@ -119,7 +119,7 @@ local function write_elem(tree, stash)
       else
        tex.sprint{mc_begin, string.format('{tag=%s}', tree[0])}
       end
-      -- NOTE: This will also flush all previous sprint's... That's often annoying, but in this 
+      -- NOTE: This will also flush all previous sprint's... That's often annoying, but in this
       -- case actually intentional.
     end)
     local mct, mcc = tex.attribute[mc_type], tex.attribute[mc_cnt]
