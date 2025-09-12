@@ -8,6 +8,7 @@ this project uses date-based 'snapshot' version identifiers.
 ## Unreleased
  ### Changed
   * Use mtable for equation numbers inserted with \eqno based placement
+  * Set attributes on structure elements included with structnum annotations
 
 ## [2025-06-25]
  ### Fixed
