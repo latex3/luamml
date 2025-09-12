@@ -9,6 +9,7 @@ this project uses date-based 'snapshot' version identifiers.
  ### Changed
   * Use mtable for equation numbers inserted with \eqno based placement
   * Set attributes on structure elements included with structnum annotations
+  * Preserve otherwise unneeded mrow nodes if they have attributes.
 
 ## [2025-06-25]
  ### Fixed
