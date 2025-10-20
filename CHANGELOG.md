@@ -5,7 +5,7 @@ All notable changes to the `luamml` package since the
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 this project uses date-based 'snapshot' version identifiers.
 
-## Unreleased
+## [2025-10-20]
  ### Changed
   * Use mtable for equation numbers inserted with \eqno based placement
   * Set attributes on structure elements included with structnum annotations
