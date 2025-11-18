@@ -181,6 +181,10 @@ local function write_elem(tree, stash)
   tex.runtoks(function()
     tex.sprint(struct_end)
   end)
+-- UF restart mc to avoid lost text after nexted math 2025-11-18  
+  tex.runtoks(function()
+      tex.sprint(-2, mc_begin, lbrace, rbrace)
+  end)
 end
 
 return function(element, stash)
