@@ -9,6 +9,9 @@ this project uses date-based 'snapshot' version identifiers.
  ### Fixed
   * Automatically mark sqrt elements and fraction line as artifacts in SE mode.
 
+ ### Changed
+  * structelemwriter: always insert \tagmcbegin{} at the end to avoid that following text is unmarked
+
 ## [2025-10-20]
  ### Changed
   * Use mtable for equation numbers inserted with \eqno based placement
