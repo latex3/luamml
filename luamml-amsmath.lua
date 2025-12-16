@@ -249,6 +249,7 @@ require'luamml-tex'.set_extract_eqno(function()
     end
     mml = { [0] = 'mtable',
       displaystyle = 'true',
+      intent = ':system-of-equations',
       { [0] = 'mtr',
         { [0] = 'mtd', intent = ':equation-label', tag },
         mml,

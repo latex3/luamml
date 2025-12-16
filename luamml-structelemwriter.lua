@@ -181,6 +181,12 @@ local function write_elem(tree, stash)
   tex.runtoks(function()
     tex.sprint(struct_end)
   end)
+-- UF restart mc after math to avoid lost text after nested math 2025-11-18
+  if tree[0]=="math" then
+   tex.runtoks(function()
+      tex.sprint(-2, mc_begin, lbrace, rbrace)
+   end)
+  end
 end
 
 return function(element, stash)

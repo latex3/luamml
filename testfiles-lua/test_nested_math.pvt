@@ -1,0 +1,21 @@
+\ExplSyntaxOn
+\sys_gset_rand_seed:n{42}
+\ExplSyntaxOff
+\DocumentMetadata{
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,attach-css=false}
+}
+\input{regression-test}
+\documentclass{article}
+\usepackage{unicode-math}
+\begin{document}
+
+\[    P_{r - j} =  
+ \begin{cases}
+    0   &  \text{if $r - j$ is odd,} \\
+    r! \, (-1)^{(r - j)/2}
+        &  \text{if $r - j$ is even.}
+ \end{cases}
+\]
+
+\end{document}
