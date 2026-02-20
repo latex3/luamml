@@ -1,0 +1,36 @@
+\ExplSyntaxOn
+\sys_gset_rand_seed:n{42}
+\ExplSyntaxOff
+\DocumentMetadata{
+  uncompress,
+  pdfversion = 2.0,
+  tagging = on,
+  tagging-setup={math/setup=mathml-SE},
+}
+\input{regression-test}
+\documentclass{article}
+\usepackage{lua-unicode-math}
+\ExplSyntaxOn
+\int_new:N \l__something_int
+\NewDocumentCommand\taggedintertext{m}{
+  \intertext{
+    \tag_struct_begin:n{
+      tag = mtext,
+      stash,
+    }
+    \int_set:Nn \l__something_int { \tag_get:n{struct_num} }
+    \tag_mc_begin:n{}
+    #1
+    \tag_mc_end:
+    \tag_struct_end:
+    \__luamml_amsmath_save_intertext_with_struct_elem:N \l__something_int
+  }
+}
+\ExplSyntaxOff
+\begin{document}
+\begin{align}
+  abc=1
+  \taggedintertext{Hello world}
+  def=2
+\end{align}
+\end{document}
