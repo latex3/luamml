@@ -1341,7 +1341,7 @@ endobj
 <<  /Type /StructTreeRoot /Namespaces 8 0 R /IDTree 246 0 R /ClassMap 247 0 R /ParentTree 6 0 R /RoleMap 7 0 R /K 21 0 R >>
 endobj
 231 0 obj
-<< /Type /Metadata /Subtype /XML /Length 10959 >>      
+<< /Type /Metadata /Subtype /XML /Length 12072 >>      
 stream
 <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/">
@@ -1364,7 +1364,8 @@ stream
     xmlns:pdfaSchema="http://www.aiim.org/pdfa/ns/schema#"
     xmlns:pdfaProperty="http://www.aiim.org/pdfa/ns/property#"
     xmlns:pdfaType="http://www.aiim.org/pdfa/ns/type#"
-    xmlns:pdfaField="http://www.aiim.org/pdfa/ns/field#">
+    xmlns:pdfaField="http://www.aiim.org/pdfa/ns/field#"
+    xmlns:tdm="http://www.w3.org/ns/tdmrep/">
    <pdfaExtension:schemas>
     <rdf:Bag>
      <rdf:li rdf:parseType="Resource">
@@ -1519,6 +1520,27 @@ stream
          <pdfaProperty:valueType>Text</pdfaProperty:valueType>
          <pdfaProperty:category>external</pdfaProperty:category>
          <pdfaProperty:description>Document's subtitle</pdfaProperty:description>
+        </rdf:li>
+       </rdf:Seq>
+      </pdfaSchema:property>
+     </rdf:li>
+     <rdf:li rdf:parseType="Resource">
+      <pdfaSchema:schema>TDMRep</pdfaSchema:schema>
+      <pdfaSchema:prefix>tdm</pdfaSchema:prefix>
+      <pdfaSchema:namespaceURI>http://www.w3.org/ns/tdmrep/</pdfaSchema:namespaceURI>
+      <pdfaSchema:property>
+       <rdf:Seq>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>reservation</pdfaProperty:name>
+         <pdfaProperty:valueType>Closed Choice of Integer</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>TDM rights are reserved (1) or not reserved (0)</pdfaProperty:description>
+        </rdf:li>
+        <rdf:li rdf:parseType="Resource">
+         <pdfaProperty:name>policy</pdfaProperty:name>
+         <pdfaProperty:valueType>URI</pdfaProperty:valueType>
+         <pdfaProperty:category>internal</pdfaProperty:category>
+         <pdfaProperty:description>URL pointing to a TDM Policy set by the rightsholder</pdfaProperty:description>
         </rdf:li>
        </rdf:Seq>
       </pdfaSchema:property>
@@ -2059,11 +2081,11 @@ xref
 0000017818 00000 n 
 0000017679 00000 n 
 0000009207 00000 n 
-0000071528 00000 n 
-0000067285 00000 n 
-0000060987 00000 n 
-0000058331 00000 n 
-0000071888 00000 n 
+0000072641 00000 n 
+0000068398 00000 n 
+0000062100 00000 n 
+0000059444 00000 n 
+0000073001 00000 n 
 0000017969 00000 n 
 0000018006 00000 n 
 0000018859 00000 n 
@@ -2072,31 +2094,31 @@ xref
 0000021684 00000 n 
 0000022124 00000 n 
 0000022789 00000 n 
-0000056677 00000 n 
-0000057386 00000 n 
-0000056709 00000 n 
-0000057609 00000 n 
-0000058487 00000 n 
-0000058689 00000 n 
-0000059949 00000 n 
-0000058762 00000 n 
-0000060180 00000 n 
-0000061150 00000 n 
-0000061359 00000 n 
-0000065817 00000 n 
-0000061644 00000 n 
-0000066047 00000 n 
-0000067448 00000 n 
-0000067657 00000 n 
-0000070339 00000 n 
-0000067843 00000 n 
-0000070562 00000 n 
-0000071685 00000 n 
-0000071952 00000 n 
-0000071998 00000 n 
-0000072132 00000 n 
+0000057790 00000 n 
+0000058499 00000 n 
+0000057822 00000 n 
+0000058722 00000 n 
+0000059600 00000 n 
+0000059802 00000 n 
+0000061062 00000 n 
+0000059875 00000 n 
+0000061293 00000 n 
+0000062263 00000 n 
+0000062472 00000 n 
+0000066930 00000 n 
+0000062757 00000 n 
+0000067160 00000 n 
+0000068561 00000 n 
+0000068770 00000 n 
+0000071452 00000 n 
+0000068956 00000 n 
+0000071675 00000 n 
+0000072798 00000 n 
+0000073065 00000 n 
+0000073111 00000 n 
+0000073245 00000 n 
 trailer
 << /Size 271 /Root 269 0 R /Info 270 0 R /ID [ <2350CAD05F8A7AF0AA4058486855344F> <2350CAD05F8A7AF0AA4058486855344F> ] >>
 startxref
-72265
+73378
 %%EOF
