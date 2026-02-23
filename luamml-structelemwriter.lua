@@ -183,6 +183,13 @@ local function write_elem(tree, stash)
   end)
 end
 
-return function(element, stash)
-  return write_elem(element, stash)
-end
+return {
+  write = function(element, stash)
+    return write_elem(element, stash)
+  end,
+  restore_after_math = function()
+   tex.runtoks(function()
+      tex.sprint(-2, mc_begin, lbrace, rbrace)
+   end)
+  end,
+}
