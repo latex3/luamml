@@ -43,6 +43,7 @@ lm-math
 ltxcmds
 luacolor
 lualatex-math
+lua-unicode-math
 pdfescape
 pdfmanagement-testphase
 pdftexcmds
