@@ -12,6 +12,10 @@ this project uses date-based 'snapshot' version identifiers.
  ### Changed
   * Add intent = ':system-of-equations' to equation
   * Remove Lbl structure element around the tag in equation
+  * Start MC after math if inserting structure elements.
+ 
+ ### Added
+  * Added support to help with correct tagging for intertext.
 
 ## [2025-10-20]
  ### Changed
