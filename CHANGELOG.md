@@ -5,7 +5,7 @@ All notable changes to the `luamml` package since the
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 this project uses date-based 'snapshot' version identifiers.
 
-## [Unreleased]
+## [2026-02-27]
  ### Fixed
   * Automatically mark sqrt elements and fraction line as artifacts in SE mode.
 
