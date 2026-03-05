@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
       - run: sudo apt-get install tidy
       - name: Install TeX Live
-        uses: zauguin/install-texlive@v3
+        uses: zauguin/install-texlive@v4
         with:
           # The list of packages to install is in a separate file under .github/tl_packages
           # to allow reuse.
