@@ -162,17 +162,18 @@
 %    \end{macrocode}
 %
 % Currently we disable flattening in Lua\TeX{} to avoid annotations getting lost.
-% We will consider later if flattening needs to be reenabled depending, but then
-% with a different implementation.
+% Instead we load \texttt{luamml-mathflatten} which reimplements math flattening
+% at a later stage.
 %    \begin{macrocode}
 %<luatex>\tex_mathflattenmode:D = 0 \scan_stop:
+%<luatex>\lua_load_module:n { luamml-mathflatten }
 %    \end{macrocode}
 %
 % Now we can load the Lua module which defines the callback.
 % Of course until pdf\TeX starts implementing \cs{directlua} this is only
 % done in Lua\TeX.
 %    \begin{macrocode}
-%<luatex>\lua_now:n { require'luamml-tex' }
+%<luatex>\lua_load_module:n { luamml-tex }
 %    \end{macrocode}
 %
 % \subsection{Hook}
@@ -370,13 +371,13 @@
 % should be compatible with future pdf\TeX versions of this functionality.
 %    \begin{macrocode}
 \cs_new_protected:Npn \luamml_annotate:nen #1#2#3 {
-  \__luamml_annotate_begin:
+  \__luamml_flattened_mathgroup_begin:
     #3
   \__luamml_annotate_end:we \tex_numexpr:D #1 \scan_stop: {#2}
 }
 
 \cs_new_protected:Npn \luamml_annotate:en #1#2 {
-  \__luamml_annotate_begin:
+  \__luamml_flattened_mathgroup_begin:
     #2
   \__luamml_annotate_end:e {#1}
 }
@@ -387,15 +388,15 @@
 % Set a MathML attribute on a MathML node.
 %    \begin{macrocode}
 \cs_new_protected:Npn \luamml_attribute:een #1#2#3 {
-  \__luamml_annotate_begin:
+  \__luamml_flattened_mathgroup_begin:
     #3
-    \__luamml_annotate_attribute_end:wee {#1} {#2}
+  \__luamml_annotate_attribute_end:wee {#1} {#2}
 }
 
 \cs_new_protected:Npn \luamml_attribute_core:een #1#2#3 {
-  \__luamml_annotate_begin:
+  \__luamml_flattened_mathgroup_begin:
     #3
-    \__luamml_annotate_attribute_end:wee core {#1} {#2}
+  \__luamml_annotate_attribute_end:wee core {#1} {#2}
 }
 %    \end{macrocode}
 % \end{macro}

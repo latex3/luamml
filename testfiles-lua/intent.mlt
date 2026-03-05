@@ -23,7 +23,7 @@
 \ExplSyntaxOff
 
 \[
-  A = \MMLintent{point(\csstring\$x, \csstring\$y)} {{(\MMLarg{x}{0}, \MMLarg{y}{0})}}
+  A = \MMLintent{point(\csstring\$x, \csstring\$y)} {(\MMLarg{x}{0}, \MMLarg{y}{0})}
 \]
 \ExplSyntaxOn
 \luamml_end_single_file:
