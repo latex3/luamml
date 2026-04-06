@@ -13,7 +13,6 @@ local function finish()
   local top = nest.top
   local head = top.head
   local first = head.next
-  print(head, first, top.tail)
   if first and first == top.tail then
     head.next, top.tail = nil, head
   else
@@ -29,12 +28,10 @@ local function finish()
   end)
   outer.mode = saved_outer_mode
   if first then
-    print'CASE 1'
     node.free(node.last_node())
     node.write(first)
     return first
   else
-    print'CASE 2'
     return nest.top.tail
   end
 end

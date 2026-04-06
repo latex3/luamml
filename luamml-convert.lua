@@ -203,7 +203,7 @@ local function kernel_to_table(kernel, cur_style, text_families)
   if id == math_char_t then
     local fam = kernel.fam
     local char = remap_lookup[fam << 21 | kernel.char]
-    local elem = digit_map[char] and 'mn' or 'mi'
+    local elem = always_mo[char] and 'mo' or digit_map[char] and 'mn' or 'mi'
     local result = {[0] = elem,
       char,
       ['tex:family'] = fam ~= 0 and fam or nil,
