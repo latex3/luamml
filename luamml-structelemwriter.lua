@@ -9,6 +9,8 @@
    and as `write_struct(xml, true)` in the callback.
 --]]
 
+local pdf_escape = require'luamml-pdf-escape'
+
 -- Create tokens from the main tagpdf commands.
 local struct_begin = token.create'tag_struct_begin:n'
 local struct_use = token.create'tag_struct_use:n'
@@ -23,13 +25,9 @@ local tagpdfsetup = token.create'tagpdfsetup'
 
 local lbrace, rbrace = token.new(string.byte'{', 1), token.new(string.byte'}', 2)
 
-local function escape_name(name)
-  return name
-end
-
-local function escape_string(str)
-  return str
-end
+local escape_name = pdf_escape.escape_name
+local escape_string = pdf_escape.escape_text
+local bytes_to_luatex_string = pdf_escape.bytes_to_luatex_string
 
 local ltx
 local function get_ltx()
@@ -80,7 +78,7 @@ local attributes = setmetatable({}, {__index = function(t, k)
   t[k] = attr_name
   tex.runtoks(function()
     tex.sprint(-2, tagpdfsetup, lbrace, 'role/new-attribute=', lbrace, attr_name, rbrace, lbrace, '/O/NSO/NS ', get_mathml_ns_obj(), ' 0 R')
-    tex.cprint(12, k, rbrace, rbrace)
+    tex.cprint(12, bytes_to_luatex_string(k), rbrace, rbrace)
   end)
   return attr_name
 end})
@@ -101,7 +99,7 @@ local function build_attributes(tree_node)
   for attr, val in next, tree_node do
     if type(attr) == 'string' and not string.find(attr, ':') and attr ~= 'xmlns' then
      i = i + 1
-     attrs[i] = string.format('/%s(%s)', escape_name(attr), escape_string(val))
+     attrs[i] = string.format('%s%s', escape_name(attr), escape_string(val))
     end
   end
   if i == 0 then return end
