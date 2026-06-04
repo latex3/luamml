@@ -1,7 +1,9 @@
+local byte, char, concat, codes, unpack = string.byte, string.char, table.concat, utf8.codes, table.unpack
+
 local function to_utf16(s)
   local i = 3
   local bytes = {0xFE, 0xFF}
-  for _, c in utf8.codes(s) do
+  for _, c in codes(s) do
     if c < 0x10000 then
       -- assert(c < 0xD800 or c >= 0xE000)
       bytes[i] = c >> 8
@@ -16,7 +18,7 @@ local function to_utf16(s)
       i = i+4
     end
   end
-  return string.char(table.unpack(bytes))
+  return char(unpack(bytes))
 end
 local l = lpeg
 -- \x16 might be a typo in the spec, just exclude it to be safe.
@@ -36,7 +38,7 @@ local function escape_text(s)
 end
 
 local name_unescaped_char = l.R'\x21\x7e' - l.S'#()<>[]{}/%'
-local name_escaped_byte = l.P(1) / function(s) string.format('#%02x', string.byte(s)) end
+local name_escaped_byte = l.P(1) / function(s) string.format('#%02x', byte(s)) end
 local escaped_name = l.Cs(l.Cc'/' * (name_unescaped_char + name_escaped_byte)^0)
 
 local function escape_name(s)
@@ -44,14 +46,12 @@ local function escape_name(s)
 end
 
 local function hide_bytes(s)
-  local bytes = {string.byte(s, 1, -1)}
-  for i = 1, #bytes do
-    local b = bytes[i]
-    if b >= 0x80 then
-      b = b + 0x110000
-    end
+  local t1 = {byte(s, 1, -1)}
+  for i = 1, #t1 do
+    local c = t1[i]
+    t1[i] = char(0xF4, 0x90, 0x80 | c >> 6, 0x80 | (c & 0x3F))
   end
-  return utf8.char(table.unpack(bytes))
+  return concat(t1)
 end
 
 return {
