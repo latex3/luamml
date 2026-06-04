@@ -45,7 +45,6 @@ luacolor
 lualatex-math
 lua-unicode-math
 pdfescape
-pdfmanagement-testphase
 pdftexcmds
 psnfss
 refcount
