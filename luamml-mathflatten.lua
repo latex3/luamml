@@ -90,7 +90,7 @@ function process_mlist(head)
   return head, force_flatten
 end
 
--- luatexbase.add_to_callback('pre_mlist_to_hlist_filter', function(head) print('FLATTEN') return tonode(process_mlist(todirect(head))) end, 'luamml.mathflatten')
+luatexbase.add_to_callback('pre_mlist_to_hlist_filter', function(head) return tonode(process_mlist(todirect(head))) end, 'luamml.mathflatten')
 
 local function new_whatsit()
   local n = node.new(whatsit_noad, user_defined_sub)
