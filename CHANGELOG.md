@@ -5,6 +5,16 @@ All notable changes to the `luamml` package since the
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 this project uses date-based 'snapshot' version identifiers.
 
+## [2026-06-18]
+ ### Fixed
+  * Correctly escape attribute values.
+
+ ### Changed
+  * Implement math group flattening to allow introducing groups for MathML
+    without affecting typeset output.
+  * Automatically generate ActualText in structure element mode when ToUnicode
+    mapping in font does not match MathML output.
+
 ## [2026-02-27]
  ### Fixed
   * Automatically mark sqrt elements and fraction line as artifacts in SE mode.
