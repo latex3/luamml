@@ -242,7 +242,7 @@ lua.get_functions_table()[funcid] = function()
   local struct_num = token.scan_int()
   local content = to_text(tex.nest.top.head)
   content[':structnum'] = struct_num
-  store_row { [0] = 'mtr', { [0] = 'mtd', colspan = tex.count['maxfields@'] + 1, content } }
+  store_row { [0] = 'mtr', { [0] = 'mtd', columnspan = tex.count['maxfields@'] + 1, content } }
 end
 
 require'luamml-tex'.set_extract_eqno(function()
