@@ -1,0 +1,35 @@
+name: Publish nightly
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  l3build:
+    runs-on: ubuntu-latest
+    name: Publish nightly
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v4
+        with:
+          package_file: .github/tl_packages
+      - name: Publish nightly
+        run: |
+          ID_TOKEN=$(curl -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://nightly.typesetting.eu" | jq -r .value)
+          mkdir target
+          export TEXMFHOME="$(pwd)/target"
+          l3build install
+          (
+            cd target
+            zip -r ../luamml.tds.zip .
+          )
+          curl --fail --data-binary @luamml.tds.zip -XPUT -H "Authorization: Bearer $ID_TOKEN" https://nightly.typesetting.eu/upload/luamml-nightly &
+          curl --fail --data-binary @luamml.tds.zip -XPUT -H "Authorization: Bearer $ID_TOKEN" https://nightly.typesetting.eu/upload/luamml-dev &
+          wait
