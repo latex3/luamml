@@ -8,7 +8,7 @@ Run `l3build install` to install `luamml` into your local `texmf` tree.
 ## Usage
 To generate MathML of your LuaLaTeX formulas you should use latex-lab-math which will internally call LuaMML. A typical example would be
 
-```
+```tex
 \DocumentMetadata{lang=en, tagging=on, tagging-setup={math/setup=mathml-SE}}
 \documentclass{article}
 \usepackage{unicode-math}
@@ -17,7 +17,7 @@ To generate MathML of your LuaLaTeX formulas you should use latex-lab-math which
 \end{document}
 ```
 
-This will automatically generate MathML nd embed it into the tagging structure
+This will automatically generate MathML and embed it into the tagging structure
 of the output.
 See the latex-lab-math documentation for details.
 
