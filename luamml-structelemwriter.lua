@@ -141,7 +141,7 @@ local function convert_tounicode_to_utf8(touni)
       cps[j] = unit
     end
   end
-  return utf8.char(table.unpack(cps, 1, i))
+  return utf8.char(table.unpack(cps, 1, j))
 end
 
 local tounicode_font_cache = setmetatable({[0] = false}, {__index = function(t, fid)
