@@ -349,15 +349,15 @@ local function noad_to_table(noad, sub, cur_style, joining, bin_replacements, te
       }, core
     end
   elseif sub == noad_under then
-    return {[0] = 'munder',
+    nucleus = {[0] = 'munder',
       nucleus,
       {[0] = 'mo', '_',},
-    }, core
+    }
   elseif sub == noad_over then
-    return {[0] = 'mover',
+    nucleus = {[0] = 'mover',
       nucleus,
       {[0] = 'mo', '\u{203E}',},
-    }, core
+    }
   elseif sub == noad_vcenter then -- Ignored. Nucleus will need special handling anyway
   else
     error[[confusion]]
