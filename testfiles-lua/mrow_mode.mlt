@@ -1,0 +1,44 @@
+\DocumentMetadata{
+  uncompress,
+  pdfversion = 2.0,
+  tagging = on,
+}
+\input{regression-test}
+\documentclass{article}
+\usepackage{lua-unicode-math}
+
+\begin{document}
+\ExplSyntaxOn
+\luamml_set_filename:n {
+    \jobname .mml
+  }
+\luamml_process:  
+\luamml_begin_single_file:
+\cs_gset_eq:NN \luammlsetting \luamml_gset_setting:nn
+\ExplSyntaxOff
+
+\newcommand \tests {
+  $abc$\par
+  ${abc}$\par
+  $\MathMLintent{abc}{abc}$\par
+  $a{b}c$\par
+  ${a{b}c}$\par
+  $a\MathMLintent{b}c$\par
+}
+
+\tests
+\luammlsetting{mrow_flatten_mode}{never}
+\tests
+\luammlsetting{mrow_flatten_mode_inner}{never}
+\tests
+\luammlsetting{mrow_flatten_mode_inner}{attr}
+\tests
+\luammlsetting{mrow_flatten_mode_inner}{always}
+\tests
+\luammlsetting{mrow_flatten_mode_outer}{never}
+\tests
+\luammlsetting{mrow_flatten_mode_outer}{attr}
+\tests
+\luammlsetting{mrow_flatten_mode_outer}{always}
+\tests
+\end{document}

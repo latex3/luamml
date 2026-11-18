@@ -126,6 +126,16 @@ local always_mo = {["%"] = true, ["&"] = true, ["."] = true, ["/"] = true,
 -- Marker tables replacing the core operator for space like elements
 local space_like = {}
 
+-- Settings
+-- mrow_flatten_mode:
+--   'always': Flatten whenever possible
+--   'attr': Flatten whenever no attributes are present
+--   'never': Don't flatten
+-- The outer flatten mode decides if the outer `<math>` element should contain a pointless mrow,
+-- while the inner flatten mode decides if inner mrows should be preserved if they only contain a single element.
+local mrow_flatten_mode_inner = 'attr'
+local mrow_flatten_mode_outer = 'always'
+
 local nodes_to_table
 
 local function sub_style(s) return s//4*2+5 end
@@ -539,13 +549,15 @@ local function cleanup_mathbin(head)
   return replacements
 end
 
-local function has_relevant_attributes(t)
+local function should_flatten(t, mrow_flatten_mode)
+  if mrow_flatten_mode == 'never' then return false end
+  if mrow_flatten_mode == 'always' then return true end
   for k in next, t do
     if type(k) == 'string' and not string.find(k, ':') and k ~= 'xmlns' then
-      return true
+      return false
     end
   end
-  return false
+  return true
 end
 
 function nodes_to_table(head, cur_style, text_families)
@@ -650,7 +662,7 @@ function nodes_to_table(head, cur_style, text_families)
     end
     joining = new_joining
   end
-  if t[0] == 'mrow' and #t == 1 and not has_relevant_attributes(t) then
+  if t[0] == 'mrow' and #t == 1 and should_flatten(t, mrow_flatten_mode_inner) then
     assert(t == result)
     result = t[1]
   end
@@ -673,7 +685,7 @@ end
 -- as firefox doesn't properly support tagging-project#856.
 
 local function to_math(root, style)
-  if root[0] == 'mrow' then
+  if root[0] == 'mrow' and should_flatten(root, mrow_flatten_mode_outer) then
     root[0] = 'math'
   else
     root = {[0] = 'math', root}
@@ -686,9 +698,35 @@ local function to_math(root, style)
   return root
 end
 
+local mrow_flatten_modes = {always = true, never = true, attr = true}
+local spacing_modes = {never = true, TeX = true, class = true}
+
 return {
   register_family = register_remap,
   process = function(head, style, families) return nodes_to_table(head, style or 2, families) end,
   make_root = to_math,
-  has_relevant_attributes = has_relevant_attributes,
+  should_flatten = function(root) return should_flatten(root, mrow_flatten_mode_inner) end,
+  apply_setting = {
+    mrow_flatten_mode_inner = function(value)
+      if mrow_flatten_modes[value] then
+        mrow_flatten_mode_inner = value
+        return true
+      end
+      return false
+    end,
+    mrow_flatten_mode_outer = function(value)
+      if mrow_flatten_modes[value] then
+        mrow_flatten_mode_outer = value
+        return true
+      end
+      return false
+    end,
+    mrow_flatten_mode = function(value)
+      if mrow_flatten_modes[value] then
+        mrow_flatten_mode_inner, mrow_flatten_mode_outer = value, value
+        return true
+      end
+      return false
+    end,
+  },
 }

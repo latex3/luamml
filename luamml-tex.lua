@@ -21,7 +21,8 @@ local mlist_to_mml = require'luamml-convert'
 local process_mlist = mlist_to_mml.process
 local make_root = mlist_to_mml.make_root
 local register_family = mlist_to_mml.register_family
-local has_relevant_attributes = mlist_to_mml.has_relevant_attributes
+local should_flatten = mlist_to_mml.should_flatten
+local apply_setting = mlist_to_mml.apply_setting
 
 local mappings = require'luamml-legacy-mappings'
 local write_xml = require'luamml-xmlwriter'
@@ -232,7 +233,7 @@ luatexbase.add_to_callback('pre_mlist_to_hlist_filter', function(mlist, style)
   if flag & 4 == 4 then
     local element_type = token.get_macro'l__luamml_root_tl'
     if element_type ~= 'mrow' then
-      if xml[0] == 'mrow' and not has_relevant_attributes(xml) then
+      if xml[0] == 'mrow' and should_flatten(xml) then
         xml[0] = element_type
       else
         xml = {[0] = element_type, xml}
@@ -333,6 +334,25 @@ funcid = luatexbase.new_luafunction'__luamml_disable_output_hook:'
 token.set_lua('__luamml_disable_output_hook:', funcid, 'protected')
 lua.get_functions_table()[funcid] = function()
   output_hook_token = nil
+end
+
+funcid = luatexbase.new_luafunction'luamml_gset_setting:nn'
+token.set_lua('luamml_gset_setting:nn', funcid, 'protected')
+lua.get_functions_table()[funcid] = function()
+  local setting = token.scan_argument()
+  local value = token.scan_argument()
+  local setter = apply_setting[setting]
+  if not setter then
+    tex.error('LuaMML: Attempt to set unknown setting. You can continue, but \
+      the setting will be ignored')
+    return
+  end
+  if not setter(value) then
+    tex.error('LuaMML: Attempt to set setting to unknown value. You can continue, but \
+      the setting will be ignored')
+    return
+  end
+  return
 end
 
 -- ??
