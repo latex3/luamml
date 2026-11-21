@@ -179,6 +179,42 @@ do
   end
 end
 
+local function adjust_equation_number_column(xml)
+  local found_eqno, found_noeqno, found_bare
+  for i=1, #xml do
+    local row = xml[i]
+    if row[0] == 'mtr' then
+      local first_col = row[1]
+      if first_col and first_col[0] == 'mtd' then
+        local intent = first_col.intent
+        if intent == ':equation-label' then
+          found_eqno = true
+        elseif intent == ':no-equation-label' then
+          found_noeqno = true
+        else
+          found_bare = true
+        end
+      end
+    end
+  end
+  if not (found_bare and (found_eqno or found_noeqno)) then return end
+  -- if found_eqno then
+    for i=1, #xml do
+      local row = xml[i]
+      if row[0] == 'mtr' then
+        local first_col = row[1]
+        if first_col and first_col[0] == 'mtd' then
+          local intent = first_col.intent
+          if intent ~= ':equation-label' and intent ~= ':no-equation-label' then
+            table.insert(row, 1, {[0] = 'mtd', intent = ':no-equation-label'})
+          end
+        end
+      end
+    end
+  -- else
+  -- end
+end
+
 funcid = luatexbase.new_luafunction'__luamml_amsmath_finalize_table:n'
 token.set_lua('__luamml_amsmath_finalize_table:n', funcid)
 lua.get_functions_table()[funcid] = function()
@@ -203,6 +239,7 @@ lua.get_functions_table()[funcid] = function()
     spacing[#spacing + 1] = n.width == 0 and '0' or '.8em'
   end
   mml_table.columnspacing = #spacing > 3 and '0 ' .. table.concat(spacing, ' ', 2, #spacing - 2) or nil
+  adjust_equation_number_column(mml_table)
   debug_mtable(mml_table, kind)
   save_result(mml_table, true)
 end
