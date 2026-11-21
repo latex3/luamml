@@ -195,7 +195,7 @@ local function adjust_equation_number_column(xml)
   local found_eqno, found_noeqno, found_bare
   for i=1, #xml do
     local row = xml[i]
-    if row[0] == 'mtr' then
+    if row[0] == 'mtr' and not row[':suppress-equation-label'] then
       local first_col = row[1]
       if first_col and first_col[0] == 'mtd' then
         local intent = first_col.intent
@@ -213,7 +213,7 @@ local function adjust_equation_number_column(xml)
   -- if found_eqno then
     for i=1, #xml do
       local row = xml[i]
-      if row[0] == 'mtr' then
+      if row[0] == 'mtr' and not row[':suppress-equation-label'] then
         local first_col = row[1]
         if first_col and first_col[0] == 'mtd' then
           local intent = first_col.intent
@@ -291,7 +291,7 @@ lua.get_functions_table()[funcid] = function()
   local struct_num = token.scan_int()
   local content = to_text(tex.nest.top.head)
   content[':structnum'] = struct_num
-  store_row { [0] = 'mtr', { [0] = 'mtd', columnspan = tex.count['maxfields@'] + 1, content } }
+  store_row { [0] = 'mtr', [':suppress-equation-label'] = true, { [0] = 'mtd', columnspan = tex.count['maxfields@'] + 1, content } }
 end
 
 require'luamml-tex'.set_extract_eqno(function()
