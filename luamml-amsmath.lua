@@ -120,6 +120,13 @@ local function debug_mtable(mtable, kind)
 end
 
 do
+  local special_columnalign = {
+    multlined = false,
+    gathered = 'center',
+    lgathered = 'left',
+    rgathered = 'right',
+  }
+
   local saved
   funcid = luatexbase.new_luafunction'__luamml_amsmath_save_inner_table:n'
   token.set_lua('__luamml_amsmath_save_inner_table:n', funcid)
@@ -135,7 +142,12 @@ do
       add_intent_continued_row(mml_table)
     end
     local columns = node.count(node.id'align_record', tex.lists.align_head) // 2
-    mml_table.columnalign = kind == 'gathered' and 'center' or string.rep('right left', columns, ' ')
+    local columnalign = special_columnalign[kind]
+    if columnalign == nil then
+      mml_table.columnalign = string.rep('right left', columns, ' ')
+    elseif columnalign then
+      mml_table.columnalign = columnalign
+    end
     local spacing = {}
     for n in node.traverse_id(node.id 'glue', tex.lists.align_head) do
       spacing[#spacing + 1] = n.width == 0 and '0' or string.format('%.3fpt', n.width / 65781.76)
