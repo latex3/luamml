@@ -636,6 +636,10 @@ function nodes_to_table(head, cur_style, text_families)
     -- elseif id == disc_t then -- Uncommon, does not play nicely with math mode and no sensible mapping anyway
     end -- The other possible ids are whatsit, penalty, adjust, ins, mark. Ignore them.
     nonscript = nil
+    local mathml_filter = props and props.mathml_filter
+    if mathml_filter then
+      new_joining, new_node, new_core = nil, mathml_filter(new_node, new_core)
+    end
     if core and new_core ~= space_like then
       core = core == space_like and new_core or nil
     end
@@ -666,12 +670,7 @@ function nodes_to_table(head, cur_style, text_families)
     assert(t == result)
     result = t[1]
   end
-  local mathml_filter = props and props.mathml_filter
-  if mathml_filter then
-    return mathml_filter(result, core)
-  else
-    return result, core
-  end
+  return result, core
 end
 
 local function register_remap(family, mapping)

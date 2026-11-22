@@ -1,9 +1,3 @@
-local function create_whatsit()
-  local n = node.new(whatsit_noad, user_defined_sub)
-  n.user_id, n.type = flattened_user_id, 100 -- Type 100 == 'd' = decimal. No actual value, so decimal reduces overhead
-  return n
-end
-
 local new_flatten_whatsit = require'luamml-mathflatten'.new_whatsit
 
 local nest = tex.nest
