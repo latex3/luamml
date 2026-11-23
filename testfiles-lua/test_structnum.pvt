@@ -23,6 +23,8 @@
 \begin{document}
 \ExplSyntaxOn
 
+% Stop kernel from automatic creation of stucture.
+\AssignTaggingSocketPlug{math/luamml/hbox}{transparent}
 \luamml_structelem:
 $a = b \quad
  \tagstructbegin{tag=mtext,stash}\tagmcbegin{}
