@@ -3,11 +3,6 @@
   <mi>𝑏</mi>
   <mi>𝑐</mi>
 </math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
 <math intent="abc" xmlns="http://www.w3.org/1998/Math/MathML">
   <mi>𝑎</mi>
   <mi>𝑏</mi>
@@ -15,16 +10,6 @@
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
   <mi intent="b">𝑐</mi>
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -35,107 +20,6 @@
   </mrow>
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mrow intent="abc">
-      <mi>𝑎</mi>
-      <mi>𝑏</mi>
-      <mi>𝑐</mi>
-    </mrow>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mrow>
-      <mi>𝑏</mi>
-    </mrow>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mrow>
-      <mi>𝑏</mi>
-    </mrow>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi intent="b">𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mrow intent="abc">
-      <mi>𝑎</mi>
-      <mi>𝑏</mi>
-      <mi>𝑐</mi>
-    </mrow>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mrow>
-      <mi>𝑏</mi>
-    </mrow>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mrow>
-      <mi>𝑏</mi>
-    </mrow>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi intent="b">𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow intent="abc">
     <mi>𝑎</mi>
     <mi>𝑏</mi>
@@ -145,140 +29,8 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
     <mi intent="b">𝑐</mi>
   </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow intent="abc">
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi intent="b">𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow intent="abc">
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>𝑎</mi>
-    <mi intent="b">𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow intent="abc">
-    <mi>𝑎</mi>
-    <mi>𝑏</mi>
-    <mi>𝑐</mi>
-  </mrow>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi intent="b">𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi>𝑎</mi>
@@ -292,15 +44,10 @@
 </math>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
-  <mi>𝑏</mi>
-  <mi>𝑐</mi>
-</math>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>𝑎</mi>
   <mi intent="b">𝑐</mi>
+</math>
+<math intent="outer-intent" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow arg="outer-arg" intent="inner-intent">
+    <mn arg="inner-arg">1</mn>
+  </mrow>
 </math>

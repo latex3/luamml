@@ -666,9 +666,8 @@ function nodes_to_table(head, cur_style, text_families)
     end
     joining = new_joining
   end
-  if t[0] == 'mrow' and #t == 1 and should_flatten(t, mrow_flatten_mode_inner) then
-    assert(t == result)
-    result = t[1]
+  if #result == 1 and result[0] == 'mrow' then
+    result = result[1]
   end
   return result, core
 end
@@ -679,9 +678,6 @@ local function register_remap(family, mapping)
     remap_lookup[family | from] = utf8.char(to)
   end
 end
-
--- 2025-05-30: Check if the outer outer mrow should be replaced by math
--- as firefox doesn't properly support tagging-project#856.
 
 local function to_math(root, style)
   if root[0] == 'mrow' and should_flatten(root, mrow_flatten_mode_outer) then

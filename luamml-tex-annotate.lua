@@ -107,24 +107,18 @@ local function annotate()
     local saved = props.mathml_filter
     local struct = annotation.struct
     function props.mathml_filter(mml, core)
+      if saved then mml, core = saved(mml, core) end
       mml[':struct'] = struct
-      if saved then
-        return saved(mml, core)
-      else
-        return mml, core
-      end
+      return mml, core
     end
   end
   if annotation.structnum ~= nil then
     local saved = props.mathml_filter
     local structnum = annotation.structnum
     function props.mathml_filter(mml, core)
+      if saved then mml, core = saved(mml, core) end
       mml[':structnum'] = structnum
-      if saved then
-        return saved(mml, core)
-      else
-        return mml, core
-      end
+      return mml, core
     end
   end
   flatten_mathml_properties(props)
@@ -141,15 +135,20 @@ local function annotate_attribute(key, value, change_core)
     properties[marked] = props
   end
   local saved = props.mathml_filter
-  function props.mathml_filter(mml, core)
-    if core and change_core then
-      core[key] = value
-    else
-      mml[key] = value
+  if key == 'intent' and not change_core then
+    function props.mathml_filter(mml, core)
+      if saved then mml, core = saved(mml, core) end
+      if mml.arg then
+        mml = {[0] = 'mrow', intent = value, mml}
+      else
+        mml.intent = value
+      end
+      return mml, core
     end
-    if saved then
-      return saved(mml, core)
-    else
+  else
+    function props.mathml_filter(mml, core)
+      if saved then mml, core = saved(mml, core) end
+      (change_core and core or mml)[key] = value
       return mml, core
     end
   end

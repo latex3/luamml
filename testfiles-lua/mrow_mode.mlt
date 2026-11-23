@@ -19,26 +19,15 @@
 
 \newcommand \tests {
   $abc$\par
-  ${abc}$\par
   $\MathMLintent{abc}{abc}$\par
-  $a{b}c$\par
-  ${a{b}c}$\par
   $a\MathMLintent{b}c$\par
 }
 
 \tests
 \luammlsetting{mrow_flatten_mode}{never}
 \tests
-\luammlsetting{mrow_flatten_mode_inner}{never}
+\luammlsetting{mrow_flatten_mode}{always}
 \tests
-\luammlsetting{mrow_flatten_mode_inner}{attr}
-\tests
-\luammlsetting{mrow_flatten_mode_inner}{always}
-\tests
-\luammlsetting{mrow_flatten_mode_outer}{never}
-\tests
-\luammlsetting{mrow_flatten_mode_outer}{attr}
-\tests
-\luammlsetting{mrow_flatten_mode_outer}{always}
-\tests
+
+$\MathMLintent{outer-intent}{\MathMLarg{outer-arg}{\MathMLintent{inner-intent}{\MathMLarg{inner-arg}{1}}}}$
 \end{document}
